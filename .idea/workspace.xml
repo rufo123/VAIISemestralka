@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Initial" />
+    <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,26 +43,47 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="" />
+      <changelist id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
       <created>1602324107604</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602324107604</updated>
-      <workItem from="1602324108812" duration="4324000" />
+      <workItem from="1602324108812" duration="4604000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial">
+      <created>1602329211865</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602329211865</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="802" y="176" key="FileChooserDialogImpl" timestamp="1602329094856">
+    <state x="802" y="176" key="FileChooserDialogImpl" timestamp="1602329181206">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="802" y="176" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1602329094856" />
+    <state x="802" y="176" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1602329181206" />
     <state x="623" y="362" key="Github.ShareDialog" timestamp="1602328990815">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
+    <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
+    <state x="352" y="197" key="Vcs.Push.Dialog.v2" timestamp="1602329291796">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="352" y="197" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602329291796" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
