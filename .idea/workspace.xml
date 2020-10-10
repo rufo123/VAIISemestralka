@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Prvotné nastavenie">
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/images/body/dark-repeated.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/body/snowy-mountain.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -27,17 +29,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1igL5gZR0g9b0RQWjuMxlihQ8DA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -52,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602324107604</updated>
-      <workItem from="1602324108812" duration="10054000" />
+      <workItem from="1602324108812" duration="21008000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -68,16 +74,25 @@
       <option name="project" value="LOCAL" />
       <updated>1602329407139</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update">
+      <created>1602335119606</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602335119606</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial" />
     <MESSAGE value="Prvotné nastavenie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prvotné nastavenie" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="802" y="176" key="FileChooserDialogImpl" timestamp="1602329181206">
@@ -88,14 +103,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
+    <state x="817" y="134" key="RollbackChangesDialog" timestamp="1602334888036">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1602334888036" />
+    <state x="0" y="149" key="SettingsEditor" timestamp="1602341198627">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602341198627" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602334874633">
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602335121727">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602334874633" />
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602335121727" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

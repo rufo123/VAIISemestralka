@@ -1,19 +1,26 @@
 * {
-    border: 1px solid;
+
+}
+
+body {
+    background-image: url("images/body/snowy-mountain.jpg");
+    background-color: #1e2047;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
 }
 
 
-
 #headerID {
-    position: fixed; /* Zmizne prvok, umiestnenie v ramci viewportu */
+     /* Zmizne prvok, umiestnenie v ramci viewportu */
     top: 0; /* Zarovnanie dohora */
     left: 0; /* Zarovanie dolava */
     right: 0; /* Zarovnanie doprava */
     z-index: 30; /* Z-Index znamena ze v akom poradi bude prekryta stranka tymto elementom */
+    margin: 0 auto;
 }
 
 #headerID .navbar {
-    position: fixed;
     top: 30px;
     right: 0;
     left: 0;
@@ -21,28 +28,94 @@
 
 .navbar .container {
     display: flex;
+    background-color: #190F26;
+
 }
 
 .container {
-    max-width: 88%;
+    max-width: 95%;
     margin: 0 auto;
 }
 
 .navbar-logo {
-    width: 50%;
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: .5em;
+}
+
+.navbar-logo img {
+
+
+    width: 30%;
+
+
 }
 
 #navigation-menuID {
-    display: flex;
-    justify-content: space-between;
 
+    width: 80%;
+
+}
+
+.navbar-item {
+    display: block;
+    padding: .5rem .75rem;
+    align-items: center;
+}
+
+
+
+#navigation-menuID ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
 
 
 }
-
 
 #navigation-menuID li {
-    display: inline-block;
+    display: flex;
+    font-size: 1.2em;
+    text-align: center;
+}
+#navigation-menuID li a {
+    text-decoration: none;
+    color: rgb(123, 44, 191);
+}
+
+#navigation-menuID li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.contentContainer {
+
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.35);
+    border: .2em black solid;
+
 
 }
+
+footer {
+    display: flex;
+    width: 100%;
+    background-color: #190F26;
+    color: white;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 1em;
+    text-align: center;
+}
+
+
+
+
+
