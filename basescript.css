@@ -1,4 +1,48 @@
-.navbar-logo img {
+* {
+    border: 1px solid;
+}
 
+
+
+#headerID {
+    position: fixed; /* Zmizne prvok, umiestnenie v ramci viewportu */
+    top: 0; /* Zarovnanie dohora */
+    left: 0; /* Zarovanie dolava */
+    right: 0; /* Zarovnanie doprava */
+    z-index: 30; /* Z-Index znamena ze v akom poradi bude prekryta stranka tymto elementom */
+}
+
+#headerID .navbar {
+    position: fixed;
+    top: 30px;
+    right: 0;
+    left: 0;
+}
+
+.navbar .container {
+    display: flex;
+}
+
+.container {
+    max-width: 88%;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    width: 50%;
+}
+
+#navigation-menuID {
+    display: flex;
+    justify-content: space-between;
+
+
+
+
+}
+
+
+#navigation-menuID li {
+    display: inline-block;
 
 }
