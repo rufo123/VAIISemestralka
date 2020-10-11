@@ -19,10 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Dokončené menu a footer. 10/10/2020">
-      <change afterPath="$PROJECT_DIR$/images/About-Me/gmail-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/About-Me/logo_gmail_lockup_dark_1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/About-Me/portfolio-img.jpg" afterDir="false" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Pridaný obsah indexu a gmail email">
+      <change afterPath="$PROJECT_DIR$/images/About-Me/Hry/ac.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/Hry/ark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/Hry/grand.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/Hry/red.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/Hry/vermintide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/development/c++-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/development/c-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/development/css3-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/development/html5-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/development/java-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/os/linux.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/os/windows.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -78,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602324107604</updated>
       <workItem from="1602324108812" duration="21318000" />
-      <workItem from="1602408593439" duration="12269000" />
+      <workItem from="1602408593439" duration="23366000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -108,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602345978832</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pridaný obsah indexu a gmail email">
+      <created>1602420990117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602420990117</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +147,8 @@
     <MESSAGE value="Prvotné nastavenie" />
     <MESSAGE value="Update" />
     <MESSAGE value="Dokončené menu a footer. 10/10/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dokončené menu a footer. 10/10/2020" />
+    <MESSAGE value="Pridaný obsah indexu a gmail email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridaný obsah indexu a gmail email" />
   </component>
   <component name="WindowStateProjectService">
     <state x="802" y="176" key="FileChooserDialogImpl" timestamp="1602329181206">
@@ -146,18 +163,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1602334888036" />
-    <state x="0" y="149" key="SettingsEditor" timestamp="1602419423560">
+    <state x="0" y="149" key="SettingsEditor" timestamp="1602432733746">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602419423560" />
+    <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602432733746" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602345981188">
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602420992679">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602345981188" />
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602420992679" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
