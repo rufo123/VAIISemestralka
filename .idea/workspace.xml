@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:VAIISemestralka" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/images/body/dark-repeated.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/body/snowy-mountain.jpg" afterDir="false" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Dokončené menu a footer. 10/10/2020">
+      <change afterPath="$PROJECT_DIR$/images/About-Me/gmail-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/logo_gmail_lockup_dark_1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/About-Me/portfolio-img.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -58,7 +77,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602324107604</updated>
-      <workItem from="1602324108812" duration="21008000" />
+      <workItem from="1602324108812" duration="21318000" />
+      <workItem from="1602408593439" duration="12269000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -81,18 +101,37 @@
       <option name="project" value="LOCAL" />
       <updated>1602335119606</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Dokončené menu a footer. 10/10/2020">
+      <created>1602345978832</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602345978832</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial" />
     <MESSAGE value="Prvotné nastavenie" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Dokončené menu a footer. 10/10/2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dokončené menu a footer. 10/10/2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="802" y="176" key="FileChooserDialogImpl" timestamp="1602329181206">
@@ -107,18 +146,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1602334888036" />
-    <state x="0" y="149" key="SettingsEditor" timestamp="1602341198627">
+    <state x="0" y="149" key="SettingsEditor" timestamp="1602419423560">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602341198627" />
+    <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602419423560" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602335121727">
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602345981188">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602335121727" />
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602345981188" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

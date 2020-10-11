@@ -96,11 +96,89 @@ body {
     margin: 0 auto;
     margin-top: 1em;
     width: 95%;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.60);
     border: .2em black solid;
 
 
 }
+
+.contentBox {
+    padding: 2em;
+}
+
+.contentBox h1 {
+    text-align: center;
+    color: #101010;
+
+}
+
+.contentBox h2 {
+    text-align: left;
+    color: #101010;
+}
+
+.contentBox p {
+    font-size: 1.1em;
+    color: #e8dede;
+}
+
+.contentBox .portfolio-me-img {
+    max-width: 300px;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all .2s ease;
+    float: right;
+
+}
+
+.contentBox hr {
+    margin-top: 4em;
+
+}
+
+.contentBox .contactParagraph {
+    text-align: center;
+
+}
+
+
+.contactOverlay {
+    position: relative;
+    max-width: 10em;
+    margin: 0 auto;
+}
+
+.contactGmailLogo {
+    display: block;
+    margin: 0 auto;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+
+.hiddenContactText {
+    top: 1px;
+    margin: 0 auto;
+    padding: 0.2em 0em 0.2em 0em;
+    width: 100%;
+    position: absolute;
+    max-font-size: 1em;
+    text-align: center;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.contactOverlay:hover .hiddenContactText {
+    opacity: 1;
+}
+.contactOverlay:hover .contactGmailLogo {
+    opacity: 0;
+}
+
+
+
+
+
 
 footer {
     display: flex;
