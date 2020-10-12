@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Dokonceny index.html">
-      <change afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/projects/Snake_Java.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +82,9 @@
       <option name="presentableId" value="Default" />
       <updated>1602324107604</updated>
       <workItem from="1602324108812" duration="21318000" />
-      <workItem from="1602408593439" duration="24959000" />
+      <workItem from="1602408593439" duration="25565000" />
+      <workItem from="1602489372765" duration="17000" />
+      <workItem from="1602491557297" duration="17083000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -124,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602436036403</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dokonceny index.html">
+      <created>1602440355169</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602440355169</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +151,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -164,18 +176,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1602334888036" />
-    <state x="0" y="149" key="SettingsEditor" timestamp="1602432733746">
+    <state x="0" y="149" key="SettingsEditor" timestamp="1602525543134">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602432733746" />
+    <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602436071839">
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2" timestamp="1602440356805">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602436071839" />
+    <state x="292" y="325" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602440356805" />
+    <state x="635" y="173" width="585" height="534" key="find.popup" timestamp="1602489383295">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="635" y="173" width="585" height="534" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1602489383295" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
