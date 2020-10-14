@@ -19,26 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Dokonceny index.html">
-      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac1-fr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac1-lr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac2-fr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac2-lr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac3-fr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac3-lr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac4-fr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/pac-man/pac4-lr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/snake/snake1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/snake/snake2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/snake/snake3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/snake/snake4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/gallery/snake/snake5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/monkeyworking.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order.html" afterDir="false" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Skoro cele html/css hotove">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
@@ -105,7 +89,10 @@
       <workItem from="1602489372765" duration="17000" />
       <workItem from="1602491557297" duration="17616000" />
       <workItem from="1602568703900" duration="2063000" />
-      <workItem from="1602602813657" duration="5746000" />
+      <workItem from="1602602813657" duration="6268000" />
+      <workItem from="1602676911775" duration="98000" />
+      <workItem from="1602678558095" duration="851000" />
+      <workItem from="1602679760053" duration="8174000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -163,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602526172613</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Skoro cele html/css hotove">
+      <created>1602608701458</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602608701458</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,9 +183,14 @@
     <MESSAGE value="Dokončené menu a footer. 10/10/2020" />
     <MESSAGE value="Pridaný obsah indexu a gmail email" />
     <MESSAGE value="Dokončený Base projects.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dokončený Base projects.html" />
+    <MESSAGE value="Skoro cele html/css hotove" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skoro cele html/css hotove" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="411" y="216" key="#Inspections" timestamp="1602609196030">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="411" y="216" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1602609196030" />
     <state x="236" y="57" key="DiffContextDialog" timestamp="1602526210500">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -220,10 +219,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="476" y="152" key="Vcs.Push.Dialog.v2" timestamp="1602526385068">
+    <state x="476" y="152" key="Vcs.Push.Dialog.v2" timestamp="1602608704535">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602526385068" />
+    <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602608704535" />
     <state x="635" y="173" width="585" height="534" key="find.popup" timestamp="1602489383295">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
