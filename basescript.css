@@ -170,7 +170,8 @@ body {
     padding: 0.2em 0 0.2em 0;
     width: 100%;
     position: absolute;
-    max-font-size: 1em;
+    font-size: 1em;
+    /* Ak by bol problem tak max-font-size: 1em; */
     text-align: center;
     opacity: 0;
     transition: .5s ease;
