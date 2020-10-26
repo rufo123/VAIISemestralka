@@ -279,14 +279,13 @@ body {
     padding-left: 40%;
 }
 
-@media screen and (max-width: 1035px) {
+@media screen and (max-width: 1050px) {
 
     .project-box {
         display: block;
     }
 
     .project-box .cover-projects-img {
-        border: 1px solid black;
         display: flex;
         align-content: center;
         justify-content: space-around;
@@ -358,7 +357,7 @@ footer p{
     text-align: center;
 }
 
-@media screen and (max-width: 624px) {
+@media screen and (max-width: 640px) {
     .navbar-logo {
         display: none;
     }
@@ -394,7 +393,7 @@ footer p{
 
 
 
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 470px) {
 
     #navigation-menuID li {
        font-size: 1em;
@@ -416,12 +415,10 @@ footer p{
 
     }
 
-
-
 }
 
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
 
     #navigation-menuID li {
         font-size: 0.8em;

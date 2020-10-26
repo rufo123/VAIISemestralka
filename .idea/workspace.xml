@@ -19,14 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Priebezne ulozenie">
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Komplet dokoncene základné HTML + CSS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +93,13 @@
       <workItem from="1602679760053" duration="8484000" />
       <workItem from="1602708797476" duration="32000" />
       <workItem from="1602777883479" duration="6000" />
-      <workItem from="1602778209025" duration="2734000" />
+      <workItem from="1602778209025" duration="2941000" />
+      <workItem from="1602877384728" duration="78000" />
+      <workItem from="1603093544993" duration="2045000" />
+      <workItem from="1603174179516" duration="28000" />
+      <workItem from="1603183165096" duration="531000" />
+      <workItem from="1603716031402" duration="104000" />
+      <workItem from="1603731852789" duration="719000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -177,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602708816704</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Komplet dokoncene základné HTML + CSS">
+      <created>1602784996943</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602784996943</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +214,8 @@
     <MESSAGE value="Skoro cele html/css hotove" />
     <MESSAGE value="Dokonceny základ stránky" />
     <MESSAGE value="Priebezne ulozenie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Priebezne ulozenie" />
+    <MESSAGE value="Komplet dokoncene základné HTML + CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Komplet dokoncene základné HTML + CSS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="411" y="216" key="#Inspections" timestamp="1602609196030">
@@ -229,10 +238,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
-    <state x="817" y="134" key="RollbackChangesDialog" timestamp="1602334888036">
+    <state x="817" y="134" key="RollbackChangesDialog" timestamp="1603183248950">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1602334888036" />
+    <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603183248950" />
     <state x="0" y="149" key="SettingsEditor" timestamp="1602525543134">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -241,10 +250,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="476" y="152" key="Vcs.Push.Dialog.v2" timestamp="1602708819315">
+    <state x="476" y="152" key="Vcs.Push.Dialog.v2" timestamp="1602784998459">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602708819315" />
+    <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="635" y="173" width="585" height="534" key="find.popup" timestamp="1602489383295">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
