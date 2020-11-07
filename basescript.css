@@ -48,7 +48,7 @@ body {
     width: 30%;
 }
 
-#navigation-menuID {
+.navigation-menu {
 
     width: 80%;
 
@@ -62,31 +62,155 @@ body {
 
 
 
-#navigation-menuID ul {
+.navigation-menu ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 
 }
 
-#navigation-menuID li {
+.navigation-menu li {
     display: flex;
     font-size: 1.2em;
     text-align: center;
 
 
 }
-#navigation-menuID li a {
+.navigation-menu li a {
     text-decoration: none;
     color: rgb(123, 44, 191);
 
 
 }
 
-#navigation-menuID li a:hover {
+.navigation-menu li a:hover {
     text-decoration: none;
     color: white;
     transition: .5s ease;
+}
+
+
+.navigation-login {
+    width: 27em;
+    float: right;
+
+}
+
+.login-container {
+    float: left;
+
+}
+
+.login-container ul {
+    display: flex;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.login-container ul .material-icons {
+    vertical-align: middle;
+}
+
+.login-container input[type = "text"], .login-container input[type="password"]  {
+    background-color: inherit;
+    border: 2px rebeccapurple solid;
+    text-align: center;
+    border-radius: 24px;
+    height: 80%;
+    color: white;
+    margin: auto;
+    width: 80%;
+    box-sizing: border-box;
+    font-style: normal;
+    font-size: 0.8em;
+    line-height: 1.25em;
+}
+
+.login-container input[type = "text"]:focus, .login-container input[type="password"]:focus {
+    border-color: ghostwhite;
+    transition: 0.25s;
+    width: 100%;
+    outline: none;
+
+
+}
+
+.login-container li.has-login-dropdown {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+.hidden-signup {
+    display: none;
+    position: absolute;
+    margin-top: 2.1em;
+    margin-left: calc( (-2em) );
+    background-color: rgba(25, 15, 38, 1);
+    border-radius: 10px;
+    height: 6em;
+    width: 7em;
+    justify-content: space-around;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+
+
+
+
+}
+
+.hidden-signup ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0 solid black;
+    justify-content: flex-end;
+
+}
+
+.hidden-signup input[type = "button"]:hover   {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+
+}
+
+.hidden-signup li {
+    padding: 0.3em 0 0.4em 0;
+    display: flex;
+
+
+}
+
+.hidden-signup input[type = "button"]{
+    background-color: inherit;
+    border: 2px rebeccapurple solid;
+    text-align: center;
+    color: white;
+    margin: auto 0;
+    width: 100%;
+    height: 2em;
+    box-sizing: border-box;
+    font-style: normal;
+    font-size: 0.8em;
+    line-height: 1.25em;
+    float: left;
+    border-radius: 7px;
+
+
+}
+
+.has-login-dropdown:hover .hidden-signup {
+
+    display: flex;
+}
+
+.has-login-dropdown:hover .hidden-signup {
+
+    opacity: 1;
 }
 
 .contentContainer {
@@ -362,13 +486,13 @@ footer p{
         display: none;
     }
 
-    #navigation-menuID {
+    .navigation-menu {
 
         width: 100%;
 
     }
 
-    #navigation-menuID ul {
+    .navigation-menu ul {
         padding: 0;
 
     }
@@ -395,7 +519,7 @@ footer p{
 
 @media screen and (max-width: 470px) {
 
-    #navigation-menuID li {
+    .navigation-menu li {
        font-size: 1em;
         width: 100%;
     }
@@ -420,7 +544,7 @@ footer p{
 
 @media screen and (max-width: 430px) {
 
-    #navigation-menuID li {
+    .navigation-menu li {
         font-size: 0.8em;
         width: 100%;
         padding: 0;
@@ -445,7 +569,7 @@ footer p{
 
 @media screen and (max-width: 240px) {
 
-    #navigation-menuID li {
+    .navigation-menu li {
        display: none;
     }
 
@@ -454,7 +578,7 @@ footer p{
 
 @media screen and (max-width: 200px) {
 
-    #navigation-menuID li {
+    .navigation-menu li {
         display: none;
     }
     .contentBox .portfolio-me-img {
