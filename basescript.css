@@ -203,6 +203,33 @@ body {
 
 }
 
+
+
+.navigation-login .login-container ul li label {
+    position: absolute;
+    display: block;
+    color: rebeccapurple;
+    margin: -1.0em;
+
+
+}
+
+.login-container ul li:hover  label{
+    color: ghostwhite;
+    transition-delay: 1s;
+    transition: 0.25s;
+}
+
+
+
+.navigation-login .login-container ul li label[for=login] {
+    margin-left: 3.2em;
+}
+
+.navigation-login .login-container ul li label[for=password] {
+    margin-left: 2.45em;
+}
+
 .has-login-dropdown:hover .hidden-signup {
 
     display: flex;
@@ -479,6 +506,36 @@ footer {
 footer p{
     font-size: 1em;
     text-align: center;
+}
+
+
+/* ------------- SIGNUP FORM ------------- */
+
+.signup-form {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+
+}
+
+.signup-form ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    margin: 2em 0 ;
+
+}
+
+.signup-form ul li {
+}
+
+.signup-form label {
+    color: ghostwhite;
+    display: flex;
+}
+
+.signup-form input {
+    display: flex;
 }
 
 @media screen and (max-width: 640px) {
