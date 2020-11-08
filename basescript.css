@@ -511,32 +511,79 @@ footer p{
 
 /* ------------- SIGNUP FORM ------------- */
 
-.signup-form {
+.signup {
     display: flex;
+    width: 100%;
     justify-content: space-around;
-    height: 100vh;
+    min-height: calc(100vh - 142px);
+
+
+
 
 }
 
-.signup-form ul {
+.signup ul {
     display: flex;
     list-style-type: none;
     flex-direction: column;
     margin: 2em 0 ;
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 1em;
+    width: 25em;
+    justify-content: center;
+
 
 }
 
-.signup-form ul li {
+.signup ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em 0;
+    justify-content: center;
+
 }
 
-.signup-form label {
+.signup ul li input{
+    display: block;
+    border: 2px solid rebeccapurple;
+    height: 3em;
+    border-radius: 15px;
+    background-color: inherit;
     color: ghostwhite;
-    display: flex;
+    text-align: center;
+    width: 15em;
+    margin: auto;
+
 }
 
-.signup-form input {
-    display: flex;
+.signup ul li input:focus {
+
+    width: 25em;
+    transition: 0.25s;
+    border: 2px solid ghostwhite;
+    outline: none;
 }
+
+.signup label {
+    display: block;
+    height: 2em;
+    color: ghostwhite;
+    margin: auto;
+    padding-top: 0.2em;
+
+}
+
+.signup ul li input[type = "button"] {
+    width: 10em;
+    margin-top: 1.5em;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.signup ul li input[type = "button"]:focus {
+    width: 10em;
+
+}
+
 
 @media screen and (max-width: 640px) {
     .navbar-logo {
