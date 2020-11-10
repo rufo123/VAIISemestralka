@@ -1,7 +1,5 @@
 <?php
 
-
-
 $signup = new SignupScript();
 
 class SignupScript
@@ -112,7 +110,7 @@ class SignupScript
         $result = $stmtSelectLogin->num_rows();
 
 
-        if (result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
+        if ($result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
 
             header('location: ../signup.html?error=loginNotUnique');
             exit();

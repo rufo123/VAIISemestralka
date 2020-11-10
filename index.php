@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +28,7 @@
 
              <div class="navigation-menu">
                  <ul>
-                    <li><a class="navbar-item" href="index.html">O Mne</a></li>
+                    <li><a class="navbar-item" href="index.php">O Mne</a></li>
                     <li><a class="navbar-item" href="projects.html">Projekty</a></li>
                     <li><a class="navbar-item" href="gallery.html">Galéria</a></li>
                     <li><a class="navbar-item" href="blog.html">Blog</a></li>
@@ -31,14 +36,45 @@
 
                  </ul>
                  <div class="navigation-login">
-                     <div class="login-container">
-                         <form action="includes/LoginScript.php" method="post">
+                             <?php
+                             if (isset($_SESSION['userLogin'] ))
+                             {
+                              echo '  
+                                  <div class="login-container logged-container">
+                                     <form class="form-default-hidden" action="includes/LogoutScript.php" method="post">
+                                        <ul>
+                                            <li class="logged-in-text">
+                                            <p> Prihlaseny ako: </p>
+                                            </li>
+                                            <li class="logged-in-user">
+                                            <p>' . $_SESSION['userLogin'] . ' </p></p>
+                                            </li>
+                                            <li>
+                                     
+                                             <input type="submit" name="logout" value="Log Out">
+                                            </li>
+                                        
+                                        </ul>
+   
+   
+   
+                                     </form>
+                                  </div>
+                                 
+                                 
+                                 
+                                    ';
+                             } else {
+
+                                 echo '   
+                        <div class="login-container">
+                          <form action="includes/LoginScript.php" method="post">
                             <ul>
 
                                  <li class="has-login-dropdown">
 
                                          <!--<i class="material-icons navbar-item">person</i>&#xe7fd; -->
-                                         <button class="person-content mdc-icon-button material-icons navbar-item login-button" type="login-proceed"></button>
+                                         <button class="person-content mdc-icon-button material-icons navbar-item login-button" name="login-proceed"></button>
 
 
 
@@ -65,7 +101,22 @@
 
                           </ul>
                          </form>
-                     </div>
+                         
+                        </div>
+                                 
+                                    ';
+
+                             }
+
+
+
+
+
+
+
+                            ?>
+
+
 
              </div>
 
