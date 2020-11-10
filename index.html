@@ -32,26 +32,39 @@
                  </ul>
                  <div class="navigation-login">
                      <div class="login-container">
+                         <form action="includes/LoginScript.php" method="post">
+                            <ul>
 
-                     <ul>
-                         <li class="has-login-dropdown">
-                             <a class="navbar-item" href="Pog"><i class="material-icons">person</i></a>  <!-- &#xe7fd; -->
-                             <div class="hidden-signup has-login-dropdown">
-                                 <ul>
-                                     <li><input type="button" name="signup" value="Sign Up"></li>
-                                     <li><input type="button" name="forgotpass" value="Forgot Pass"></li>
-                                 </ul>
-                             </div>
-                         </li>
-                         <li>
-                             <label for="login">Login</label>
-                             <input type="text" id="login" name="login" placeholder="User Name">
-                         </li>
-                         <li>
-                             <label for="password">Password</label>
-                             <input type="password" id="password" name="password" placeholder="min. 6 char.">
-                         </li>
-                     </ul>
+                                 <li class="has-login-dropdown">
+
+                                         <!--<i class="material-icons navbar-item">person</i>&#xe7fd; -->
+                                         <button class="person-content mdc-icon-button material-icons navbar-item login-button" type="login-proceed"></button>
+
+
+
+
+                                     <div class="hidden-signup has-login-dropdown">
+                                         <ul>
+                                            <li><input type="submit" name="signup" value="Sign Up"></li>
+                                            <li><input type="submit" name="forgotPass" value="Forgot Pass"></li>
+
+                                      </ul>
+                                  </div>
+                                 </li>
+
+                               <li>
+                                    <label for="login">Login</label>
+                                   <input type="text" id="login" name="login" placeholder="User Name">
+                               </li>
+
+                                <li>
+                                  <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" placeholder="min. 6 char.">
+                              </li>
+
+
+                          </ul>
+                         </form>
                      </div>
 
              </div>

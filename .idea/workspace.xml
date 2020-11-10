@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Dokonceny Login HTML+CSS, Zaciatok prace na Signup-e">
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="HTML+CSS signup.html Dokončené">
+      <change afterPath="$PROJECT_DIR$/Includes/DBConnect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Includes/SignupScript.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -45,6 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4.10" />
   <component name="ProjectId" id="1igL5gZR0g9b0RQWjuMxlihQ8DA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -60,7 +64,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -106,7 +110,14 @@
       <workItem from="1604387322012" duration="73000" />
       <workItem from="1604751266144" duration="15052000" />
       <workItem from="1604834240858" duration="6535000" />
-      <workItem from="1604857156401" duration="4702000" />
+      <workItem from="1604857156401" duration="5319000" />
+      <workItem from="1604919843488" duration="628000" />
+      <workItem from="1604925999549" duration="1795000" />
+      <workItem from="1604934748628" duration="3069000" />
+      <workItem from="1604937850945" duration="13072000" />
+      <workItem from="1604991735646" duration="242000" />
+      <workItem from="1605001099559" duration="5098000" />
+      <workItem from="1605006290595" duration="211000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -213,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604844230255</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="HTML+CSS signup.html Dokončené">
+      <created>1604862194363</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1604862194363</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,21 +264,28 @@
     <MESSAGE value="Posledné upravy pred odovzdaním prvej časti" />
     <MESSAGE value="Zaciatok prace na Signup-Login systeme" />
     <MESSAGE value="Dokonceny Login HTML+CSS, Zaciatok prace na Signup-e" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dokonceny Login HTML+CSS, Zaciatok prace na Signup-e" />
+    <MESSAGE value="HTML+CSS signup.html Dokončené" />
+    <option name="LAST_COMMIT_MESSAGE" value="HTML+CSS signup.html Dokončené" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="411" y="216" key="#Inspections" timestamp="1602609196030">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
+      <screen x="-1600" y="174" width="1600" height="860" />
+    </state>
+    <state x="-1014" y="220" key="#CLI_Interpreters/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926157600" />
+    <state x="493" y="261" key="#Inspections" timestamp="1604937902133">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="411" y="216" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1602609196030" />
+    <state x="493" y="261" key="#Inspections/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1604937902133" />
     <state x="236" y="57" key="DiffContextDialog" timestamp="1602526210500">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="236" y="57" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1602526210500" />
-    <state x="962" y="213" key="FileChooserDialogImpl" timestamp="1604387389781">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-798" y="350" key="FileChooserDialogImpl" timestamp="1604926140077">
+      <screen x="-1600" y="174" width="1600" height="860" />
     </state>
     <state x="802" y="176" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1602329181206" />
+    <state x="-798" y="350" key="FileChooserDialogImpl/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926140077" />
     <state x="962" y="213" key="FileChooserDialogImpl/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1604387389781" />
     <state x="657" y="329" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1602526371629">
       <screen x="0" y="0" width="1600" height="860" />
@@ -270,32 +295,43 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
+    <state x="706" y="184" key="NewPhpClassDialog" timestamp="1605001370091">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1012" y="326" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926362416" />
+    <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605001370091" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604936426716">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1604936426716" />
     <state x="817" y="134" key="RollbackChangesDialog" timestamp="1603183248950">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603183248950" />
-    <state x="0" y="149" key="SettingsEditor" timestamp="1602525543134">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="-1093" y="210" key="SettingsEditor" timestamp="1604926180735">
+      <screen x="-1600" y="174" width="1600" height="860" />
     </state>
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
+    <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="-1124" y="326" key="Vcs.Push.Dialog.v2" timestamp="1604844231884">
+    <state x="-1124" y="326" key="Vcs.Push.Dialog.v2" timestamp="1604862197430">
       <screen x="-1600" y="174" width="1600" height="860" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
-    <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604844231884" />
+    <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1603732609285" />
     <state x="635" y="173" width="585" height="534" key="find.popup" timestamp="1602489383295">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="635" y="173" width="585" height="534" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1602489383295" />
-    <state x="-1137" y="354" width="672" height="678" key="search.everywhere.popup" timestamp="1604766888076">
-      <screen x="-1600" y="174" width="1600" height="860" />
+    <state x="556" y="218" width="807" height="820" key="search.everywhere.popup" timestamp="1604943916006">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1137" y="354" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604766888076" />
+    <state x="556" y="218" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1604943916006" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -7,6 +7,7 @@
     <link rel="icon" type="image/ico" href="favicon.ico"/>
     <link rel="stylesheet" href="basescript.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
 
@@ -39,27 +40,28 @@
 </div> <!-- Koniec Headeru -->
 
 <div class="contentContainer">
-    <form class="signup">
+    <form class="signup" action="includes/SignupScript.php" method="post">
 
     <ul>
         <li>
-        <label for="login">Login</label>
-        <input type="text" id="login" name="login" placeholder="User Name">
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" placeholder="User Name">
         </li>
         <li>
             <label for="e-mail">E-Mail</label>
             <input type="text" id="e-mail" name="e-mail" placeholder="E-Mail">
         </li>
         <li>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="min. 6 char.">
+             <label for="password">Password</label>v
+             <input type="password" id="password" name="password" placeholder="min. 6 char.">
         </li>
         <li>
-        <label for="repeat-password">Repeat Password</label>
-        <input type="password" id="repeat-password" name="repeat-password" placeholder="min. 6 char.">
+             <label for="repeat-password">Repeat Password</label>
+              <input type="password" id="repeat-password" name="repeat-password" placeholder="min. 6 char.">
         </li>
         <li>
-            <input type="button" id="signup-button" name="signup-button" value="Sign Up">
+            <input type="submit" name="signup-proceed">Sign Up>
+           <!-- <input type="button" id="signup-proceed" name="signup-proceed" value="Sign Up"> --->
         </li>
 
     </ul>

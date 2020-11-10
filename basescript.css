@@ -131,8 +131,29 @@ body {
     transition: 0.25s;
     width: 100%;
     outline: none;
+}
+
+.login-container .person-content:before {
+    content: "person";
+}
+
+.login-container .login-button:hover:before {
+    content: "how_to_reg";
+
+}
 
 
+.login-container .login-button {
+
+    background-color: inherit;
+    border-style: none;
+    color: rgb(123, 44, 191);
+
+}
+
+.login-container .login-button:hover {
+    color: white;
+    transition: .5s ease;
 }
 
 .login-container li.has-login-dropdown {
@@ -140,6 +161,9 @@ body {
     flex-direction: column;
 
 }
+
+
+
 
 
 
@@ -172,7 +196,7 @@ body {
 
 }
 
-.hidden-signup input[type = "button"]:hover   {
+.hidden-signup input[type = "submit"]:hover   {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 7px;
 
@@ -185,7 +209,7 @@ body {
 
 }
 
-.hidden-signup input[type = "button"]{
+.hidden-signup input[type = "submit"]{
     background-color: inherit;
     border: 2px rebeccapurple solid;
     text-align: center;
@@ -573,13 +597,13 @@ footer p{
 
 }
 
-.signup ul li input[type = "button"] {
+.signup ul li input[type = "submit"] {
     width: 10em;
     margin-top: 1.5em;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.signup ul li input[type = "button"]:focus {
+.signup ul li button:focus {
     width: 10em;
 
 }
