@@ -268,20 +268,18 @@ body {
 .form-default-hidden {
     display: flex;
     align-content: space-evenly;
+
 }
 
 .form-default-hidden ul {
     display: flex;
-    align-content: space-around;
+    justify-content: center;
     width: 90%;
-    padding: 0 1em;
+    padding: 0.5336em 1em;
+    margin: 0;
 }
 
 
-.logged-in-text {
-
-
-}
 
 .form-default-hidden input[type = "submit"] {
     display: flex;
@@ -304,23 +302,42 @@ body {
     width: 100%;
 }
 
+.form-default-hidden .logged-in-text, .form-default-hidden .logged-in-user {
+display: unset;
+}
+
+.logged-container li {
+    width: 100%;
+    font-size: 1em;
+}
+
+.login-container .logged-in-text {
+    width: 55%;
+
+}
+
 .logged-in-text {
     border: 2px rebeccapurple solid;
-    color: ghostwhite;
-    border-radius: 24px;
+    color: rebeccapurple;
     float: left;
+
 }
 
 .logged-in-user {
-    display: flex;
-    justify-content: space-around;
     border: 2px rebeccapurple solid;
-    color: ghostwhite;
-    border-radius: 10px;
+    color: rebeccapurple;
+    float: left;
+
 }
 
 .logged-in-user p {
+    text-align: center;
+}
 
+.form-default-hidden .logout-button {
+    display: flex;
+    width: unset;
+    justify-content: flex-end;
 }
 
 

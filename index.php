@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,17 +41,19 @@ session_start();
                                   <div class="login-container logged-container">
                                      <form class="form-default-hidden" action="includes/LogoutScript.php" method="post">
                                         <ul>
+                                  
                                             <li class="logged-in-text">
                                             <p> Prihlaseny ako: </p>
                                             </li>
                                             <li class="logged-in-user">
                                             <p>' . $_SESSION['userLogin'] . ' </p></p>
                                             </li>
-                                            <li>
-                                     
-                                             <input type="submit" name="logout" value="Log Out">
-                                            </li>
-                                        
+                                            
+                                         </ul>
+                                         <ul class="logout-button">
+                                             <li>
+                                                <input type="submit" name="logout" value="Log Out">
+                                            </li> 
                                         </ul>
    
    
