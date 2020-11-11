@@ -15,7 +15,7 @@ class LoginScript
         session_start();
         if (isset($_POST['signup'])) {
 
-            header('location: ../signup.html?redirectFrom=loginForm');
+            header('location: ../signup.php?redirectFrom=loginForm');
             exit();
 
         } else if (isset($_POST['forgotPass'])) {

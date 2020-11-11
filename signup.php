@@ -25,10 +25,10 @@
             <div class="navigation-menu">
                 <ul>
                     <li><a class="navbar-item" href="index.php">O Mne</a></li>
-                    <li><a class="navbar-item" href="projects.html">Projekty</a></li>
-                    <li><a class="navbar-item" href="gallery.html">Galéria</a></li>
-                    <li><a class="navbar-item" href="blog.html">Blog</a></li>
-                    <li><a class="navbar-item" href="order.html">Objednávky</a></li>
+                    <li><a class="navbar-item" href="projects.php">Projekty</a></li>
+                    <li><a class="navbar-item" href="gallery.php">Galéria</a></li>
+                    <li><a class="navbar-item" href="blog.php">Blog</a></li>
+                    <li><a class="navbar-item" href="order.php">Objednávky</a></li>
                 </ul>
 
             </div>
@@ -60,9 +60,46 @@
               <input type="password" id="repeat-password" name="repeat-password" placeholder="min. 6 char.">
         </li>
         <li>
-            <input type="submit" name="signup-proceed">Sign Up>
+            <input type="submit" name="signup-proceed">
            <!-- <input type="button" id="signup-proceed" name="signup-proceed" value="Sign Up"> --->
         </li>
+        <?php
+
+        if (isset($_GET['success']))
+        {
+            if ($_GET['success'] == 'uspZareg')
+            {
+                echo '<li>';
+                echo '<p class="success-messages">Úspešne zaregistrovaný</p>';
+                echo '</li>';
+            }
+        }
+        else if ((isset($_GET['error'])))
+        {
+            echo '<li>';
+
+            if ($_GET['error'] == 'prazdnyInput')
+            {
+                echo '<p class="error-messages">Error: Niektore z poli je prazdne!</p>';
+            }
+            else if ($_GET['error'] == 'zlyEmail')
+            {
+                echo '<p class="error-messages">Error: Zadali ste neexistujuci E-Mail!</p>';
+            }
+            else if ($_GET['error'] == 'nezhodneHesla')
+            {
+                echo '<p class="error-messages">Error: Hesla sa nezhoduju!</p>';
+            }
+            else if ($_GET['error'] == 'loginNotUnique')
+            {
+                echo '<p class="error-messages">Error: Takylo login uz existuje!</p>';
+            }
+
+            echo '</li>';
+        }
+
+
+        ?>
 
     </ul>
 

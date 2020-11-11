@@ -683,7 +683,18 @@ footer p{
 
 .signup ul li button:focus {
     width: 10em;
+}
 
+.signup ul li .error-messages {
+    text-align: center;
+    color: rebeccapurple;
+    font-size: 1.5em;
+}
+
+.signup ul li .success-messages {
+    text-align: center;
+    color: lightgrey;
+    font-size: 1.5em;
 }
 
 

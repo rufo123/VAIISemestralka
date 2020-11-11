@@ -23,10 +23,10 @@
              <div class="navigation-menu">
                  <ul>
                     <li><a class="navbar-item" href="index.php">O Mne</a></li>
-                    <li><a class="navbar-item" href="projects.html">Projekty</a></li>
-                    <li><a class="navbar-item" href="gallery.html">Galéria</a></li>
-                    <li><a class="navbar-item" href="blog.html">Blog</a></li>
-                    <li><a class="navbar-item" href="order.html">Objednávky</a></li>
+                    <li><a class="navbar-item" href="projects.php">Projekty</a></li>
+                    <li><a class="navbar-item" href="gallery.php">Galéria</a></li>
+                    <li><a class="navbar-item" href="blog.php">Blog</a></li>
+                    <li><a class="navbar-item" href="order.php">Objednávky</a></li>
                  </ul>
             
              </div>
@@ -35,8 +35,6 @@
             </div>
 
         </div>
-
-    </div>
 
 </div> <!-- Koniec Headeru -->
 

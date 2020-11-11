@@ -53,7 +53,7 @@ class SignupScript
     {
         if ( empty($login) || empty($email) || empty($pass) || empty($repeatPass) ) {
 
-            header('location: ../signup.html?error=prazdnyInput'); //Spolu s navratom na signup vratim aj error message, v tomto pripade
+            header('location: ../signup.php?error=prazdnyInput'); //Spolu s navratom na signup vratim aj error message, v tomto pripade
             exit();                                                      //Informujem pouzivatela o tom, ze nevyplnil nejake pole
         }
 
@@ -63,7 +63,7 @@ class SignupScript
     {
         if (!filter_var( $email, FILTER_VALIDATE_EMAIL)){
 
-            header('location: ../signup.html?error=zlyEmail&login=' . $login);
+            header('location: ../signup.php?error=zlyEmail&login=' . $login);
             exit();
         }
 
@@ -73,7 +73,7 @@ class SignupScript
     {
         if (!preg_match('/^[a-zA-Z0-9_]*$/', $login)) {
 
-            header('location ../signup.html?error=zlyLogin$email=' . $email);
+            header('location ../signup.php?error=zlyLogin$email=' . $email);
             exit();
 
         }
@@ -84,7 +84,7 @@ class SignupScript
     {
         if ($pass !== $repeatPass) {
 
-            header('location ../signup.html?error=nezhodneHesla$email=' . $email . '$login' . $login);
+            header('location ../signup.php?error=nezhodneHesla$email=' . $email . '$login' . $login);
             exit();
 
         }
@@ -100,7 +100,7 @@ class SignupScript
         $stmtSelectLogin = $conn->stmt_init();
 
         if (!$stmtSelectLogin->prepare($sqlLogin)) { //Ak doslo k nejakej chybe
-            header('location: ../signup.html?error=stmtError');
+            header('location: ../signup.php?error=stmtError');
             exit();
         }
 
@@ -112,7 +112,7 @@ class SignupScript
 
         if ($result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
 
-            header('location: ../signup.html?error=loginNotUnique');
+            header('location: ../signup.php?error=loginNotUnique');
             exit();
 
         }
@@ -127,7 +127,7 @@ class SignupScript
         $stmtCreate = $conn->stmt_init();
 
         if (!$stmtCreate->prepare($sql)) { //Ak doslo k nejakej chybe
-            header('location: ../signup.html?error=stmtError');
+            header('location: ../signup.php?error=stmtError');
             exit();
         }
 
@@ -136,7 +136,7 @@ class SignupScript
         $stmtCreate->bind_param('sss', $login, $email, $hashPass); //ss - String, String
         $stmtCreate->execute();
         $stmtCreate->close();
-        header('location: ../signup.html?success=uspZareg');
+        header('location: ../signup.php?success=uspZareg');
         exit();
     }
 
