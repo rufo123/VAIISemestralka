@@ -180,10 +180,6 @@ body {
     justify-content: space-around;
     transition: opacity 1s ease-out;
     opacity: 0;
-
-
-
-
 }
 
 .hidden-signup ul {
@@ -773,6 +769,16 @@ footer p{
 
     }
 
+    .navigation-login .login-container ul li label[for=login] {
+        margin-left: 3.6em;
+
+    }
+
+    .navigation-login .login-container ul li label[for=password] {
+        margin-left: 3.0em;
+
+    }
+
 }
 
 @media screen and (max-width: 550px) {
@@ -788,6 +794,15 @@ footer p{
     }
 
 
+
+
+}
+
+@media screen and (max-width: 515px) {
+
+    .hidden-signup {
+        margin-left: calc( (0em) );
+    }
 
 }
 
@@ -815,6 +830,34 @@ footer p{
 
     }
 
+    .navigation-login {
+
+        width: unset;
+    }
+
+    .login-container{
+        display: flex;
+        float: inherit;
+
+
+    }
+
+    .login-container form {
+        float: right;
+        overflow: hidden;
+    }
+
+    .login-container li.has-login-dropdown {
+
+        width: 10%;
+    }
+
+    .hidden-signup {
+        margin-top: 2.3em;
+        margin-left: calc( (-2em) );
+    }
+
+
 }
 
 
@@ -830,6 +873,30 @@ footer p{
     .navbar-item {
         padding: 1px;
     }
+
+    .navigation-login .login-container ul li label[for=login] {
+        margin-left: -1em;
+
+    }
+
+    .navigation-login .login-container ul li label[for=password] {
+        margin-left: -1em;
+
+    }
+
+    .hidden-signup {
+
+        width: 6em;
+        margin-top: 8em;
+        margin-left: calc( (0em) );
+
+    }
+
+    .hidden-signup li {
+        padding: 0.8em 0 0.7em 0;
+
+    }
+
 
 }
 
