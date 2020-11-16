@@ -31,9 +31,9 @@ class SignupScript
             $this->isValidnyEmail($email, $login);
             $this->isValidnyLogin($email, $login);
             $this->isRovnakeHeslo($pass, $repeatPass, $login, $email);
-            $this->isLoginUnique($dbConn->getConn(), $login);
+            $this->isLoginUnique($dbConn->getInitConn(), $login);
 
-            $this->vytvorPouzivatela($dbConn->getConn(), $login, $email, $pass);
+            $this->vytvorPouzivatela($dbConn->getInitConn(), $login, $email, $pass);
 
 
 

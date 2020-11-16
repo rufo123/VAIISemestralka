@@ -7,17 +7,14 @@ class DBConn
     private string $aDBlogin = 'semvaidbmanager';
     private string $aDBpass = 'GaRdaqQ78';
     private string $aDBmeno = 'vaisemestralka';
-    private mysqli $conn;
+    private mysqli $initConn;
 
     public function __construct() {
 
-
-
         $this->setConn(new mysqli($this->getAServerName(), $this->getADBlogin(), $this->getADBpass(), $this->getADBmeno()));
-        $conn = $this->getConn();
-
-        if($conn->connect_error) {
-            die('Pripojenie sa nezdarilo' . $conn->connect_error);
+        $initConn = $this->getInitConn();
+        if($initConn->connect_error) {
+            die('Pripojenie sa nezdarilo' . $initConn->connect_error);
         }
 
     }
@@ -59,17 +56,17 @@ class DBConn
     /**
      * @return mysqli
      */
-    public function getConn(): mysqli
+    public function getInitConn(): mysqli
     {
-        return $this->conn;
+        return $this->initConn;
     }
 
     /**
-     * @param mysqli $conn
+     * @param mysqli $parConn
      */
-    private function setConn(mysqli $conn): void
+    private function setConn(mysqli $parConn): void
     {
-        $this->conn = $conn;
+        $this->initConn = $parConn;
     }
 
 

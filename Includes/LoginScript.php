@@ -36,7 +36,7 @@ class LoginScript
 
 
 
-            $this->prihlasPouzivatela(($this->isLoginCorrect($dbConn->getConn(), $user)) , $pass );
+            $this->prihlasPouzivatela(($this->isLoginCorrect($dbConn->getInitConn(), $user)) , $pass );
 
 
         } else {

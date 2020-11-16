@@ -42,8 +42,8 @@ session_start();
                                      <form class="form-default-hidden" action="includes/LogoutScript.php" method="post">
                                         <ul>
                                   
-                                            <li class="logged-in-text">
-                                            <p> Prihlaseny ako: </p>
+                                            <li class="logged-in-avatar">
+                                            <img src="images/userAvatars/default.png" alt="profile-photo">
                                             </li>
                                             <li class="logged-in-user">
                                             <p>' . $_SESSION['userLogin'] . ' </p></p>
@@ -52,7 +52,7 @@ session_start();
                                          </ul>
                                          <ul class="logout-button">
                                              <li>
-                                                <input type="submit" name="logout" value="Log Out">
+                                                 <button class="exit_to_app-content mdc-icon-button material-icons logout" name="login-proceed">exit_to_app</button>
                                             </li> 
                                         </ul>
    
@@ -83,9 +83,10 @@ session_start();
                                          <ul>
                                             <li><input type="submit" name="signup" value="Sign Up"></li>
                                             <li><input type="submit" name="forgotPass" value="Forgot Pass"></li>
-
                                       </ul>
-                                  </div>
+                                    </div>
+                                    
+                                    
                                  </li>
 
                                <li>
