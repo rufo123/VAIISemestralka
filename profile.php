@@ -72,48 +72,57 @@
         <li>
 
             <?php  echo '<p> Prihlaseny ako: '.  $profileData->getUserLogin($savedUserData) . '</p>'  ?>
-
             <div class="profile-change-box">
-            <label for="changeUserShow">User Name</label>
-            <input type="text" name="changeUserShow" id="changeUserShow" placeholder="User Name">
-            <input type="submit" name="changeUserProceed">
+                <div class="profile-change-label">
+                    <label for="changeUserShow">User Name</label>
+                    <input type="text" name="changeUserShow" id="changeUserShow" placeholder="User Name">
+                    <input type="submit" name="changeUserProceed">
+                </div>
             </div>
+
         </li>
         <li>
             <?php  echo '<p> Meno Pouzivatela : '.  $profileData->getFirstName($savedProfileData) . '</p>'  ?>
             <div class="profile-change-box">
-            <label for="changeNameShow">Meno</label>
-            <input type="text" name="changeNameShow" id="changeNameShow" placeholder="Name">
-            <input type="submit" name="changeNameProceed">
+                <div class="profile-change-label">
+                     <label for="changeNameShow">Meno</label>
+                     <input type="text" name="changeNameShow" id="changeNameShow" placeholder="Name">
+                     <input type="submit" name="changeNameProceed">
             </div>
         </li>
         <li>
             <?php  echo '<p> Priezvisko Pouzivatela : '.  $profileData->getLastName($savedProfileData) . '</p>'  ?>
             <div class="profile-change-box">
-            <label for="changeSurnameShow">Priezvisko</label>
-            <input type="text" name="changeSurnameShow" id="changeSurnameShow" placeholder="Surname">
-            <input type="submit" name="changeSurnameProceed">
+                <div class="profile-change-label">
+                    <label for="changeSurnameShow">Priezvisko</label>
+                    <input type="text" name="changeSurnameShow" id="changeSurnameShow" placeholder="Surname">
+                    <input type="submit" name="changeSurnameProceed">
+                </div>
             </div>
         </li>
         <li>
 
             <?php  echo '<p> Email: '.  $profileData->getEmailUser($savedUserData) . '</p>'  ?>
             <div class="profile-change-box">
-            <label for="changeEmailShow">E-Mail</label>
-            <input type="text" name="changeEmailShow" id="changeEmailShow" placeholder="E-Mail">
-            <input type="submit" name="changeEmailProceed">
+                <div class="profile-change-label">
+                    <label for="changeEmailShow">E-Mail</label>
+                    <input type="text" name="changeEmailShow" id="changeEmailShow" placeholder="E-Mail">
+                    <input type="submit" name="changeEmailProceed">
+                </div>
             </div>
         </li>
         <li>
-            <p class="password-desc">Zmena Hesla:</p>
-            <div class="profile-change-box profile-change-box-password">
-            <label for="changePassShow">Heslo</label>
-            <input type="password" name="changePassShow" id="changePassShow" placeholder="Password">
-            <label for="changeRepeatPassShow">Heslo Znova</label>
-            <input type="password" name="changeRepeatPassShow" id="changeRepeatPassShow" placeholder="Repeat Password">
-            <input type="submit" name="changePassSubmit">
-            </div>
 
+            <p class="password-desc">Zmena Hesla:</p>
+            <div class="profile-change-box profile-change-box-row">
+                <div class="profile-change-label">
+                    <label for="changePassShow">Heslo</label>
+                    <input type="password" name="changePassShow" id="changePassShow" placeholder="Password">
+                    <label for="changeRepeatPassShow">Heslo Znova</label>
+                    <input type="password" name="changeRepeatPassShow" id="changeRepeatPassShow" placeholder="Repeat Password">
+                    <input type="submit" name="changePassSubmit">
+                 </div>
+            </div>
         </li>
     </ul>
 

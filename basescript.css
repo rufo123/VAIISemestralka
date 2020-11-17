@@ -777,69 +777,78 @@ footer p{
     border: 2px solid rebeccapurple;
     padding: 1em;
     border-radius: 24px;
-    text-align: left;
-    width: 50%;
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
 
 }
 
-.profile-content .profile-change-box {
-    width: 46%;
+.profile-content .profile-change-label {
     display: inline-flex;
-    justify-content: flex-end;
-
-
+    justify-content: flex-start;
+    margin-left: 1em;;
 }
 
 
 
-
-.profile-content .profile-change-box label {
-    border: 2px solid turquoise;
-    padding: 1em;
+.profile-content .profile-change-label label {
+    padding: 0.8em;
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
-    margin-right: 10%;
+    min-width: 5em;
+
+
+}
+.profile-content .profile-change-label input[type="text"] {
+    min-width: 11em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
 
 }
 
-
-
-
-.profile-content .profile-change-box input[type = "text"] {
-    border: 2px solid black;
-    width: 40%;
+.profile-content .profile-change-label input[type="text"]:focus {
+    min-width: 15em;
+    transition: 0.5s;
 
 }
 
-
-
-.profile-content .profile-change-box input[type= "submit"] {
-    border: 2px solid rebeccapurple;
-    min-width: 5%;
-    align-items: flex-end;
-    margin-left: 10%;
+.profile-content .profile-change-label input[type="submit"] {
+    background-color: rgba(102, 51, 153, 0.7);
+    border: none;
+}
+.profile-content .profile-change-label input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.5s;
 }
 
-.profile-content .profile-change-box-password{
-    width: 100%;
+.profile-change-box {
     display: inline-flex;
-    justify-content: space-around;
-
+    width: 60%;
+    padding: 0.8em;
+    justify-content: center;
 }
 
-.profile-content .profile-change-box-password label {
-    margin-right: 0%;
-
+.profile-change-box input {
+    padding: 0.8em;
 }
 
-.profile-content .profile-change-box-password input[type= "submit"] {
-    width: 10%;
-    margin-left: 0%;
+.profile-change-box-row {
+
+    display: flex;
+    width: 100%;
 }
 
+.profile-content .profile-change-label input[type="password"] {
+    min-width: 10em;
+    text-align: center;
+}
 
+.profile-content .profile-change-label input[type="password"]:focus {
+    min-width: 15em;
+    transition: 0.5s;
 
-
+}
 
 
 
