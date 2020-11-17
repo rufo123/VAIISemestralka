@@ -6,7 +6,6 @@ class SignupScript
 {
 
 
-
     public function __construct()
     {
 
@@ -18,13 +17,10 @@ class SignupScript
             $dbConn = new DBConn();
 
 
-
-
-
             $login = $_POST['login'];
             $email = $_POST['e-mail'];
             $pass = $_POST['password'];
-            $repeatPass= $_POST['repeat-password'];
+            $repeatPass = $_POST['repeat-password'];
 
 
             $this->isPrazdnyInput($login, $email, $pass, $repeatPass);
@@ -36,22 +32,14 @@ class SignupScript
             $this->vytvorPouzivatela($dbConn->getInitConn(), $login, $email, $pass);
 
 
-
-
-
-
-
-
-
         }
-
 
 
     }
 
-    public function isPrazdnyInput(string $login, string $email, string $pass, string $repeatPass) : void
+    public function isPrazdnyInput(string $login, string $email, string $pass, string $repeatPass): void
     {
-        if ( empty($login) || empty($email) || empty($pass) || empty($repeatPass) ) {
+        if (empty($login) || empty($email) || empty($pass) || empty($repeatPass)) {
 
             header('location: ../signup.php?error=prazdnyInput'); //Spolu s navratom na signup vratim aj error message, v tomto pripade
             exit();                                                      //Informujem pouzivatela o tom, ze nevyplnil nejake pole
@@ -59,9 +47,9 @@ class SignupScript
 
     }
 
-    public function isValidnyEmail(string $email, string $login) : void
+    public function isValidnyEmail(string $email, string $login): void
     {
-        if (!filter_var( $email, FILTER_VALIDATE_EMAIL)){
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
             header('location: ../signup.php?error=zlyEmail&login=' . $login);
             exit();
@@ -69,7 +57,7 @@ class SignupScript
 
     }
 
-    public function isValidnyLogin(string $email, string $login) : void
+    public function isValidnyLogin(string $email, string $login): void
     {
         if (!preg_match('/^[a-zA-Z0-9_]*$/', $login)) {
 
@@ -80,7 +68,7 @@ class SignupScript
 
     }
 
-    public function isRovnakeHeslo(string $pass, string $repeatPass, string $login, string $email ) : void
+    public function isRovnakeHeslo(string $pass, string $repeatPass, string $login, string $email): void
     {
         if ($pass !== $repeatPass) {
 
@@ -94,20 +82,19 @@ class SignupScript
     public function isLoginUnique(mysqli $conn, string $login) : void
     {
 
-        $sqlLogin = "SELECT * FROM pouzivatelia WHERE loginPouzivatela = ?;";
+        $sqlUniqueCheck = "SELECT * FROM pouzivatelia WHERE loginPouzivatela = ?;";
 
+        $stmtSelectUnique = $conn->stmt_init();
 
-        $stmtSelectLogin = $conn->stmt_init();
-
-        if (!$stmtSelectLogin->prepare($sqlLogin)) { //Ak doslo k nejakej chybe
+        if (!$stmtSelectUnique->prepare($sqlUniqueCheck)) { //Ak doslo k nejakej chybe
             header('location: ../signup.php?error=stmtError');
             exit();
         }
 
-        $stmtSelectLogin->bind_param("s", $login); //ss - String, String
-        $stmtSelectLogin->execute();
-        $stmtSelectLogin->store_result();
-        $result = $stmtSelectLogin->num_rows();
+        $stmtSelectUnique->bind_param("s", $login); //ss - String, String
+        $stmtSelectUnique->execute();
+        $stmtSelectUnique->store_result();
+        $result = $stmtSelectUnique->num_rows();
 
 
         if ($result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
@@ -116,26 +103,44 @@ class SignupScript
             exit();
 
         }
-        //Pridaj Aj mail
 
     }
 
     public function vytvorPouzivatela(mysqli $conn, string $login, string $email, string $pass) : void
     {
 
-        $sql = 'INSERT INTO pouzivatelia (loginPouzivatela, emailPouzivatela, passPouzivatela) VALUES (?, ?, ?)';
-        $stmtCreate = $conn->stmt_init();
+        $sqlPouzivatelia = 'INSERT INTO pouzivatelia (loginPouzivatela, emailPouzivatela, passPouzivatela) VALUES (?, ?, ?)';
 
-        if (!$stmtCreate->prepare($sql)) { //Ak doslo k nejakej chybe
-            header('location: ../signup.php?error=stmtError');
+        $sqlSelectID = 'INSERT INTO profile_data ( idUser ) 
+                        SELECT idPouzivatela 
+                        FROM pouzivatelia
+                        WHERE loginPouzivatela = ?';
+
+
+        $stmtPouzivateliaCreate = $conn->stmt_init();
+
+        if (!$stmtPouzivateliaCreate->prepare($sqlPouzivatelia)) { //Ak doslo k nejakej chybe
+            header('location: ../signup.php?error=stmtErrorPouzivateliaCreate');
             exit();
         }
 
         $hashPass = password_hash($pass, PASSWORD_DEFAULT); //Hashovanie hesla
 
-        $stmtCreate->bind_param('sss', $login, $email, $hashPass); //ss - String, String
-        $stmtCreate->execute();
-        $stmtCreate->close();
+        $stmtPouzivateliaCreate->bind_param('sss', $login, $email, $hashPass); //ss - String, String
+        $stmtPouzivateliaCreate->execute();
+        $stmtPouzivateliaCreate->close();
+
+        $stmtSelectID = $conn->stmt_init();
+
+        if (!$stmtSelectID->prepare($sqlSelectID)) {
+            header('location: ../signup.php?error=stmtErrorSelectID');
+            exit();
+        }
+        $stmtSelectID->bind_param('s', $login); //s - String
+        $stmtSelectID->execute();
+        $stmtSelectID->close();
+
+
         header('location: ../signup.php?success=uspZareg');
         exit();
     }

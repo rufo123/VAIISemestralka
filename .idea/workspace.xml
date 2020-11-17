@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,9 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Prihlasovanie dokoncene - dorobit responzivny design">
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Responzivny Dizajn skoro hotovy">
+      <change afterPath="$PROJECT_DIR$/Includes/ChangeProfileData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Includes/SpolocneMetody.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/SignupScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/SignupScript.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,18 +65,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
-      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\php_mysql\www\VAIISemestralka\includes" />
+      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
+      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -118,7 +126,8 @@
       <workItem from="1605089126718" duration="4141000" />
       <workItem from="1605105268319" duration="2825000" />
       <workItem from="1605435656935" duration="14688000" />
-      <workItem from="1605525544350" duration="6027000" />
+      <workItem from="1605525544350" duration="6058000" />
+      <workItem from="1605613483593" duration="25225000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -274,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605525575180</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Responzivny Dizajn skoro hotovy">
+      <created>1605551464507</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1605551464507</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +328,8 @@
     <MESSAGE value="Prihlasovanie dokoncene - dorobit responzivny dizajn" />
     <MESSAGE value="Prerobene html na php" />
     <MESSAGE value="Prihlasovanie dokoncene - dorobit responzivny design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prihlasovanie dokoncene - dorobit responzivny design" />
+    <MESSAGE value="Responzivny Dizajn skoro hotovy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responzivny Dizajn skoro hotovy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
@@ -328,14 +345,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605438991836" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1605023616946">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1605618180950">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605023616946" />
-    <state x="425" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605449314438">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605618180950" />
+    <state x="425" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605628346582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="425" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605449314438" />
+    <state x="425" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605628346582" />
     <state x="236" y="57" key="DiffContextDialog" timestamp="1602526210500">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -354,11 +373,12 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
-    <state x="706" y="184" key="NewPhpClassDialog" timestamp="1605091128140">
+    <state x="706" y="184" key="NewPhpClassDialog" timestamp="1605628205462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1012" y="326" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926362416" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605091128140" />
+    <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605628205462" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605442376335">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -367,35 +387,42 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603183248950" />
-    <state x="-1093" y="210" key="SettingsEditor" timestamp="1604926180735">
-      <screen x="-1600" y="174" width="1600" height="860" />
+    <state x="465" y="80" key="SettingsEditor" timestamp="1605638519498">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
+    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605638519498" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1605525577242">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1605551466146">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605525577242" />
-    <state x="500" y="214" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605441661295">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605551466146" />
+    <state x="589" y="233" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605623584525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="500" y="214" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605441661295" />
+    <state x="589" y="233" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605623584525" />
+    <state x="540" y="339" width="1179" height="822" key="dock-window-1" timestamp="1605616216712">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="339" width="1179" height="822" key="dock-window-1/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605616216712" />
     <state x="635" y="173" width="585" height="534" key="find.popup" timestamp="1602489383295">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="635" y="173" width="585" height="534" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1602489383295" />
-    <state x="982" y="205" width="807" height="820" key="search.everywhere.popup" timestamp="1605447770035">
+    <state x="982" y="205" width="807" height="820" key="search.everywhere.popup" timestamp="1605634771620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1137" y="354" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604766888076" />
     <state x="982" y="205" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605447770035" />
+    <state x="982" y="205" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605634771620" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

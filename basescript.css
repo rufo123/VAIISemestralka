@@ -706,6 +706,7 @@ footer p{
     margin: 0 auto;
     border: 1px solid rebeccapurple;
     border-radius: 5px;
+    overflow: hidden;
 
 }
 
@@ -727,6 +728,7 @@ footer p{
 
     display: flex;
 
+    width: 82%;
 
 
 
@@ -736,9 +738,10 @@ footer p{
     display: inline-flex;
     float: left;
     color: white;
-    margin: 0 auto;
     list-style: none;
     padding: 0;
+    margin: 0 auto 1em;
+    width: 90%;
 
 
 }
@@ -750,6 +753,94 @@ footer p{
 
 
 }
+
+.profile-content .profile-data-ul {
+
+    margin-left: 3.5em;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.profile-content ul li {
+
+
+}
+
+.profile-content ul li .password-desc {
+    width: 100%;
+}
+
+.profile-content ul li p {
+    display: inline-flex;
+    border: 2px solid rebeccapurple;
+    padding: 1em;
+    border-radius: 24px;
+    text-align: left;
+    width: 50%;
+
+}
+
+.profile-content .profile-change-box {
+    width: 46%;
+    display: inline-flex;
+    justify-content: flex-end;
+
+
+}
+
+
+
+
+.profile-content .profile-change-box label {
+    border: 2px solid turquoise;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin-right: 10%;
+
+}
+
+
+
+
+.profile-content .profile-change-box input[type = "text"] {
+    border: 2px solid black;
+    width: 40%;
+
+}
+
+
+
+.profile-content .profile-change-box input[type= "submit"] {
+    border: 2px solid rebeccapurple;
+    min-width: 5%;
+    align-items: flex-end;
+    margin-left: 10%;
+}
+
+.profile-content .profile-change-box-password{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+
+}
+
+.profile-content .profile-change-box-password label {
+    margin-right: 0%;
+
+}
+
+.profile-content .profile-change-box-password input[type= "submit"] {
+    width: 10%;
+    margin-left: 0%;
+}
+
+
+
+
+
 
 
 
@@ -833,6 +924,7 @@ footer p{
     .navigation-login {
 
         width: unset;
+        float: unset;
     }
 
     .login-container{
@@ -840,11 +932,13 @@ footer p{
         float: inherit;
 
 
+
     }
 
     .login-container form {
         float: right;
         overflow: hidden;
+        width: 100%;
     }
 
     .login-container li.has-login-dropdown {
@@ -856,6 +950,8 @@ footer p{
         margin-top: 2.3em;
         margin-left: calc( (-2em) );
     }
+
+
 
 
 }
@@ -914,6 +1010,10 @@ footer p{
 
     .navigation-menu li {
        display: none;
+    }
+
+    .navigation-login  {
+        opacity: 0;
     }
 
 

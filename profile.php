@@ -41,6 +41,13 @@
 
 <div class="contentContainer">
 <div class="profile-content">
+    <form method="post" action="includes/ChangeProfileData.php">
+
+    <?php require "includes/ChangeProfileData.php";
+    $savedUserData = $profileData->selectPouzivateliaData($profileData->getDbConn(), $profileData->getUserLoggedWithAs());
+    $savedProfileData = $profileData->selectProfileData($profileData->getDbConn(), $profileData->getIDUser($savedUserData));
+
+    ?>
 
     <div class="profile-top-image-name">
 
@@ -49,12 +56,8 @@
         <div class="profile-name">
              <ul>
                  <li class="li-name">
-                      Test
+                      Nahrať súbor
                  </li> <!-- First Name -->
-
-                 <li class="li-name">
-                     Test2
-                 </li> <!-- Last Name -->
 
              </ul>
         </div>
@@ -63,10 +66,61 @@
 
     </div>
 
+    <ul class="profile-data-ul">
+
+
+        <li>
+
+            <?php  echo '<p> Prihlaseny ako: '.  $profileData->getUserLogin($savedUserData) . '</p>'  ?>
+
+            <div class="profile-change-box">
+            <label for="changeUserShow">User Name</label>
+            <input type="text" name="changeUserShow" id="changeUserShow" placeholder="User Name">
+            <input type="submit" name="changeUserProceed">
+            </div>
+        </li>
+        <li>
+            <?php  echo '<p> Meno Pouzivatela : '.  $profileData->getFirstName($savedProfileData) . '</p>'  ?>
+            <div class="profile-change-box">
+            <label for="changeNameShow">Meno</label>
+            <input type="text" name="changeNameShow" id="changeNameShow" placeholder="Name">
+            <input type="submit" name="changeNameProceed">
+            </div>
+        </li>
+        <li>
+            <?php  echo '<p> Priezvisko Pouzivatela : '.  $profileData->getLastName($savedProfileData) . '</p>'  ?>
+            <div class="profile-change-box">
+            <label for="changeSurnameShow">Priezvisko</label>
+            <input type="text" name="changeSurnameShow" id="changeSurnameShow" placeholder="Surname">
+            <input type="submit" name="changeSurnameProceed">
+            </div>
+        </li>
+        <li>
+
+            <?php  echo '<p> Email: '.  $profileData->getEmailUser($savedUserData) . '</p>'  ?>
+            <div class="profile-change-box">
+            <label for="changeEmailShow">E-Mail</label>
+            <input type="text" name="changeEmailShow" id="changeEmailShow" placeholder="E-Mail">
+            <input type="submit" name="changeEmailProceed">
+            </div>
+        </li>
+        <li>
+            <p class="password-desc">Zmena Hesla:</p>
+            <div class="profile-change-box profile-change-box-password">
+            <label for="changePassShow">Heslo</label>
+            <input type="password" name="changePassShow" id="changePassShow" placeholder="Password">
+            <label for="changeRepeatPassShow">Heslo Znova</label>
+            <input type="password" name="changeRepeatPassShow" id="changeRepeatPassShow" placeholder="Repeat Password">
+            <input type="submit" name="changePassSubmit">
+            </div>
+
+        </li>
+    </ul>
 
 
 
 
+    </form>
 </div>
 </div>
 
