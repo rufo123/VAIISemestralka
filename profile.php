@@ -43,9 +43,11 @@
 <div class="profile-content">
     <form method="post" action="includes/ChangeProfileData.php">
 
-    <?php require "includes/ChangeProfileData.php";
-    $savedUserData = $profileData->selectPouzivateliaData($profileData->getDbConn(), $profileData->getUserLoggedWithAs());
-    $savedProfileData = $profileData->selectProfileData($profileData->getDbConn(), $profileData->getIDUser($savedUserData));
+    <?php require "includes/ViewProfileData.php";
+   // $savedUserData = $profileData->selectPouzivateliaData($profileData->getDbConn(), $profileData->getUserLoggedWithAs());
+   // $savedProfileData = $profileData->selectProfileData($profileData->getDbConn(), $profileData->getIDUser($savedUserData));
+
+    $profileData = new ViewProfileData();
 
     ?>
 
@@ -71,7 +73,7 @@
 
         <li>
 
-            <?php  echo '<p> Prihlaseny ako: '.  $profileData->getUserLogin($savedUserData) . '</p>'  ?>
+            <?php  echo '<p> Prihlaseny ako: '.  $profileData->getUserLogin() . '</p>'  ?>
             <div class="profile-change-box">
                 <div class="profile-change-label">
                     <label for="changeUserShow">User Name</label>
@@ -82,7 +84,7 @@
 
         </li>
         <li>
-            <?php  echo '<p> Meno Pouzivatela : '.  $profileData->getFirstName($savedProfileData) . '</p>'  ?>
+            <?php  echo '<p> Meno Pouzivatela : '.  $profileData->getUserFirstName() . '</p>'  ?>
             <div class="profile-change-box">
                 <div class="profile-change-label">
                      <label for="changeNameShow">Meno</label>
@@ -91,7 +93,7 @@
             </div>
         </li>
         <li>
-            <?php  echo '<p> Priezvisko Pouzivatela : '.  $profileData->getLastName($savedProfileData) . '</p>'  ?>
+            <?php  echo '<p> Priezvisko Pouzivatela : '.  $profileData->getUserLastName() . '</p>'  ?>
             <div class="profile-change-box">
                 <div class="profile-change-label">
                     <label for="changeSurnameShow">Priezvisko</label>
@@ -102,7 +104,7 @@
         </li>
         <li>
 
-            <?php  echo '<p> Email: '.  $profileData->getEmailUser($savedUserData) . '</p>'  ?>
+            <?php  echo '<p> Email: '.  $profileData->getUserEmail() . '</p>'  ?>
             <div class="profile-change-box">
                 <div class="profile-change-label">
                     <label for="changeEmailShow">E-Mail</label>
