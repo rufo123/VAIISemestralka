@@ -1,8 +1,9 @@
 <?php
 
-$profileData = new ChangeProfileData();
 
-class ChangeProfileData
+require_once "../includes/ViewProfileData.php";
+
+class ChangeProfileData extends ViewProfileData
 {
 
     private DBConn $dbConn;
@@ -14,12 +15,12 @@ class ChangeProfileData
      */
     public function __construct()
     {
+       parent::__construct();
 
-        session_start();
 
-        if (isset($_SESSION['userLogin'] ))
+
+        if (isset($_SESSION['userLogin']) && isset($_SESSION['idUser']))
         {
-            require 'DBConnect.php';
 
             $newDBConnect = new DBConn();
             $this->setDbConn($newDBConnect);
@@ -53,181 +54,6 @@ class ChangeProfileData
         $this->dbConn = $dbConn;
     }
 
-    public function selectPouzivateliaData(DBConn $parDBConn, string $parUsername)
-    {
-        $sqlUserData = "SELECT * FROM pouzivatelia WHERE loginPouzivatela = ?;";
-        return $this->workWithPreparedStatement($parDBConn, $sqlUserData, $parUsername);
-
-    }
-
-    public function selectProfileData(DBConn $parDBConn, string $parIDUser)
-    {
-        $sqlProfileData =  "SELECT * 
-                            FROM pouzivatelia JOIN profile_data
-                            ON (idPouzivatela = idUser)
-                            WHERE idPouzivatela = ?;";
-
-        return $this->workWithPreparedStatement($parDBConn, $sqlProfileData, $parIDUser);
-
-    }
-
-
-    public function workWithPreparedStatement(DBConn $parDBConn, string $parSQL, string $parString) {
-
-        $insideDB = $parDBConn->getInitConn();
-        $stmtProfileData = $insideDB->stmt_init();
-
-        if (!$stmtProfileData->prepare($parSQL))  //Ak doslo k nejakej chybe
-        {
-            header('location: ../index.php?error=profileStmtError');
-            exit();
-        }
-
-
-        $stmtProfileData->bind_param("s", $parString); //s - String
-        $stmtProfileData->execute();
-        $resultData = $stmtProfileData->get_result();
-
-        if ($vysledneDataZDB = $resultData->fetch_assoc()) //Priradime si data z DB do vysledneData a ak to prebehlo dobre vrati true
-        {
-            return $vysledneDataZDB;
-        }
-        else
-        {
-            $resultData = false;
-           // header('location: ../index.php?error=noLoginFound'); //Ak nebol najdeny dany login hodim false a presmeruje nas naspat
-            return $resultData;
-
-        }
-
-
-    }
-
-
-
-
-    public function getIDUser(array $parDBProfileDataArray) : string
-    {
-        if ($parDBProfileDataArray !== NULL) {
-            if ($userID = $parDBProfileDataArray["idPouzivatela"]) {
-
-                return $userID;
-
-            } else {
-
-                $resultID = false;
-                header('location: ../index.php?error=noIDFound'); //Ak sa nenaslo priradene ID k  loginu (Nemalo by sa stat)
-                return $resultID;
-
-            }
-
-        } else {
-            return false;
-        }
-
-    }
-
-    public function getEmailUser(array $parDBProfileDataArray) : string
-    {
-        if ($parDBProfileDataArray !== NULL) {
-
-            if ($emailUser = $parDBProfileDataArray["emailPouzivatela"]) {
-
-                return $emailUser;
-
-            } else {
-
-                $emailUser = false;
-                header('location: ../index.php?error=noEmailFound'); //Ak sa nenasiel priradeny Email k  loginu (Nemalo by sa stat)
-                return $emailUser;
-
-            }
-
-        } else {
-
-            return false;
-        }
-    }
-
-    public function getUserLogin(array $parDBProfileDataArray){
-
-        // return $_SESSION['userLogin']; //Toto nemozeme pouzit, pretoze niekedy sa pouzivatel prihlasuje emailom inokedy loginom..
-
-        if ($parDBProfileDataArray !== NULL) {
-
-            if ($loginUser = $parDBProfileDataArray["loginPouzivatela"]) {
-
-                return $loginUser;
-
-            } else {
-
-                $loginUser = false;
-                header('location: ../index.php?error=noLoginUserFound'); //Ak sa nenasiel priradeny Email k  loginu (Nemalo by sa stat)
-                return $loginUser;
-
-            }
-
-        } else {
-            return false;
-
-        }
-
-    }
-
-    public function getFirstName( array $parDBProfileDataArray) : string
-    {
-        if ($parDBProfileDataArray !== NULL) {
-
-            if ($firstNameOfUser = $parDBProfileDataArray["userFirstName"]) { //Tu si priradime obsah FirstNamu
-
-                    return $firstNameOfUser;
-
-
-            } else {
-
-                    return "Meno pouzivatela zatial nezadane";
-
-            }
-
-        } else {
-            return false;
-
-        }
-    }
-
-    public function getLastName( array $parDBProfileDataArray) : string
-    {
-        if ($parDBProfileDataArray !== NULL) {
-
-            if ($firstNameOfUser = $parDBProfileDataArray["userLastName"]) { //Tu si priradime obsah FirstNamu
-
-                return $firstNameOfUser;
-
-
-            } else {
-
-                return "Priezvisko pouzivatela zatial nezadane";
-
-            }
-
-        } else {
-            return false;
-
-        }
-    }
-
-
-    public function getUserLoggedWithAs(){
-
-        if (isset($_SESSION['userLogin'] ))
-        {
-            return $_SESSION['userLogin'];
-
-        } else {
-            return false;
-
-        }
-    }
 
     public function checkIfColEmpty(string $parNameOfCol) : bool
     {
@@ -261,11 +87,6 @@ class ChangeProfileData
         $stmtUsernameChange->execute();
         $stmtUsernameChange->close();
         //Kedze sme uspesne zmenili pouzivatelsky login, treba ho zmenit aj v session
-
-        session_start();
-        session_unset();
-        session_destroy();
-        session_start();
 
         $_SESSION['userLogin'] = $parChangeToWhat;
         header('location: ../profile.php?success=uspChangedUsername');
@@ -414,8 +235,7 @@ class ChangeProfileData
             }
             else
             {
-                $arrayWithDataFromPouzivatelia = $this->selectPouzivateliaData($this->getDbConn(), $this->getUserLoggedWithAs());
-                $this->changeUserName($changedUsername, $this->getDbConn()->getInitConn(),$this->getIDUser($arrayWithDataFromPouzivatelia) );
+                $this->changeUserName($changedUsername, $this->getDbConn()->getInitConn(),$_SESSION['idUser']);
             }
 
 
@@ -430,8 +250,7 @@ class ChangeProfileData
             }
             else
             {
-                $arrayWithDataFromProfileData = $this->selectPouzivateliaData($this->getDbConn(), $this->getUserLoggedWithAs());
-                $this->changeProfileRow($changedName, $this->getDbConn()->getInitConn(), $this->getIDUser($arrayWithDataFromProfileData), "userFirstName");
+                $this->changeProfileRow($changedName, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userFirstName");
 
             }
 
@@ -448,8 +267,7 @@ class ChangeProfileData
 
             } else
             {
-                $arrayWithDataFromProfileData = $this->selectPouzivateliaData($this->getDbConn(), $this->getUserLoggedWithAs());
-                $this->changeProfileRow($changedSurname, $this->getDbConn()->getInitConn(), $this->getIDUser($arrayWithDataFromProfileData), "userLastName");
+                $this->changeProfileRow($changedSurname, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userLastName");
 
             }
 
@@ -464,8 +282,8 @@ class ChangeProfileData
 
             } else
             {
-                $arrayWithDataFromPouzivatelia = $this->selectPouzivateliaData($this->getDbConn(), $this->getUserLoggedWithAs());
-                $this->changeEmail($changedEmail, $this->getDbConn()->getInitConn(),$this->getIDUser($arrayWithDataFromPouzivatelia) );
+
+                $this->changeEmail($changedEmail, $this->getDbConn()->getInitConn(), $_SESSION['idUser'] );
 
             }
 
@@ -481,8 +299,7 @@ class ChangeProfileData
 
             } else
             {
-                $arrayWithDataFromPouzivatelia = $this->selectPouzivateliaData($this->getDbConn(), $this->getUserLoggedWithAs());
-                $this->changePass($this->getDbConn()->getInitConn(), $changePass, $changeRepeatPass,$this->getIDUser($arrayWithDataFromPouzivatelia) );
+                $this->changePass($this->getDbConn()->getInitConn(), $changePass, $changeRepeatPass, $_SESSION['idUser'] );
             }
 
 
@@ -496,3 +313,5 @@ class ChangeProfileData
 
 
 }
+
+$changeProfileData = new ChangeProfileData();

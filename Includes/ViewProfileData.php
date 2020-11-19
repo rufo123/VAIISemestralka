@@ -1,6 +1,7 @@
 <?php
 
-require "includes/DBConnect.php";
+
+
 
 class ViewProfileData
 {
@@ -13,6 +14,9 @@ class ViewProfileData
     public function __construct()
     {
         session_start();
+
+        require 'DBConnect.php';
+
         $this->dbConn  = new DBConn();
 
 
@@ -80,9 +84,27 @@ class ViewProfileData
     public function initialiseProfileVariables(string $idUser) {
         $arrayUserDataFromDB= $this->selectProfileData($idUser);
         $this->setUserLogin($arrayUserDataFromDB["loginPouzivatela"]);
-        $this->setUserFirstName($arrayUserDataFromDB["userFirstName"]);
-        $this->setUserLastName($arrayUserDataFromDB["userLastName"]);
         $this->setUserEmail($arrayUserDataFromDB["emailPouzivatela"]);
+
+        if ($arrayUserDataFromDB["userFirstName"] != NULL)
+        {
+            $this->setUserFirstName($arrayUserDataFromDB["userFirstName"]);
+        }
+        else
+        {
+            $this->setUserFirstName("Meno nespecifikovane");
+        }
+
+
+
+        if ($arrayUserDataFromDB ['userLastName'] != NULL)
+        {
+            $this->setUserLastName($arrayUserDataFromDB["userLastName"]);
+        }
+        else
+        {
+            $this->setUserLastName("Priezvisko nespecifikovane");
+        }
     }
 
 
@@ -153,6 +175,5 @@ class ViewProfileData
     {
         $this->userEmail = $userEmail;
     }
-
 
 }

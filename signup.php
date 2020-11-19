@@ -40,16 +40,45 @@
 </div> <!-- Koniec Headeru -->
 
 <div class="contentContainer">
+
+
     <form class="signup" action="includes/SignupScript.php" method="post">
 
+        <?php
+
+        if (isset($_GET["login"]))
+        {
+            $aGottenLogin = $_GET["login"];
+
+        }
+        else {
+            $aGottenLogin = "";
+
+        }
+
+        if (isset($_GET["e-mail"]))
+        {
+            $aGottenEmail = $_GET["login"];
+
+        }
+        else {
+            $aGottenEmail = "";
+
+        }
+        ?>
+
+
     <ul>
+
+
+
         <li>
             <label for="login">Login</label>
-            <input type="text" id="login" name="login" placeholder="User Name">
+            <input type="text" id="login" name="login" placeholder="User Name" value="<?php echo $aGottenLogin ?>">
         </li>
         <li>
             <label for="e-mail">E-Mail</label>
-            <input type="text" id="e-mail" name="e-mail" placeholder="E-Mail">
+            <input type="text" id="e-mail" name="e-mail" placeholder="E-Mail" value="<?php echo $aGottenEmail ?>">
         </li>
         <li>
              <label for="password">Password</label>
@@ -57,7 +86,7 @@
         </li>
         <li>
              <label for="repeat-password">Repeat Password</label>
-              <input type="password" id="repeat-password" name="repeat-password" placeholder="min. 6 char.">
+             <input type="password" id="repeat-password" name="repeat-password" placeholder="min. 6 char.">
         </li>
         <li>
             <input type="submit" name="signup-proceed">
@@ -92,7 +121,7 @@
             }
             else if ($_GET['error'] == 'loginNotUnique')
             {
-                echo '<p class="error-messages">Error: Takylo login uz existuje!</p>';
+                echo '<p class="error-messages">Error: Takyto login uz existuje!</p>';
             }
 
             echo '</li>';

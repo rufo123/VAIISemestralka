@@ -22,11 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit">
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="ViewProfileData a ChangeProfileData - upravená dedičnosť">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/LoginScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/ViewProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ViewProfileData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/ChangeProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ChangeProfileData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/ViewProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ViewProfileData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +47,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="4d671b55-4bd4-4d00-8998-7b96b3aa8c55" name="localhost" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4.10" />
   <component name="ProjectId" id="1igL5gZR0g9b0RQWjuMxlihQ8DA" />
@@ -128,7 +133,8 @@
       <workItem from="1605613483593" duration="25259000" />
       <workItem from="1605642778132" duration="5027000" />
       <workItem from="1605725425564" duration="4257000" />
-      <workItem from="1605805845242" duration="4679000" />
+      <workItem from="1605805845242" duration="4713000" />
+      <workItem from="1605824013942" duration="6184000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -312,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605729430873</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ViewProfileData a ChangeProfileData - upravená dedičnosť">
+      <created>1605813455423</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1605813455423</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +367,8 @@
     <MESSAGE value="PhpCko hotove na 90% - Dizajn profilu dorobit" />
     <MESSAGE value="Profile - Hotovy" />
     <MESSAGE value="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit" />
+    <MESSAGE value="ViewProfileData a ChangeProfileData - upravená dedičnosť" />
+    <option name="LAST_COMMIT_MESSAGE" value="ViewProfileData a ChangeProfileData - upravená dedičnosť" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
@@ -402,6 +416,54 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1605829649792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605829649792" />
     <state x="706" y="184" key="NewPhpClassDialog" timestamp="1605725816952">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -426,13 +488,13 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1605729432788">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1605813457755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605729432788" />
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605813457755" />
     <state x="589" y="233" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605623584525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
