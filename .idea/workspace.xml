@@ -22,9 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Profile - Hotovy">
-      <change afterPath="$PROJECT_DIR$/Includes/ViewProfileData.php" afterDir="false" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/LoginScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/ViewProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ViewProfileData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
@@ -126,7 +127,8 @@
       <workItem from="1605525544350" duration="6058000" />
       <workItem from="1605613483593" duration="25259000" />
       <workItem from="1605642778132" duration="5027000" />
-      <workItem from="1605725425564" duration="3930000" />
+      <workItem from="1605725425564" duration="4257000" />
+      <workItem from="1605805845242" duration="4679000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -303,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605648624019</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit">
+      <created>1605729430873</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1605729430873</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +353,8 @@
     <MESSAGE value="Responzivny Dizajn skoro hotovy" />
     <MESSAGE value="PhpCko hotove na 90% - Dizajn profilu dorobit" />
     <MESSAGE value="Profile - Hotovy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile - Hotovy" />
+    <MESSAGE value="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
@@ -416,13 +426,13 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1605648626827">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1605729432788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605648626827" />
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605729432788" />
     <state x="589" y="233" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605623584525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

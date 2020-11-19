@@ -109,6 +109,7 @@ class LoginScript
         else
         {
             session_start();
+            $_SESSION['idUser'] = $riadokZDB['idPouzivatela'];
             $_SESSION['userLogin'] = $riadokZDB['loginPouzivatela'];
             header('location: ../index.php?login=success');
             exit();

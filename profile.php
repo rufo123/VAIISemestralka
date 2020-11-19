@@ -49,6 +49,8 @@
 
     $profileData = new ViewProfileData();
 
+
+
     ?>
 
     <div class="profile-top-image-name">
