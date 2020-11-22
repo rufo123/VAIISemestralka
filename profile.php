@@ -44,9 +44,6 @@
     <form method="post" action="includes/ChangeProfileData.php">
 
     <?php require "includes/ViewProfileData.php";
-   // $savedUserData = $profileData->selectPouzivateliaData($profileData->getDbConn(), $profileData->getUserLoggedWithAs());
-   // $savedProfileData = $profileData->selectProfileData($profileData->getDbConn(), $profileData->getIDUser($savedUserData));
-
     $profileData = new ViewProfileData();
 
 
@@ -59,9 +56,6 @@
 
         <div class="profile-name">
              <ul>
-                 <li class="li-name">
-                      Nahrať súbor
-                 </li> <!-- First Name -->
 
              </ul>
         </div>
@@ -71,6 +65,66 @@
     </div>
 
     <ul class="profile-data-ul">
+
+        <li>
+            <?php
+            if (isset($_GET['success']))
+            {
+                if ($_GET['success'] == 'uspChangedUsername')
+                {
+                    echo "<p>Pouzivatelske meno, uspesne zmenene!</p>";
+                } else if ($_GET['success'] == 'uspChangedEmail') {
+                    echo "<p>Email, uspesne zmeneny!</p>";
+                } else if ($_GET['success'] == 'uspChangePass') {
+                    echo "<p>Heslo, uspesne zmenene!</p>";
+                }
+
+            } else if (isset($_GET['error']))
+            {
+                if ($_GET['error'] == 'loginNotUnique')
+                {
+                    echo "<p>Username nie je unikatny!</p>";
+                } else if ($_GET['error'] == 'emailNotUnique')
+                {
+                    echo "<p>Email nie je unikatny!</p>";
+                } else if ($_GET['error'] == 'passNotLongEnough') {
+
+                    echo "<p>Heslo obsahuje menej ako 8 znakov!</p>";
+                } else if ($_GET['error'] == 'passNoRequiredCharacters') {
+                    echo "<p>Heslo neobsahuje aspon 1: Velke, male pismeno a cislo!</p>";
+
+                } else if ($_GET['error'] == 'passwordNotEquals') {
+
+                    echo "<p>Hesla sa nezhoduju!</p>";
+
+                } else if ($_GET['error'] == 'UsernameEmpty') {
+
+                    echo "<p>Kolonka Username je prazdna!</p>";
+
+                } else if ($_GET['error'] == 'NameEmpty') {
+
+                    echo "<p>Kolonka Meno je prazdna!</p>";
+
+                } else if ($_GET['error'] == 'SurnameEmpty') {
+
+                    echo "<p>Kolonka Priezvisko je prazdna!</p>";
+
+                } else if ($_GET['error'] == 'EmailEmpty') {
+
+                    echo "<p>Kolonka Email je prazdna!</p>";
+
+                } else if ($_GET['error'] == 'passFieldEmpty') {
+
+                    echo "<p>Kolonka Pass je prazdna!</p>";
+
+                }
+
+            }
+
+
+            ?>
+        </li>
+
 
 
         <li>
@@ -121,13 +175,15 @@
             <div class="profile-change-box profile-change-box-row">
                 <div class="profile-change-label">
                     <label for="changePassShow">Heslo</label>
-                    <input type="password" name="changePassShow" id="changePassShow" placeholder="Password">
+                    <input type="password" name="changePassShow" id="changePassShow" placeholder="Password" minlength="8">
                     <label for="changeRepeatPassShow">Heslo Znova</label>
-                    <input type="password" name="changeRepeatPassShow" id="changeRepeatPassShow" placeholder="Repeat Password">
+                    <input type="password" name="changeRepeatPassShow" id="changeRepeatPassShow" placeholder="Repeat Password" minlength="8">
                     <input type="submit" name="changePassSubmit">
                  </div>
             </div>
         </li>
+
+
     </ul>
 
 

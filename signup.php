@@ -123,6 +123,14 @@
             {
                 echo '<p class="error-messages">Error: Takyto login uz existuje!</p>';
             }
+            else if ($_GET['error'] == 'passNotLongEnough')
+            {
+                echo '<p class="error-messages">Error: Heslo je prilis kratke</p>';
+            } else if ($_GET['error'] == 'passNoRequiredCharacters')
+            {
+                echo '<p class="error-messages">Error: Heslo musi obsahovat aspon 1:</p>';
+                echo '<p class="error-messages">Cislo, velke a male pismeno</p>';
+            }
 
             echo '</li>';
         }

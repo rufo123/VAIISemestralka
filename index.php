@@ -46,7 +46,7 @@ session_start();
                                             <img src="images/userAvatars/default.png" alt="profile-photo">
                                             </li>
                                             <li class="logged-in-user">
-                                            <p>' . $_SESSION['userLogin'] . ' </p></p>
+                                            <a href="profile.php"> <p>' . $_SESSION['userLogin'] . ' </p></a>
                                             </li>
                                             
                                          </ul>

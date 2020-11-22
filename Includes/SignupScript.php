@@ -1,6 +1,7 @@
 <?php
 
-$signup = new SignupScript();
+
+
 
 class SignupScript
 {
@@ -16,7 +17,6 @@ class SignupScript
 
             $dbConn = new DBConn();
 
-
             $login = $_POST['login'];
             $email = $_POST['e-mail'];
             $pass = $_POST['password'];
@@ -26,9 +26,9 @@ class SignupScript
             $this->isPrazdnyInput($login, $email, $pass, $repeatPass);
             $this->isValidnyEmail($email, $login);
             $this->isValidnyLogin($email, $login);
-            $this->isRovnakeHeslo($pass, $repeatPass, $login, $email);
             $this->isLoginUnique($dbConn->getInitConn(), $login);
-
+            $this->doesPassFulfilCriteria($pass, $login,$email);
+            $this->isRovnakyPass($pass, $repeatPass, $login, $email);
             $this->vytvorPouzivatela($dbConn->getInitConn(), $login, $email, $pass);
 
 
@@ -59,27 +59,24 @@ class SignupScript
 
     public function isValidnyLogin(string $email, string $login): void
     {
-        if (!preg_match('/^[a-zA-Z0-9_]*$/', $login)) {
+        if (!preg_match("(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$)", $login)) {
 
-            header('location ../signup.php?error=zlyLogin$email=' . $email);
+            header('location ../signup.php?error=zlyLogin&e-mail=' . $email);
             exit();
 
         }
 
     }
 
-    public function isRovnakeHeslo(string $pass, string $repeatPass, string $login, string $email): void
+    public function isRovnakyPass(string $pass, string $repeatPass, string $login, string $email): void
     {
-        if ($pass !== $repeatPass) {
-
-            header('location ../signup.php?error=nezhodneHesla$email=' . $email . '$login' . $login);
+        if ($repeatPass !== $pass) {
+            header("location: ../signup.php?error=nezhodneHesla&login=" . $login . "&e-mail=" . $email);
             exit();
-
         }
-
     }
 
-    public function isLoginUnique(mysqli $conn, string $login) : void
+    public function isLoginUnique(mysqli $conn, string $login): void
     {
 
         $sqlUniqueCheck = "SELECT * FROM pouzivatelia WHERE loginPouzivatela = ?;";
@@ -102,6 +99,20 @@ class SignupScript
             header('location: ../signup.php?error=loginNotUnique');
             exit();
 
+        }
+
+    }
+
+    public function doesPassFulfilCriteria(string $pass, string $parLogin, string $parEmail): void
+    {
+        if (strlen($pass) < 8) { //Overovanie, ci heslo je dostatocne dlhe
+            header('location: ../signup.php?error=passNotLongEnough&login='. $parLogin . '&e-mail=' . $parEmail);
+            exit();
+        }
+
+        if (!preg_match("/^[a-zA-Z0-9_]*$/", $pass)) { // 0-9 | a-z | A-Z | length from 8-30
+            header('location: ../signup.php?error=passNoRequiredCharacters&login='. $parLogin . '&e-mail=' . $parEmail);
+            exit();
         }
 
     }
@@ -149,3 +160,5 @@ class SignupScript
 
 
 }
+
+$signup = new SignupScript();
