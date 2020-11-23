@@ -30,7 +30,7 @@ class ChangeProfileData extends ViewProfileData
 
 
         } else {
-            header("location ../index.php?error=noSessionFound");
+            header("location ../profile.php?error=noSessionFound");
             exit();
 
         }
@@ -58,7 +58,7 @@ class ChangeProfileData extends ViewProfileData
     public function checkIfColEmpty(string $parNameOfCol) : bool
     {
         if (empty($parNameOfCol)) {
-            header('location: ../profile.php?success=emptyInput');
+            header('location: ../profile.php?error=emptyInput');
             exit();
         } else {
             return false;
@@ -67,6 +67,20 @@ class ChangeProfileData extends ViewProfileData
 
 
     }
+
+    public function passRequiredChar(string $parPass)
+    {
+        if (strlen($parPass) < 8) { //Overovanie, ci heslo je dostatocne dlhe
+            header('location: ../profile.php?error=passNotLongEnough');
+            exit();
+        }
+
+        if (!preg_match("(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$)",$parPass)) { // 0-9 | a-z | A-Z
+            header('location: ../profile.php?error=passNoRequiredCharacters');
+            exit();
+        }
+    }
+
 
     public function changeUserName(string $parChangeToWhat, mysqli $parConn, string $idUser) {
 
@@ -102,7 +116,7 @@ class ChangeProfileData extends ViewProfileData
         } else if ($typeOfInput == "login") {
             $sqlUniqueCheck = "SELECT * FROM pouzivatelia WHERE loginPouzivatela = ?;";
         } else {
-            header('location: ../profile.php?error=isLoginUniqueBADTYPE');
+            header('location: ../profile.php?systemError=isLoginUniqueBADTYPE');
             exit();
         }
 
@@ -111,7 +125,7 @@ class ChangeProfileData extends ViewProfileData
         $stmtSelectUnique = $conn->stmt_init();
 
         if (!$stmtSelectUnique->prepare($sqlUniqueCheck)) { //Ak doslo k nejakej chybe
-            header('location: ../signup.php?error=stmtError');
+            header('location: ../profile.php?error=stmtError');
             exit();
         }
 
@@ -123,12 +137,13 @@ class ChangeProfileData extends ViewProfileData
 
         if ($result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
 
-            header('location: ../login.php?error=loginOrEmailNotUnique');
+            header('location: ../profile.php?error='.$typeOfInput.'NotUnique');
             exit();
 
         }
 
     }
+
 
     public function changeProfileRow(string $changedRow, mysqli $parConn, string $idUser, string $nameOfDBCol) {
 
@@ -137,7 +152,7 @@ class ChangeProfileData extends ViewProfileData
         } else if ($nameOfDBCol == "userLastName") {
             $sqlRowChange = "    UPDATE profile_data SET userLastName = ? WHERE idUser = ?";
         } else {
-            header('location: ../profile.php?error=changeProfileRowBADCOLL');
+            header('location: ../profile.php?systemError=changeProfileRowBADCOLL');
             exit();
 
         }
@@ -172,7 +187,7 @@ class ChangeProfileData extends ViewProfileData
         $stmtEmailChange = $parConn->stmt_init();
 
         if (!$stmtEmailChange->prepare($sqlEmailChange)) { //Ak doslo k nejakej chybe
-            header('location: ../signup.php?error=stmtErrorEmailCheck');
+            header('location: ../profile.php?error=stmtErrorEmailCheck');
             exit();
         }
 
@@ -193,16 +208,13 @@ class ChangeProfileData extends ViewProfileData
             exit();
         } else {
 
+            $this->passRequiredChar($parPassword); //Overujeme, ci ma heslo potrebne znaky
+
             $sqlPasswordChange = 'UPDATE pouzivatelia SET passPouzivatela = ? WHERE idPouzivatela = ?';
             $stmtPasswordChange = $parConnection->stmt_init();
 
             if (!$stmtPasswordChange->prepare($sqlPasswordChange)) { //Ak doslo k nejakej chybe
                 header('location: ../profile.php?error=stmtErrorPassword');
-                exit();
-            }
-
-            if ($parPassword !== $parRepeatPass) {
-                header('location: ../profile.php?error=passwordNotEquals');
                 exit();
             }
 
@@ -226,7 +238,7 @@ class ChangeProfileData extends ViewProfileData
         if (isset($_POST['changeUserProceed']))
         {
 
-            $changedUsername = $_POST['changeUserShow']; //Meno premmennej, ktora je input na to co sa ma zmenit
+            $changedUsername = trim($_POST['changeUserShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
 
             if ($this->checkIfColEmpty($changedUsername))  //Kontrolujeme ak sme submitli zmenu Username
             {
@@ -241,7 +253,7 @@ class ChangeProfileData extends ViewProfileData
 
         } else if (isset($_POST['changeNameProceed'])) { //Kontrolujeme ak sme submitli zmenu Mena
 
-            $changedName = $_POST['changeNameShow']; //Meno premmennej, ktora je input na to co sa ma zmenit
+            $changedName = trim($_POST['changeNameShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
 
             if ($this->checkIfColEmpty($changedName))
             {
@@ -258,7 +270,7 @@ class ChangeProfileData extends ViewProfileData
 
         } else if (isset($_POST['changeSurnameProceed'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
 
-            $changedSurname = $_POST['changeSurnameShow'];
+            $changedSurname = trim($_POST['changeSurnameShow']);
 
             if ($this->checkIfColEmpty($changedSurname))
             {
@@ -273,7 +285,7 @@ class ChangeProfileData extends ViewProfileData
 
         } else if (isset($_POST['changeEmailProceed'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
 
-            $changedEmail = $_POST['changeEmailShow'];
+            $changedEmail = trim($_POST['changeEmailShow']);
 
             if ($this->checkIfColEmpty($changedEmail))
             {
@@ -287,10 +299,13 @@ class ChangeProfileData extends ViewProfileData
 
             }
 
-        } else if (isset($_POST['changePassSubmit'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
+        } else if (isset($_POST['changePassSubmit'])) { //Kontrolujeme ak sme submitli zmenu Hesla
 
-            $changePass = $_POST['changePassShow'];
-            $changeRepeatPass = $_POST['changeRepeatPassShow'];
+            $changePass = trim($_POST['changePassShow']);
+            $changeRepeatPass = trim($_POST['changeRepeatPassShow']);
+
+
+
 
             if ($this->checkIfColEmpty($changePass) || $this->checkIfColEmpty($changeRepeatPass))
             {

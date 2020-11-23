@@ -22,11 +22,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Mini fixy">
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Pripravene na prezentaciu 2.hej casti">
+      <change afterPath="$PROJECT_DIR$/incPageContent/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/incPageContent/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/ChangeProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ChangeProfileData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/SignupScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/SignupScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/SpolocneMetody.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
@@ -72,7 +81,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/includes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -137,7 +146,8 @@
       <workItem from="1605725425564" duration="4257000" />
       <workItem from="1605805845242" duration="4713000" />
       <workItem from="1605824013942" duration="6286000" />
-      <workItem from="1606070115231" duration="6366000" />
+      <workItem from="1606070115231" duration="7053000" />
+      <workItem from="1606150925638" duration="5433000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -335,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605830306842</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="na 99% hotova druha cast">
+      <created>1606076607321</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1606076607321</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +372,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial" />
     <MESSAGE value="Prvotné nastavenie" />
     <MESSAGE value="Update" />
     <MESSAGE value="Dokončené menu a footer. 10/10/2020" />
@@ -379,7 +395,9 @@
     <MESSAGE value="Profile este extendnut viewProfile do Change a hotovo + responzivita dokoncit" />
     <MESSAGE value="ViewProfileData a ChangeProfileData - upravená dedičnosť" />
     <MESSAGE value="Mini fixy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mini fixy" />
+    <MESSAGE value="na 99% hotova druha cast" />
+    <MESSAGE value="Pripravene na prezentaciu 2.hej casti" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pripravene na prezentaciu 2.hej casti" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
@@ -427,85 +445,86 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1605830354569">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354569" />
-    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1605830354569">
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354569" />
-    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1605830354568">
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354568" />
-    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1605830354569">
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1606158441806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830354569" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158441806" />
     <state x="706" y="184" key="NewPhpClassDialog" timestamp="1605725816952">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1012" y="326" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926362416" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605091128140" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605725816952" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605442376335">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1606154496154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605442376335" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606154496154" />
     <state x="817" y="134" key="RollbackChangesDialog" timestamp="1603183248950">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603183248950" />
-    <state x="465" y="80" key="SettingsEditor" timestamp="1605638519498">
+    <state x="465" y="80" key="SettingsEditor" timestamp="1606158699899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
-    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605638519498" />
+    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606158699899" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1605830308706">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1606076608980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605830308706" />
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606076608980" />
     <state x="589" y="233" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605623584525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

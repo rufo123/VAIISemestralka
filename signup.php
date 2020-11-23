@@ -11,33 +11,7 @@
 </head>
 <body>
 
-<div id="headerID" class="header">
-    <div class="navbar">
-
-        <div class="container">
-
-            <div class="navbar-logo">
-                <a href="#">
-                    <img src="images/navbar-logo.jpg" alt="My-Logo">
-                </a>
-            </div>
-
-            <div class="navigation-menu">
-                <ul>
-                    <li><a class="navbar-item" href="index.php">O Mne</a></li>
-                    <li><a class="navbar-item" href="projects.php">Projekty</a></li>
-                    <li><a class="navbar-item" href="gallery.php">Galéria</a></li>
-                    <li><a class="navbar-item" href="blog.php">Blog</a></li>
-                    <li><a class="navbar-item" href="order.php">Objednávky</a></li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div> <!-- Koniec Headeru -->
+<?php include "incPageContent/headerWOLogin.php"?>
 
 <div class="contentContainer">
 
@@ -58,7 +32,7 @@
 
         if (isset($_GET["e-mail"]))
         {
-            $aGottenEmail = $_GET["login"];
+            $aGottenEmail = $_GET["e-mail"];
 
         }
         else {
@@ -111,6 +85,10 @@
             {
                 echo '<p class="error-messages">Error: Niektore z poli je prazdne!</p>';
             }
+            else if ($_GET['error'] == 'zlyLogin')
+            {
+                echo '<p class="error-messages">Error: Username obsahuje nepovoleny charakter!</p>';
+            }
             else if ($_GET['error'] == 'zlyEmail')
             {
                 echo '<p class="error-messages">Error: Zadali ste neexistujuci E-Mail!</p>';
@@ -144,9 +122,7 @@
 
 </div>
 
-<footer>
-    <p> Vytvoril: Rudolf Šimo - 2020 </p>
-</footer>
+<?php include "incPageContent/footer.php"?>
 
 </body>
 

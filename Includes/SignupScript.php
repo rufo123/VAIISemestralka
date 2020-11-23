@@ -17,15 +17,16 @@ class SignupScript
 
             $dbConn = new DBConn();
 
-            $login = $_POST['login'];
-            $email = $_POST['e-mail'];
-            $pass = $_POST['password'];
-            $repeatPass = $_POST['repeat-password'];
+            $login = trim($_POST['login']);
+            $email = trim($_POST['e-mail']);
+            $pass = trim($_POST['password']);
+            $repeatPass = trim($_POST['repeat-password']);
 
 
             $this->isPrazdnyInput($login, $email, $pass, $repeatPass);
             $this->isValidnyEmail($email, $login);
-            $this->isValidnyLogin($email, $login);
+            //$this->isValidnyLogin($email, $login);
+            $this->isValidLogin($email, $login);
             $this->isLoginUnique($dbConn->getInitConn(), $login);
             $this->doesPassFulfilCriteria($pass, $login,$email);
             $this->isRovnakyPass($pass, $repeatPass, $login, $email);
@@ -57,13 +58,12 @@ class SignupScript
 
     }
 
-    public function isValidnyLogin(string $email, string $login): void
+    public function isValidLogin(string $email, string $login): void
     {
-        if (!preg_match("(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$)", $login)) {
+        if (!preg_match("/^[a-zA-Z0-9_]*$/",$login)) {
 
-            header('location ../signup.php?error=zlyLogin&e-mail=' . $email);
+            header("location: ../signup.php?error=zlyLogin&e-mail=". $email);
             exit();
-
         }
 
     }
@@ -110,7 +110,7 @@ class SignupScript
             exit();
         }
 
-        if (!preg_match("/^[a-zA-Z0-9_]*$/", $pass)) { // 0-9 | a-z | A-Z | length from 8-30
+        if (!preg_match("(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$)",$pass)) {
             header('location: ../signup.php?error=passNoRequiredCharacters&login='. $parLogin . '&e-mail=' . $parEmail);
             exit();
         }
