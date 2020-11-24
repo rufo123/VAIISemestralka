@@ -56,11 +56,11 @@
         </li>
         <li>
              <label for="password">Password</label>
-             <input type="password" id="password" name="password" placeholder="min. 6 char.">
+             <input type="password" id="password" name="password" placeholder="min. 8 char.">
         </li>
         <li>
              <label for="repeat-password">Repeat Password</label>
-             <input type="password" id="repeat-password" name="repeat-password" placeholder="min. 6 char.">
+             <input type="password" id="repeat-password" name="repeat-password" placeholder="min. 8 char.">
         </li>
         <li>
             <input type="submit" name="signup-proceed">
@@ -100,6 +100,10 @@
             else if ($_GET['error'] == 'loginNotUnique')
             {
                 echo '<p class="error-messages">Error: Takyto login uz existuje!</p>';
+            }
+            else if ($_GET['error'] == 'emailNotUnique')
+            {
+                echo '<p class="error-messages">Error: Takyto email uz existuje!</p>';
             }
             else if ($_GET['error'] == 'passNotLongEnough')
             {
