@@ -29,8 +29,8 @@ class LoginScript
 
             $dbConn = new DBConn();
 
-            $user = $_POST['login'];
-            $pass = $_POST['password'];
+            $user = trim($_POST['login']);
+            $pass = trim($_POST['password']);
 
             $this->isPrazdnyInput($user, $pass);
 
@@ -50,7 +50,7 @@ class LoginScript
     public function isPrazdnyInput(string $username, string $password) : void
     {
         if ( empty($username) || empty($password) ) {
-            header('location: ../login.php?error=prazdnyInput');
+            header('location: ../index.php?error=prazdnyInput');
             exit();
         }
 

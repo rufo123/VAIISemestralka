@@ -232,6 +232,104 @@ class ChangeProfileData extends ViewProfileData
 
     }
 
+    public function checkPassword(mysqli $parConnection, string $parPassword, string $idUser ) { //Overovanie hesla
+
+
+        $sqlPassCheck = "SELECT passPouzivatela FROM pouzivatelia WHERE idPouzivatela = ?;";
+
+        $stmtPassCheck = $parConnection->stmt_init();
+
+        if (!$stmtPassCheck->prepare($sqlPassCheck)) { //Ak doslo k nejakej chybe
+            header('location: ../profile.php?error=stmtError');
+            exit();
+        }
+
+
+
+        $stmtPassCheck->bind_param("s",  $idUser); //ss - String, String
+        $stmtPassCheck->execute();
+
+        $result = $stmtPassCheck->get_result();
+
+        if ($vyslednyArray = $result->fetch_assoc()) {
+
+            $hashPass = password_hash($parPassword, PASSWORD_DEFAULT); //Hashovanie hesla
+            if (password_verify($vyslednyArray['passPouzivatela'], $hashPass)) {
+
+                echo '';
+
+            } else {
+                header('location: ../profile.php?error=wrongPass');
+                exit();
+            }
+
+
+
+
+
+        } else {
+
+            header('location: ../profile.php?error=wrongPass');
+            exit();
+
+        }
+
+
+
+
+
+
+
+
+    }
+
+    public function deleteAccount(mysqli $parConnection, string $parPassword, string $idUser) {
+
+
+        $this->checkPassword( $parConnection,  $parPassword,  $idUser); //Overenie hesla pre potvrdenie
+
+
+
+        $sqlAccPouziv = 'DELETE FROM pouzivatelia WHERE idPouzivatela = ?';
+        $sqlAccProfile = 'DELETE FROM profile_data WHERE idUser = ?';
+
+
+        $stmtDelAccProfile = $parConnection->stmt_init();
+
+        if (!$stmtDelAccProfile->prepare($sqlAccProfile)) { //Ak doslo k nejakej chybe
+            header('location: ../profile.php?error=stmtErrorDelProfile');
+            exit();
+        }
+
+
+        $stmtDelAccProfile->bind_param('s', $idUser, ); //ss - String, String
+        $stmtDelAccProfile->execute();
+        $stmtDelAccProfile->close();
+
+        //Dokoncene mazanie z profile_data
+
+
+
+        $stmtDelAccPouziv = $parConnection->stmt_init();
+
+        if (!$stmtDelAccPouziv->prepare($sqlAccPouziv)) {
+            header('location: ../profile.php?error=stmtErrorDelPouz');
+            exit();
+        }
+        $stmtDelAccPouziv->bind_param('s', $idUser); //s - String
+        $stmtDelAccPouziv->execute();
+        $stmtDelAccPouziv->close();
+
+        session_start();
+        session_unset();
+        session_destroy();
+
+        header('location: ../index.php?success=uspDelete');
+        exit();
+
+
+    }
+
 
 
     public function changeDataByInput() {
@@ -315,6 +413,23 @@ class ChangeProfileData extends ViewProfileData
             } else
             {
                 $this->changePass($this->getDbConn()->getInitConn(), $changePass, $changeRepeatPass, $_SESSION['idUser'] );
+            }
+
+
+        } else if (isset($_POST['deleteAccount'])) { //Zmaza
+
+            $checkPass = trim($_POST['reqDelPass']);
+
+
+
+            if ($this->checkIfColEmpty($checkPass))
+            {
+                header("location ../profile.php?error=passEmpty");
+                exit();
+
+            } else
+            {
+                $this->deleteAccount($this->getDbConn()->getInitConn(), $checkPass, $_SESSION['idUser'] );
             }
 
 
