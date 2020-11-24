@@ -254,14 +254,8 @@ class ChangeProfileData extends ViewProfileData
         if ($vyslednyArray = $result->fetch_assoc()) {
 
             $hashPass = password_hash($parPassword, PASSWORD_DEFAULT); //Hashovanie hesla
-            if (password_verify($vyslednyArray['passPouzivatela'], $hashPass)) {
+            password_verify($vyslednyArray['passPouzivatela'], $hashPass);
 
-                echo '';
-
-            } else {
-                header('location: ../profile.php?error=wrongPass');
-                exit();
-            }
 
 
 
