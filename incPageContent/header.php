@@ -83,7 +83,7 @@
 
                                 <li>
                                   <label for="password">Password</label>
-                                    <input type="password" id="password" name="password" placeholder="min. 6 char.">
+                                    <input type="password" id="password" name="password" placeholder="min. 8 char.">
                               </li>
 
 

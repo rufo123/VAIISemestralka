@@ -25,9 +25,9 @@ class SignupScript
 
             $this->isPrazdnyInput($login, $email, $pass, $repeatPass);
             $this->isValidnyEmail($email, $login);
-            //$this->isValidnyLogin($email, $login);
             $this->isValidLogin($email, $login);
-            $this->isLoginUnique($dbConn->getInitConn(), $login);
+            $this->isLoginUnique($dbConn->getInitConn(), 'login', $login, $login); //Overovanie loginu
+            $this->isLoginUnique($dbConn->getInitConn(),'email', $email, $email); //Tu istu funkciu pouzijeme na overenie e-mailu
             $this->doesPassFulfilCriteria($pass, $login,$email);
             $this->isRovnakyPass($pass, $repeatPass, $login, $email);
             $this->vytvorPouzivatela($dbConn->getInitConn(), $login, $email, $pass);
@@ -76,10 +76,10 @@ class SignupScript
         }
     }
 
-    public function isLoginUnique(mysqli $conn, string $login): void
+    public function isLoginUnique(mysqli $conn, string $typeOfInput, string $parEmail, string $login): void
     {
 
-        $sqlUniqueCheck = "SELECT * FROM pouzivatelia WHERE loginPouzivatela = ?;";
+        $sqlUniqueCheck = "SELECT * FROM pouzivatelia WHERE loginPouzivatela = ? OR emailPouzivatela = ?;";
 
         $stmtSelectUnique = $conn->stmt_init();
 
@@ -88,7 +88,7 @@ class SignupScript
             exit();
         }
 
-        $stmtSelectUnique->bind_param("s", $login); //ss - String, String
+        $stmtSelectUnique->bind_param("ss", $parEmail, $login); //ss - String, String
         $stmtSelectUnique->execute();
         $stmtSelectUnique->store_result();
         $result = $stmtSelectUnique->num_rows();
@@ -96,8 +96,16 @@ class SignupScript
 
         if ($result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
 
-            header('location: ../signup.php?error=loginNotUnique');
-            exit();
+            if ($typeOfInput == 'email') {
+                header('location: ../signup.php?error=emailNotUnique&login=' . $login);
+                exit();
+
+            } else if ($typeOfInput == 'login') {
+                header('location: ../signup.php?error=loginNotUnique&e-mail='. $parEmail);
+                exit();
+
+            }
+
 
         }
 

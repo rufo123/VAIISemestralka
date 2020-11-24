@@ -92,6 +92,10 @@
 
                     echo "<p>Kolonka Pass je prazdna!</p>";
 
+                } else if ($_GET['error'] == 'wrongPass') {
+
+                    echo "<p>Zadane heslo je nespravne!</p>";
+
                 }
 
             }
@@ -155,6 +159,22 @@
                     <input type="password" name="changeRepeatPassShow" id="changeRepeatPassShow" placeholder="Repeat Password" minlength="8">
                     <input type="submit" name="changePassSubmit">
                  </div>
+            </div>
+        </li>
+        <li>
+            <div class="profile-change-box profile-change-box-row">
+            <p>Zmazat Ucet?</p>
+            </div>
+        </li>
+        <li>
+            <div class="profile-change-box profile-change-box-row">
+
+                <div class="profile-change-label">
+                    <br>
+                    <label for="reqDelPass">Heslo pre overenie</label>
+                    <input type="password" name="reqDelPass" id="reqDelPass" placeholder="Password" minlength="8">
+                    <input type="submit" name="deleteAccount">
+                </div>
             </div>
         </li>
 
