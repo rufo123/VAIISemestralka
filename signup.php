@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudolf Šimo | Portfolio</title>
-    <link rel="icon" type="image/ico" href="favicon.ico"/>
-    <link rel="stylesheet" href="basescript.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <title>Rudolf Šimo | Sign-UP</title>
 </head>
-<body>
+<?php include "incPageContent/headerWOLogin.php"?> <!-- Header Without Login-->
 
-<?php include "incPageContent/headerWOLogin.php"?>
+<body>
 
 <div class="contentContainer">
 
@@ -129,5 +124,4 @@
 <?php include "incPageContent/footer.php"?>
 
 </body>
-
 </html>

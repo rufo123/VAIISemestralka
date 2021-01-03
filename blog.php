@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <title>Rudolf Šimo | Blog</title>
-    <link rel="icon" type="image/ico" href="favicon.ico"/>
-    <link rel="stylesheet" href="basescript.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-
 <?php include 'incPageContent/header.php'; ?> <!-- Header -->
+
+<body>
 
 <div class="contentContainer">
 

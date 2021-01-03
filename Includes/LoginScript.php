@@ -4,6 +4,7 @@ $login = new LoginScript();
 
 class LoginScript
 {
+    private string $returnURL;
 
 
     /**
@@ -11,6 +12,8 @@ class LoginScript
      */
     public function __construct()
     {
+
+
 
         session_start();
         if (isset($_POST['signup'])) {
@@ -32,9 +35,9 @@ class LoginScript
             $user = trim($_POST['login']);
             $pass = trim($_POST['password']);
 
+            $this->setURLOfPreviousPage();
+
             $this->isPrazdnyInput($user, $pass);
-
-
 
             $this->prihlasPouzivatela(($this->isLoginCorrect($dbConn->getInitConn(), $user)) , $pass );
 
@@ -50,7 +53,7 @@ class LoginScript
     public function isPrazdnyInput(string $username, string $password) : void
     {
         if ( empty($username) || empty($password) ) {
-            header('location: ../index.php?error=prazdnyInput');
+            header('location: ' . $this->getReturnURL() .'?error=prazdnyInput');
             exit();
         }
 
@@ -68,7 +71,7 @@ class LoginScript
 
         if (!$stmtLoginCheck->prepare($sqlLoginCheck))  //Ak doslo k nejakej chybe
         {
-            header('location: ../index.php?error=stmtError');
+            header('location: ' . $this->getReturnURL() .'?error=stmtError');
             exit();
         }
 
@@ -87,7 +90,7 @@ class LoginScript
         else
         {
         $result = false;
-        header('location: ../index.php?error=loginNotFound'); //Ak sme nenasli data v databaze vyhodime error
+            header('location: ' . $this->getReturnURL() .'?error=loginNotFound'); //Ak sme nenasli data v databaze vyhodime error
         return $result;
         }
 
@@ -102,7 +105,7 @@ class LoginScript
 
         if ($passChecker == false)
         {
-            header('location: ../index.php?error=zleHeslo');
+            header('location: ' . $this->getReturnURL() .'?error=zleHeslo');
             exit();
 
         }
@@ -111,9 +114,34 @@ class LoginScript
             session_start();
             $_SESSION['idUser'] = $riadokZDB['idPouzivatela'];
             $_SESSION['userLogin'] = $riadokZDB['loginPouzivatela'];
-            header('location: ../index.php?login=success');
+            header('location: ' . $this->getReturnURL() .'?login=success');
             exit();
         }
     }
+    
+    public function setURLOfPreviousPage(){
+        $currentPageURL = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+        $escapedCurrentPageURL = htmlspecialchars($currentPageURL, ENT_QUOTES, 'UTF-8');
+        $previousPageURL = $_SERVER['HTTP_REFERER'];
+        $escapedPreviousPageURL = htmlspecialchars($previousPageURL, ENT_QUOTES, 'UTF-8');
+
+        if ($escapedCurrentPageURL !== $escapedPreviousPageURL) {
+            $urlWithoutExtraOutput = explode("?", $escapedPreviousPageURL);
+            $this->returnURL = $urlWithoutExtraOutput[0];
+        } else {
+            $this->returnURL = "../index.php";
+        }
+
+
+    }
+
+    /**
+     * @return string
+     */
+    public function getReturnURL(): string
+    {
+        return $this->returnURL;
+    }
+
 
 }

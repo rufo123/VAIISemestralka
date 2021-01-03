@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudolf Šimo | Portfolio</title>
-    <link rel="icon" type="image/ico" href="favicon.ico"/>
-    <link rel="stylesheet" href="basescript.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Rudolf Šimo | About Me</title>
 </head>
-<body>
-
 <?php include 'incPageContent/header.php'; ?> <!-- Header -->
+
+<body>
 
 <div class="contentContainer">
     <div class="contentBox">
@@ -21,25 +17,29 @@
             <img class="portfolio-me-img" alt="portfolio-image" src="images/about-me/portfolio-img.jpg">
 
 
-            <h2 >V skratke:</h2>
-             <p>Som študentom Fakulty Riadenia a Informatiky v Žilinskej Univerzite v Žiline,
-                   kde už momentálne študujem tretí rok. K mojim záľubám patrí: Programovanie, hranie PC hier,
-                    práca s drevom, hranie sa s mojim psom a hľadanie riešení k nejakému problému.
-                </p>
-
+            <h2>V skratke:</h2>
+            <p>Som študentom Fakulty Riadenia a Informatiky v Žilinskej Univerzite v Žiline,
+                kde už momentálne študujem tretí rok. K mojim záľubám patrí: Programovanie, hranie PC hier,
+                práca s drevom, hranie sa s mojim psom a hľadanie riešení k nejakému problému.
+            </p>
 
 
             <h2>Obľúbené hry:</h2>
             <div class="zoznam-hier">
-            <table class="oblubene-hry-table">
-            <tr>
-                <td><img src="images/about-me/hry/ark.jpg" alt="ARK: Survival Evolved" title="ARK: Survival Evolved"></td>
-                <td><img src="images/about-me/hry/vermintide.jpg" alt="Warhammer: Vermintide 2" title="Warhammer: Vermintide 2" ></td>
-                <td><img src="images/about-me/hry/red.jpg" alt="Red Dead Redemption 2" title="Red Dead Redemption 2"></td>
-                <td><img src="images/about-me/hry/grand.jpg" alt="Grand Theft Auto V" title="Grand Theft Auto V"></td>
-                <td><img src="images/about-me/hry/ac.jpg" alt="Assassin's Creed Séria" title="Assassin's Creed Séria"></td>
-            </tr>
-            </table>
+                <table class="oblubene-hry-table">
+                    <tr>
+                        <td><img src="images/about-me/hry/ark.jpg" alt="ARK: Survival Evolved"
+                                 title="ARK: Survival Evolved"></td>
+                        <td><img src="images/about-me/hry/vermintide.jpg" alt="Warhammer: Vermintide 2"
+                                 title="Warhammer: Vermintide 2"></td>
+                        <td><img src="images/about-me/hry/red.jpg" alt="Red Dead Redemption 2"
+                                 title="Red Dead Redemption 2"></td>
+                        <td><img src="images/about-me/hry/grand.jpg" alt="Grand Theft Auto V"
+                                 title="Grand Theft Auto V"></td>
+                        <td><img src="images/about-me/hry/ac.jpg" alt="Assassin's Creed Séria"
+                                 title="Assassin's Creed Séria"></td>
+                    </tr>
+                </table>
             </div>
 
 
@@ -48,16 +48,16 @@
             <p>Technológie: Pascal (Už len veľmi okrajovo)</p>
 
             <div class="development-zoznam">
-            <table class="development-tables">
-                <tr>
-                    <td><img src="images/about-me/development/java-logo.png" alt="Java" title="Java"></td>
-                    <td><img src="images/about-me/development/c-logo.png" alt="C" title="C"></td>
-                    <td><img src="images/about-me/development/c++-logo.png" alt="C++" title="C++"></td>
-                    <td><img src="images/about-me/development/html5-logo.png" alt="HTML5" title="HTML5"></td>
-                    <td><img src="images/about-me/development/css3-logo.png" alt="CSS3" title="CSS3"></td>
+                <table class="development-tables">
+                    <tr>
+                        <td><img src="images/about-me/development/java-logo.png" alt="Java" title="Java"></td>
+                        <td><img src="images/about-me/development/c-logo.png" alt="C" title="C"></td>
+                        <td><img src="images/about-me/development/c++-logo.png" alt="C++" title="C++"></td>
+                        <td><img src="images/about-me/development/html5-logo.png" alt="HTML5" title="HTML5"></td>
+                        <td><img src="images/about-me/development/css3-logo.png" alt="CSS3" title="CSS3"></td>
 
-                </tr>
-            </table>
+                    </tr>
+                </table>
             </div>
 
 
@@ -76,12 +76,10 @@
 
             <p class="contactParagraph"> V prípade akýchkoľvek otázok ma môžte kontaktovať na</p>
 
-                <div class="contactOverlay">
-                    <img class="contactGmailLogo" alt="gmail-logo" src="images/about-me/gmail-logo.png">
-                    <p class="hiddenContactText">imorudolf@gmail.com</p>
-                </div>
-
-
+            <div class="contactOverlay">
+                <img class="contactGmailLogo" alt="gmail-logo" src="images/about-me/gmail-logo.png">
+                <p class="hiddenContactText">imorudolf@gmail.com</p>
+            </div>
 
 
         </article>
@@ -90,7 +88,7 @@
 
 </div>
 
-<?php include "incPageContent/footer.php"?>
+<?php include "incPageContent/footer.php" ?>
 
 </body>
 

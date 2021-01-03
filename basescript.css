@@ -1,4 +1,5 @@
 * {
+
 }
 
 body {
@@ -7,11 +8,30 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
+
+}
+
+body.body-admin-panel {
+    background-color: black;
+    background-image: none;
+}
+
+.bg-image {
+    position: fixed;
+    background-image: url("images/body/snowy-mountain.jpg");
+    background-size: cover;
+    top: -2em;
+    left: -2em;
+    width: calc(100% + 4em);
+    height: calc(100% + 4em);
+    filter: blur(15px);
+    opacity: 0.8;
+    z-index: -1;
 }
 
 
 #headerID {
-     /* Zmizne prvok, umiestnenie v ramci viewportu */
+    /* Zmizne prvok, umiestnenie v ramci viewportu */
     top: 0; /* Zarovnanie dohora */
     left: 0; /* Zarovanie dolava */
     right: 0; /* Zarovnanie doprava */
@@ -61,7 +81,6 @@ body {
 }
 
 
-
 .navigation-menu ul {
     display: flex;
     flex-direction: row;
@@ -73,9 +92,11 @@ body {
     display: flex;
     font-size: 1.2em;
     text-align: center;
+    color: rgb(123, 44, 191);
 
 
 }
+
 .navigation-menu li a {
     text-decoration: none;
     color: rgb(123, 44, 191);
@@ -86,6 +107,17 @@ body {
 .navigation-menu li a:hover {
     text-decoration: none;
     color: white;
+    transition: .5s ease;
+}
+
+.navigation-menu li .admin-nav-icon {
+    background: inherit;
+    border: none;
+    color: inherit;
+}
+
+.navigation-menu li .admin-nav-icon:hover {
+    color: snow;
     transition: .5s ease;
 }
 
@@ -111,7 +143,7 @@ body {
     vertical-align: middle;
 }
 
-.login-container input[type = "text"], .login-container input[type="password"]  {
+.login-container input[type = "text"], .login-container input[type="password"] {
     background-color: inherit;
     border: 2px rebeccapurple solid;
     text-align: center;
@@ -163,16 +195,11 @@ body {
 }
 
 
-
-
-
-
-
 .hidden-signup {
     display: none;
     position: absolute;
     margin-top: 2.1em;
-    margin-left: calc( (-2em) );
+    margin-left: calc((-2em));
     background-color: rgba(25, 15, 38, 1);
     border-radius: 10px;
     height: 6em;
@@ -192,7 +219,7 @@ body {
 
 }
 
-.hidden-signup input[type = "submit"]:hover   {
+.hidden-signup input[type = "submit"]:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 7px;
 
@@ -205,7 +232,7 @@ body {
 
 }
 
-.hidden-signup input[type = "submit"]{
+.hidden-signup input[type = "submit"] {
     background-color: inherit;
     border: 2px rebeccapurple solid;
     text-align: center;
@@ -224,7 +251,6 @@ body {
 }
 
 
-
 .navigation-login .login-container ul li label {
     position: absolute;
     display: block;
@@ -234,12 +260,11 @@ body {
 
 }
 
-.login-container ul li:hover  label{
+.login-container ul li:hover label {
     color: ghostwhite;
     transition-delay: 1s;
     transition: 0.25s;
 }
-
 
 
 .navigation-login .login-container ul li label[for=login] {
@@ -276,7 +301,6 @@ body {
 }
 
 
-
 .form-default-hidden .logout-button button { /* Logout button */
     display: flex;
     float: right;
@@ -299,7 +323,7 @@ body {
 }
 
 .form-default-hidden .logged-in-avatar, .form-default-hidden .logged-in-user {
-display: unset;
+    display: unset;
 }
 
 .logged-container li {
@@ -351,7 +375,6 @@ display: unset;
     border: .2em black solid;
 
 
-
 }
 
 .contentBox {
@@ -389,11 +412,13 @@ display: unset;
 
 
 }
+
 .contentBox .portfolio-me-img:hover {
     transition: all .5s ease;
     opacity: 0.8;
 
 }
+
 .contentBox hr {
     margin-top: 4em;
 
@@ -435,6 +460,7 @@ display: unset;
 .contactOverlay:hover .hiddenContactText {
     opacity: 1;
 }
+
 .contactOverlay:hover .contactGmailLogo {
     opacity: 0;
 }
@@ -442,6 +468,7 @@ display: unset;
 .oblubene-hry-table tr td img:hover {
     opacity: 0.7;
 }
+
 .oblubene-hry-table tr td img {
     max-width: 8em;
     transition: .5s ease;
@@ -457,7 +484,7 @@ display: unset;
 }
 
 .zoznam-hier, .development-zoznam, .os-zoznam {
-    overflow-x:auto;
+    overflow-x: auto;
 }
 
 .os-tables tr td img:hover {
@@ -472,8 +499,6 @@ display: unset;
 .os-tables tr td, .development-tables tr td, .oblubene-hry-table tr td {
     padding-right: 1em;
 }
-
-
 
 
 .projects-article {
@@ -510,12 +535,11 @@ display: unset;
 }
 
 
-
-.projects-article:nth-of-type(2n) p{
+.projects-article:nth-of-type(2n) p {
     text-align: right;
 }
 
-.project-box .projects-article:nth-of-type(2n) img{
+.project-box .projects-article:nth-of-type(2n) img {
 
     float: right;
     margin-left: 3em;
@@ -524,12 +548,12 @@ display: unset;
 }
 
 
-.contentBox .project-box:nth-of-type(even) .projects-article .project-title{
+.contentBox .project-box:nth-of-type(even) .projects-article .project-title {
     text-align: right;
     padding-right: 40%;
 }
 
-.contentBox .project-box:nth-of-type(odd) .projects-article .project-title{
+.contentBox .project-box:nth-of-type(odd) .projects-article .project-title {
     text-align: left;
     padding-left: 40%;
 }
@@ -554,13 +578,14 @@ display: unset;
 
     }
 
-    .contentBox .project-box:nth-of-type(n) .projects-article .project-title{
+    .contentBox .project-box:nth-of-type(n) .projects-article .project-title {
         text-align: center;
         padding-right: 0;
         padding-left: 0;
     }
 
 }
+
 .gallery-imagebox {
     display: flex;
     align-items: center;
@@ -587,18 +612,18 @@ display: unset;
     padding: 0 2em;
 
 
-
 }
 
 .WIP {
-    background: url("images/monkeyworking.jpg") center no-repeat fixed ;
+    background: url("images/monkeyworking.jpg") center no-repeat fixed;
     background-size: calc(100vw - 50%);
     opacity: 0.2;
-    min-height: 400px ;
+    min-height: 400px;
 
 }
 
 
+/*<editor-fold desc="Footer">*/
 footer {
     display: flex;
     width: 100%;
@@ -607,10 +632,12 @@ footer {
     justify-content: center;
 }
 
-footer p{
+footer p {
     font-size: 1em;
     text-align: center;
 }
+
+/*</editor-fold>*/
 
 
 /* ------------- SIGNUP FORM ------------- */
@@ -622,15 +649,13 @@ footer p{
     min-height: calc(100vh - 142px);
 
 
-
-
 }
 
 .signup ul {
     display: flex;
     list-style-type: none;
     flex-direction: column;
-    margin: 2em 0 ;
+    margin: 2em 0;
     background-color: rgba(1, 1, 1, 0.5);
     padding: 1em;
     width: 25em;
@@ -647,7 +672,7 @@ footer p{
 
 }
 
-.signup ul li input{
+.signup ul li input {
     display: block;
     border: 2px solid rebeccapurple;
     height: 3em;
@@ -731,7 +756,6 @@ footer p{
     width: 82%;
 
 
-
 }
 
 .profile-content ul {
@@ -763,6 +787,7 @@ footer p{
 
 
 }
+
 .profile-content ul li {
 
 
@@ -790,7 +815,6 @@ footer p{
 }
 
 
-
 .profile-content .profile-change-label label {
     padding: 0.8em;
     background-color: rgba(255, 255, 255, 0.2);
@@ -799,6 +823,7 @@ footer p{
 
 
 }
+
 .profile-content .profile-change-label input[type="text"] {
     min-width: 11em;
     text-align: center;
@@ -817,6 +842,7 @@ footer p{
     background-color: rgba(102, 51, 153, 0.7);
     border: none;
 }
+
 .profile-content .profile-change-label input[type="submit"]:hover {
     background-color: rgba(255, 255, 255, 1);
     transition: 0.5s;
@@ -850,6 +876,209 @@ footer p{
 
 }
 
+/*<editor-fold desc="Admin Panel Redirect">*/
+.admin-panel-box {
+    margin-top: -1em;
+    min-height: calc(100vh - 56px);
+
+}
+
+.admin-login {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: inherit;
+}
+.admin-login ul {
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid white;
+    padding: 2em;
+    margin: 0;
+}
+
+.admin-login ul:focus-within {
+    transition: 0.5s;
+    border-color: turquoise;
+}
+
+.admin-login ul {
+    color: snow;
+    font-size: 1.7em;
+}
+
+.admin-login ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-login ul li label {
+    text-align: center;
+    font-size: 0.9em;
+    color: mediumpurple;
+    padding: 0.5em 0;
+}
+
+.admin-login ul li input{
+    text-align: center;
+    width: 30%;
+    align-self: center;
+    height: 2em;
+    border: 0.3em solid rebeccapurple;
+    background: rgba(255,255,255,0.1);
+    border-radius: 1em;
+}
+
+.admin-login ul li input:focus {
+    width: 60%;
+    transition: 0.5s;
+    border-color: turquoise;
+
+}
+
+.admin-login ul li input[type='submit'] {
+    margin-top: 1.5em;
+    background: rgba(255,255,255,0.2);
+    border-color: rebeccapurple;
+    color: black;
+    height: 3em;
+    width: 10%;
+}
+
+.admin-login ul li input[type='submit']:hover {
+    border-color: turquoise;
+    background-color: unset;
+    color: grey;
+    transition: 0.5s;
+    width: 11%;
+
+}
+
+
+
+/*</editor-fold>*/
+
+
+/*<editor-fold desc="Admin Panel">*/
+.admin-panel-main-wrapper{
+    margin: 0 auto 0;
+    width: calc(100% - (0.2em * 2));
+    min-height: calc(100vh - 50px - (0.2em * 2));
+    background-color: rgba(255, 255, 255, 0.75);
+    border: .2em black solid;
+
+}
+
+.admin-header{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    height: 3em;
+    background-color: rebeccapurple;
+    border-bottom: 0.1em solid black;
+    z-index: 0;
+
+}
+
+.admin-left{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    min-height: 5em;
+    width: 15%;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.admin-right{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-height: 5em;
+    width: 85%;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.admin-content-container{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - (0.1em * 4.5) - 50px - 3em);
+    background-color: rgba(0, 0, 0, 0.75);
+    border-color: black;
+}
+
+.go-back-btn {
+    background-color: rgba(0,0,0,0.7);
+    border: none;
+    color: white;
+    z-index: 1;
+}
+
+.admin-header .username-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 5em;
+    color: white;
+    text-align: center;
+    padding: 0 1em;
+    z-index: 1;
+}
+
+.admin-header img {
+    display: flex;
+    background-color: rgba(0,0,0,0.7);
+    height: 2.5em;
+    align-self: center;
+    padding: 0.25em 0.5em;
+    z-index: 1;
+
+}
+
+.admin-left ul {
+    padding: 1em 0;
+    list-style: none;
+    text-align: center;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 50%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 50%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 50%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+.admin-left ul li {
+    color: rgba(255,255,255,1);
+    padding: 0;
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,0);
+    display: block;
+
+
+}
+.admin-left ul li:hover {
+    color: white;
+    border: 1px solid mediumpurple;
+
+
+}
+
+.btn-subpages {
+    color: rgba(255,255,255,1);
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    background: none;
+    border: 1px solid rgba(0,0,0,0);
+
+}
+
+.btn-subpages:active {
+   color: rebeccapurple;
+    background-color: rgba(255,255,255,0.1);
+}
+
+/*</editor-fold>*/
 
 
 
@@ -894,24 +1123,21 @@ footer p{
     }
 
 
-
-
 }
 
 @media screen and (max-width: 515px) {
 
     .hidden-signup {
-        margin-left: calc( (0em) );
+        margin-left: calc((0em));
     }
 
 }
 
 
-
 @media screen and (max-width: 470px) {
 
     .navigation-menu li {
-       font-size: 1em;
+        font-size: 1em;
         width: 100%;
     }
 
@@ -936,10 +1162,9 @@ footer p{
         float: unset;
     }
 
-    .login-container{
+    .login-container {
         display: flex;
         float: inherit;
-
 
 
     }
@@ -957,10 +1182,8 @@ footer p{
 
     .hidden-signup {
         margin-top: 2.3em;
-        margin-left: calc( (-2em) );
+        margin-left: calc((-2em));
     }
-
-
 
 
 }
@@ -993,7 +1216,7 @@ footer p{
 
         width: 6em;
         margin-top: 8em;
-        margin-left: calc( (0em) );
+        margin-left: calc((0em));
 
     }
 
@@ -1018,10 +1241,10 @@ footer p{
 @media screen and (max-width: 240px) {
 
     .navigation-menu li {
-       display: none;
+        display: none;
     }
 
-    .navigation-login  {
+    .navigation-login {
         opacity: 0;
     }
 
@@ -1033,6 +1256,7 @@ footer p{
     .navigation-menu li {
         display: none;
     }
+
     .contentBox .portfolio-me-img {
         display: none;
     }

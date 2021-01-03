@@ -23,7 +23,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Pripravene na prezentaciu 2.hej casti.">
-      <change beforePath="$PROJECT_DIR$/includes/ChangeProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ChangeProfileData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Includes/adminLoginForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminPanel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/test2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/incPageContent/headElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/ChangeProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ChangeProfileData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/LoginScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/ViewProfileData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incPageContent/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incPageContent/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +62,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,7 +91,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/adminPanelSubpages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -75,11 +99,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\php_mysql\www\VAIISemestralka\adminPanelSubpages" />
+      <recent name="F:\php_mysql\www\VAIISemestralka" />
       <recent name="F:\php_mysql\www\VAIISemestralka\includes" />
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\php_mysql\www\VAIISemestralka" />
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
     </key>
   </component>
@@ -138,7 +165,11 @@
       <workItem from="1606070115231" duration="7053000" />
       <workItem from="1606150925638" duration="6550000" />
       <workItem from="1606172776311" duration="2394000" />
-      <workItem from="1606195270349" duration="6161000" />
+      <workItem from="1606195270349" duration="8578000" />
+      <workItem from="1606806284011" duration="425000" />
+      <workItem from="1609508150377" duration="3808000" />
+      <workItem from="1609592782142" duration="16957000" />
+      <workItem from="1609681205062" duration="15408000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -371,7 +402,28 @@
       <option name="project" value="LOCAL" />
       <updated>1606201372453</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Pripravene na prezentaciu 2.hej casti.">
+      <created>1606201507699</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1606201507699</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Pripravene na prezentaciu 2.hej casti.">
+      <created>1606201547196</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1606201547196</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Pripravene na prezentaciu 2.hej casti.">
+      <created>1606201665165</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1606201665165</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,11 +488,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605438991836" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1605727454186">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1609612008369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605023616946" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605727454186" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1609612008369" />
     <state x="425" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605628346582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -518,21 +570,21 @@
     <state x="-1012" y="326" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926362416" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605091128140" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605725816952" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1606154496154">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1609696735970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605442376335" />
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606154496154" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1609696735970" />
     <state x="817" y="134" key="RollbackChangesDialog" timestamp="1603183248950">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603183248950" />
-    <state x="465" y="80" key="SettingsEditor" timestamp="1606159299551">
+    <state x="465" y="80" key="SettingsEditor" timestamp="1609593237763">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
-    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606159299551" />
+    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1609593237763" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -561,12 +613,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606070309305" />
-    <state x="982" y="205" width="807" height="820" key="search.everywhere.popup" timestamp="1606196100656">
+    <state x="982" y="205" width="807" height="820" key="search.everywhere.popup" timestamp="1609611566610">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1137" y="354" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604766888076" />
     <state x="982" y="205" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605447770035" />
-    <state x="982" y="205" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606196100656" />
+    <state x="982" y="205" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1609611566610" />
     <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

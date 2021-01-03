@@ -1,12 +1,15 @@
 <?php
 
 
-require_once "../includes/ViewProfileData.php";
 
-class ChangeProfileData extends ViewProfileData
+class ChangeProfileData
 {
 
     private DBConn $dbConn;
+    private string $userLogin;
+    private string $userFirstName;
+    private string $userLastName;
+    private string $userEmail;
 
 
 
@@ -15,22 +18,26 @@ class ChangeProfileData extends ViewProfileData
      */
     public function __construct()
     {
-       parent::__construct();
+        if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
+            session_start();
+        }
 
+        require_once 'DBConnect.php';
 
+        $this->dbConn = new DBConn();
+        
 
         if (isset($_SESSION['userLogin']) && isset($_SESSION['idUser']))
         {
 
-            $newDBConnect = new DBConn();
-            $this->setDbConn($newDBConnect);
 
+            $this->setDbConn($this->dbConn);
+            $this->initialiseProfileVariables($_SESSION['idUser']);
             $this->changeDataByInput(); //Interna logika zmeny jednotlivych poli
 
 
-
         } else {
-            header("location ../profile.php?error=noSessionFound");
+            header('location: ../index.php?notLoggedIN');
             exit();
 
         }
@@ -38,7 +45,7 @@ class ChangeProfileData extends ViewProfileData
     }
 
 
-    /**
+  /**
      * @return DBConn
      */
     public function getDbConn(): DBConn
@@ -53,6 +60,156 @@ class ChangeProfileData extends ViewProfileData
     {
         $this->dbConn = $dbConn;
     }
+
+    public function selectProfileData(string $idUser) {
+        $sqlProfileSelectData =
+            " SELECT po.idPouzivatela, po.loginPouzivatela,
+              po.emailPouzivatela, po.passPouzivatela, 
+              pd.avatarID, pd.userFirstName, 
+              pd.userLastName 
+              FROM pouzivatelia po
+              JOIN profile_data pd
+              ON (po.idPouzivatela = pd.idUser)
+              WHERE po.idPouzivatela = ?;"; //Je to dlhe pretoze chcem tieto specificke stlpce
+
+
+        $dbInitConn = $this->dbConn->getInitConn();
+
+
+        if ($dbInitConn == NULL) {
+            header('location: ../index.php?DBIncludeError');
+            exit();
+        }
+
+        $stmtSelectProfileData = $dbInitConn->stmt_init();
+
+        if (!($stmtSelectProfileData->prepare($sqlProfileSelectData)))  //Ak doslo k nejakej chybe
+        {
+            header('location: ../index.php?error=profileStmtError');
+            exit();
+        }
+
+
+        $stmtSelectProfileData->bind_param("s", $idUser); //s - String
+        $stmtSelectProfileData->execute();
+        $resultData = $stmtSelectProfileData->get_result();
+
+        if ($resultDataFromDB = $resultData->fetch_assoc()) //Priradime si data z DB do vysledneData a ak to prebehlo dobre vrati true
+        {
+            return $resultDataFromDB;
+        }
+        else
+        {
+            $resultData = false;
+            // header('location: ../index.php?error=noLoginFound'); //Ak nebol najdeny dany login hodim false a presmeruje nas naspat
+            return $resultData;
+
+        }
+
+
+
+    }
+
+    //<editor-fold desc="Initialize Attributes">
+
+    public function initialiseProfileVariables(string $idUser) {
+        $arrayUserDataFromDB= $this->selectProfileData($idUser);
+        $this->setUserLogin($arrayUserDataFromDB["loginPouzivatela"]);
+        $this->setUserEmail($arrayUserDataFromDB["emailPouzivatela"]);
+
+        if ($arrayUserDataFromDB["userFirstName"] != NULL)
+        {
+            $this->setUserFirstName($arrayUserDataFromDB["userFirstName"]);
+        }
+        else
+        {
+            $this->setUserFirstName("Meno nespecifikovane");
+        }
+
+
+
+        if ($arrayUserDataFromDB ['userLastName'] != NULL)
+        {
+            $this->setUserLastName($arrayUserDataFromDB["userLastName"]);
+        }
+        else
+        {
+            $this->setUserLastName("Priezvisko nespecifikovane");
+        }
+    }
+    //</editor-fold>
+
+
+
+    //Getters And Setters
+    //<editor-fold desc="Getters and Setters">
+
+    /**
+     * @return string
+     */
+    public function getUserLogin(): string
+    {
+        return $this->userLogin;
+    }
+
+    /**
+     * @param string $userLogin
+     */
+    protected function setUserLogin(string $userLogin): void
+    {
+        $this->userLogin = $userLogin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUserFirstName(): string
+    {
+        return $this->userFirstName;
+    }
+
+    /**
+     * @param string $userFirstName
+     */
+    protected function setUserFirstName(string $userFirstName): void
+    {
+        $this->userFirstName = $userFirstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUserLastName(): string
+    {
+        return $this->userLastName;
+    }
+
+    /**
+     * @param string $userLastName
+     */
+    protected function setUserLastName(string $userLastName): void
+    {
+        $this->userLastName = $userLastName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUserEmail(): string
+    {
+        return $this->userEmail;
+    }
+
+    /**
+     * @param string $userEmail
+     */
+    protected function setUserEmail(string $userEmail): void
+    {
+        $this->userEmail = $userEmail;
+    }
+
+    //</editor-fold>
+
 
 
     public function checkIfColEmpty(string $parNameOfCol) : bool

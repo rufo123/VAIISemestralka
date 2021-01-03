@@ -15,13 +15,13 @@
                     <li><a class="navbar-item" href="projects.php">Projekty</a></li>
                     <li><a class="navbar-item" href="gallery.php">Galéria</a></li>
                     <li><a class="navbar-item" href="blog.php">Blog</a></li>
-                    <li><a class="navbar-item" href="order.php">Objednávky</a></li>
-                </ul>
+                    <!--  <li><a class="navbar-item" href="order.php">Objednávky</a></li> -->
+                       </ul>
 
-            </div>
+                   </div>
 
-        </div>
+               </div>
 
-    </div>
+           </div>
 
-</div> <!-- Koniec Headeru -->
+       </div> <!-- Koniec Headeru -->
