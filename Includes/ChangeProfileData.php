@@ -10,6 +10,8 @@ class ChangeProfileData
     private string $userFirstName;
     private string $userLastName;
     private string $userEmail;
+    private int $avatarID;
+    private bool $isAdmin;
 
 
 
@@ -66,7 +68,7 @@ class ChangeProfileData
             " SELECT po.idPouzivatela, po.loginPouzivatela,
               po.emailPouzivatela, po.passPouzivatela, 
               pd.avatarID, pd.userFirstName, 
-              pd.userLastName 
+              pd.userLastName, pd.isAdmin 
               FROM pouzivatelia po
               JOIN profile_data pd
               ON (po.idPouzivatela = pd.idUser)
@@ -116,7 +118,8 @@ class ChangeProfileData
         $arrayUserDataFromDB= $this->selectProfileData($idUser);
         $this->setUserLogin($arrayUserDataFromDB["loginPouzivatela"]);
         $this->setUserEmail($arrayUserDataFromDB["emailPouzivatela"]);
-
+        $this->setAvatarID((int)$arrayUserDataFromDB["avatarID"]);
+        $this->setIsAdmin((bool)$arrayUserDataFromDB["isAdmin"]);
         if ($arrayUserDataFromDB["userFirstName"] != NULL)
         {
             $this->setUserFirstName($arrayUserDataFromDB["userFirstName"]);
@@ -125,8 +128,6 @@ class ChangeProfileData
         {
             $this->setUserFirstName("Meno nespecifikovane");
         }
-
-
 
         if ($arrayUserDataFromDB ['userLastName'] != NULL)
         {
@@ -143,6 +144,43 @@ class ChangeProfileData
 
     //Getters And Setters
     //<editor-fold desc="Getters and Setters">
+
+    /**
+     * @return int
+     */
+    public function getAvatarID(): int
+    {
+        return $this->avatarID;
+    }
+
+    /**
+     * @param int $avatarID
+     */
+    public function setAvatarID(int $avatarID): void
+    {
+        $this->avatarID = $avatarID;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAdmin(): bool
+    {
+        return $this->isAdmin;
+    }
+
+    /**
+     * @param bool $isAdmin
+     */
+    public function setIsAdmin(bool $isAdmin): void
+    {
+        $this->isAdmin = $isAdmin;
+    }
+
+
+
+
+
 
     /**
      * @return string

@@ -1,0 +1,14 @@
+
+
+h1,h2 {
+    text-align: center;
+
+}
+
+.admin_profile_showcase_image {
+    width: 20%;
+    max-width: 200px;
+    max-height: 200px;
+    display: flex;
+    align-self: center;
+}

@@ -22,31 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="Pripravene na prezentaciu 2.hej casti.">
-      <change afterPath="$PROJECT_DIR$/Includes/adminLoginForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/test2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incPageContent/headElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="- Zaciatok prace na Admin Paneli + AJAX dynamicka zmena SubStranky">
+      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/admin_welcome.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/statistics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/css_admin_panel_subpages/admin_welcome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VAIISemestralka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VAIISemestralka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/ChangeProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ChangeProfileData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/LoginScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/ViewProfileData.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incPageContent/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incPageContent/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,14 +47,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpServers">
     <servers>
@@ -89,25 +82,24 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/adminPanelSubpages" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jquery-3.0.0.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\php_mysql\www\VAIISemestralka" />
+      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\php_mysql\www\VAIISemestralka\adminPanelSubpages" />
       <recent name="F:\php_mysql\www\VAIISemestralka" />
       <recent name="F:\php_mysql\www\VAIISemestralka\includes" />
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\php_mysql\www\VAIISemestralka" />
-      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -169,7 +161,8 @@
       <workItem from="1606806284011" duration="425000" />
       <workItem from="1609508150377" duration="3808000" />
       <workItem from="1609592782142" duration="16957000" />
-      <workItem from="1609681205062" duration="15408000" />
+      <workItem from="1609681205062" duration="15529000" />
+      <workItem from="1610712437579" duration="26603000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -423,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606201665165</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="- Zaciatok prace na Admin Paneli + AJAX dynamicka zmena SubStranky">
+      <created>1609697560195</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1609697560195</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +443,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update" />
     <MESSAGE value="Dokončené menu a footer. 10/10/2020" />
     <MESSAGE value="Pridaný obsah indexu a gmail email" />
     <MESSAGE value="Dokončený Base projects.html" />
@@ -468,7 +467,8 @@
     <MESSAGE value="na 99% hotova druha cast" />
     <MESSAGE value="Pripravene na prezentaciu 2.hej casti" />
     <MESSAGE value="Pripravene na prezentaciu 2.hej casti." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pripravene na prezentaciu 2.hej casti." />
+    <MESSAGE value="- Zaciatok prace na Admin Paneli + AJAX dynamicka zmena SubStranky" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Zaciatok prace na Admin Paneli + AJAX dynamicka zmena SubStranky" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
@@ -488,11 +488,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605438991836" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1609612008369">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1610727433491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605023616946" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1609612008369" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610727433491" />
     <state x="425" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605628346582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -502,12 +502,13 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="236" y="57" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1602526210500" />
-    <state x="-798" y="350" key="FileChooserDialogImpl" timestamp="1604926140077">
-      <screen x="-1600" y="174" width="1600" height="860" />
+    <state x="962" y="213" key="FileChooserDialogImpl" timestamp="1610733398615">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="176" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1602329181206" />
     <state x="-798" y="350" key="FileChooserDialogImpl/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926140077" />
     <state x="962" y="213" key="FileChooserDialogImpl/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1604387389781" />
+    <state x="962" y="213" key="FileChooserDialogImpl/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610733398615" />
     <state x="657" y="329" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1602526371629">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -570,37 +571,37 @@
     <state x="-1012" y="326" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926362416" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605091128140" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605725816952" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1609696735970">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610713917711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605442376335" />
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1609696735970" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610713917711" />
     <state x="817" y="134" key="RollbackChangesDialog" timestamp="1603183248950">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603183248950" />
-    <state x="465" y="80" key="SettingsEditor" timestamp="1609593237763">
+    <state x="465" y="80" key="SettingsEditor" timestamp="1610733404100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
-    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1609593237763" />
+    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610733404100" />
     <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1606201374408">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1610739244442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606201374408" />
-    <state x="589" y="233" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605623584525">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610739244442" />
+    <state x="589" y="233" width="593" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610713343737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="500" y="214" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605441661295" />
-    <state x="589" y="233" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1605623584525" />
+    <state x="589" y="233" width="593" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610713343737" />
     <state x="540" y="339" width="1179" height="822" key="dock-window-1" timestamp="1605616216712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

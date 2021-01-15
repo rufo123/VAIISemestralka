@@ -997,6 +997,7 @@ footer p {
     width: 85%;
     opacity: 0.8;
     z-index: 2;
+    transition: 1s;
 }
 
 .admin-content-container{
@@ -1078,7 +1079,14 @@ footer p {
     background-color: rgba(255,255,255,0.1);
 }
 
+
+
+
 /*</editor-fold>*/
+
+
+
+
 
 
 
