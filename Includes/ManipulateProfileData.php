@@ -1,8 +1,7 @@
 <?php
 
 
-
-class ChangeProfileData
+class ManipulateProfileData
 {
 
     private DBConn $dbConn;
@@ -14,9 +13,8 @@ class ChangeProfileData
     private bool $isAdmin;
 
 
-
     /**
-     * ChangeProfileData constructor.
+     * ManipulateProfileData constructor.
      */
     public function __construct()
     {
@@ -27,10 +25,9 @@ class ChangeProfileData
         require_once 'DBConnect.php';
 
         $this->dbConn = new DBConn();
-        
 
-        if (isset($_SESSION['userLogin']) && isset($_SESSION['idUser']))
-        {
+
+        if (isset($_SESSION['userLogin']) && isset($_SESSION['idUser'])) {
 
 
             $this->setDbConn($this->dbConn);
@@ -47,7 +44,7 @@ class ChangeProfileData
     }
 
 
-  /**
+    /**
      * @return DBConn
      */
     public function getDbConn(): DBConn
@@ -63,12 +60,16 @@ class ChangeProfileData
         $this->dbConn = $dbConn;
     }
 
-    public function selectProfileData(string $idUser) {
+    public function selectProfileData(string $idUser)
+    {
+
+
         $sqlProfileSelectData =
             " SELECT po.idPouzivatela, po.loginPouzivatela,
               po.emailPouzivatela, po.passPouzivatela, 
+              po.isAdmin,
               pd.avatarID, pd.userFirstName, 
-              pd.userLastName, pd.isAdmin 
+              pd.userLastName
               FROM pouzivatelia po
               JOIN profile_data pd
               ON (po.idPouzivatela = pd.idUser)
@@ -99,9 +100,7 @@ class ChangeProfileData
         if ($resultDataFromDB = $resultData->fetch_assoc()) //Priradime si data z DB do vysledneData a ak to prebehlo dobre vrati true
         {
             return $resultDataFromDB;
-        }
-        else
-        {
+        } else {
             $resultData = false;
             // header('location: ../index.php?error=noLoginFound'); //Ak nebol najdeny dany login hodim false a presmeruje nas naspat
             return $resultData;
@@ -109,37 +108,31 @@ class ChangeProfileData
         }
 
 
-
     }
 
     //<editor-fold desc="Initialize Attributes">
 
-    public function initialiseProfileVariables(string $idUser) {
-        $arrayUserDataFromDB= $this->selectProfileData($idUser);
+    public function initialiseProfileVariables(string $idUser)
+    {
+        $arrayUserDataFromDB = $this->selectProfileData($idUser);
         $this->setUserLogin($arrayUserDataFromDB["loginPouzivatela"]);
         $this->setUserEmail($arrayUserDataFromDB["emailPouzivatela"]);
         $this->setAvatarID((int)$arrayUserDataFromDB["avatarID"]);
-        $this->setIsAdmin((bool)$arrayUserDataFromDB["isAdmin"]);
-        if ($arrayUserDataFromDB["userFirstName"] != NULL)
-        {
+        $this->setIsAdmin($arrayUserDataFromDB["isAdmin"]);
+
+        if ($arrayUserDataFromDB["userFirstName"] != NULL) {
             $this->setUserFirstName($arrayUserDataFromDB["userFirstName"]);
-        }
-        else
-        {
+        } else {
             $this->setUserFirstName("Meno nespecifikovane");
         }
 
-        if ($arrayUserDataFromDB ['userLastName'] != NULL)
-        {
+        if ($arrayUserDataFromDB ['userLastName'] != NULL) {
             $this->setUserLastName($arrayUserDataFromDB["userLastName"]);
-        }
-        else
-        {
+        } else {
             $this->setUserLastName("Priezvisko nespecifikovane");
         }
     }
     //</editor-fold>
-
 
 
     //Getters And Setters
@@ -176,10 +169,6 @@ class ChangeProfileData
     {
         $this->isAdmin = $isAdmin;
     }
-
-
-
-
 
 
     /**
@@ -246,11 +235,11 @@ class ChangeProfileData
         $this->userEmail = $userEmail;
     }
 
+
     //</editor-fold>
 
 
-
-    public function checkIfColEmpty(string $parNameOfCol) : bool
+    public function checkIfColEmpty(string $parNameOfCol): bool
     {
         if (empty($parNameOfCol)) {
             header('location: ../profile.php?error=emptyInput');
@@ -258,7 +247,6 @@ class ChangeProfileData
         } else {
             return false;
         }
-
 
 
     }
@@ -270,17 +258,17 @@ class ChangeProfileData
             exit();
         }
 
-        if (!preg_match("(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$)",$parPass)) { // 0-9 | a-z | A-Z
+        if (!preg_match("(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$)", $parPass)) { // 0-9 | a-z | A-Z
             header('location: ../profile.php?error=passNoRequiredCharacters');
             exit();
         }
     }
 
 
-    public function changeUserName(string $parChangeToWhat, mysqli $parConn, string $idUser) {
+    public function changeUserName(string $parChangeToWhat, mysqli $parConn, string $idUser)
+    {
 
         $this->isLoginUnique($parConn, $parChangeToWhat, "login");
-
 
 
         $sqlChange = 'UPDATE pouzivatelia SET loginPouzivatela = ? WHERE idPouzivatela = ?';
@@ -303,7 +291,7 @@ class ChangeProfileData
 
     }
 
-    public function isLoginUnique(mysqli $conn, string $loginORemail, string $typeOfInput) : void
+    public function isLoginUnique(mysqli $conn, string $loginORemail, string $typeOfInput): void
     {
         if ($typeOfInput == "email") {
 
@@ -314,7 +302,6 @@ class ChangeProfileData
             header('location: ../profile.php?systemError=isLoginUniqueBADTYPE');
             exit();
         }
-
 
 
         $stmtSelectUnique = $conn->stmt_init();
@@ -332,7 +319,7 @@ class ChangeProfileData
 
         if ($result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
 
-            header('location: ../profile.php?error='.$typeOfInput.'NotUnique');
+            header('location: ../profile.php?error=' . $typeOfInput . 'NotUnique');
             exit();
 
         }
@@ -340,7 +327,8 @@ class ChangeProfileData
     }
 
 
-    public function changeProfileRow(string $changedRow, mysqli $parConn, string $idUser, string $nameOfDBCol) {
+    public function changeProfileRow(string $changedRow, mysqli $parConn, string $idUser, string $nameOfDBCol)
+    {
 
         if ($nameOfDBCol == "userFirstName") {
             $sqlRowChange = "UPDATE profile_data SET userFirstName = ? WHERE idUser = ?";
@@ -353,7 +341,6 @@ class ChangeProfileData
         }
 
 
-
         $stmtProfileRowChange = $parConn->stmt_init();
 
 
@@ -362,7 +349,7 @@ class ChangeProfileData
             exit();
         }
 
-        $stmtProfileRowChange->bind_param('ss',$changedRow, $idUser); //ss - NaCoZmenit - IdUsera
+        $stmtProfileRowChange->bind_param('ss', $changedRow, $idUser); //ss - NaCoZmenit - IdUsera
         $stmtProfileRowChange->execute();
         $stmtProfileRowChange->close();
         //Kedze sme uspesne zmenili pouzivatelsky login, treba ho zmenit aj v session
@@ -395,7 +382,8 @@ class ChangeProfileData
 
     }
 
-    public function changePass(mysqli $parConnection, string $parPassword, string $parRepeatPass, string $idUser) {
+    public function changePass(mysqli $parConnection, string $parPassword, string $parRepeatPass, string $idUser)
+    {
 
 
         if ($parPassword !== $parRepeatPass) {
@@ -427,7 +415,8 @@ class ChangeProfileData
 
     }
 
-    public function checkPassword(mysqli $parConnection, string $parPassword, string $idUser ) { //Overovanie hesla
+    public function checkPassword(mysqli $parConnection, string $parPassword, string $idUser)
+    { //Overovanie hesla
 
 
         $sqlPassCheck = "SELECT passPouzivatela FROM pouzivatelia WHERE idPouzivatela = ?;";
@@ -440,8 +429,7 @@ class ChangeProfileData
         }
 
 
-
-        $stmtPassCheck->bind_param("s",  $idUser); //ss - String, String
+        $stmtPassCheck->bind_param("s", $idUser); //ss - String, String
         $stmtPassCheck->execute();
 
         $result = $stmtPassCheck->get_result();
@@ -452,10 +440,6 @@ class ChangeProfileData
             password_verify($vyslednyArray['passPouzivatela'], $hashPass);
 
 
-
-
-
-
         } else {
 
             header('location: ../profile.php?error=wrongPass');
@@ -463,20 +447,33 @@ class ChangeProfileData
 
         }
 
+    }
 
+    public function deleteAccountWithAdminPrivileges(mysqli $parConnection, string $idUserToDelete)
+    {
+        if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
 
+            $this->deleteAccount($parConnection, $idUserToDelete);
 
+        } else {
+            header('location: ../index.php?error=noAdminPrivileges');
+            exit();
 
-
-
+        }
 
     }
 
-    public function deleteAccount(mysqli $parConnection, string $parPassword, string $idUser) {
+    public function deleteAccountOfMyself(mysqli $parConnection, string $parPassword, string $idUser)
+    {
+
+        $this->checkPassword($parConnection, $parPassword, $idUser); //Overenie hesla pre potvrdenie
+
+        $this->deleteAccount($parConnection, $idUser);
+    }
 
 
-        $this->checkPassword( $parConnection,  $parPassword,  $idUser); //Overenie hesla pre potvrdenie
-
+    private function deleteAccount(mysqli $parConnection, string $idUser)
+    {
 
 
         $sqlAccPouziv = 'DELETE FROM pouzivatelia WHERE idPouzivatela = ?';
@@ -491,12 +488,11 @@ class ChangeProfileData
         }
 
 
-        $stmtDelAccProfile->bind_param('s', $idUser, ); //ss - String, String
+        $stmtDelAccProfile->bind_param('s', $idUser,); //ss - String, String
         $stmtDelAccProfile->execute();
         $stmtDelAccProfile->close();
 
         //Dokoncene mazanie z profile_data
-
 
 
         $stmtDelAccPouziv = $parConnection->stmt_init();
@@ -520,10 +516,9 @@ class ChangeProfileData
     }
 
 
-
-    public function changeDataByInput() {
-        if (isset($_POST['changeUserProceed']))
-        {
+    public function changeDataByInput()
+    {
+        if (isset($_POST['changeUserProceed'])) {
 
             $changedUsername = trim($_POST['changeUserShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
 
@@ -531,10 +526,8 @@ class ChangeProfileData
             {
                 header("location ../profile.php?error=UsernameEmpty");
                 exit();
-            }
-            else
-            {
-                $this->changeUserName($changedUsername, $this->getDbConn()->getInitConn(),$_SESSION['idUser']);
+            } else {
+                $this->changeUserName($changedUsername, $this->getDbConn()->getInitConn(), $_SESSION['idUser']);
             }
 
 
@@ -542,30 +535,24 @@ class ChangeProfileData
 
             $changedName = trim($_POST['changeNameShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
 
-            if ($this->checkIfColEmpty($changedName))
-            {
+            if ($this->checkIfColEmpty($changedName)) {
                 header("location ../profile.php?error=NameEmpty");
                 exit();
-            }
-            else
-            {
+            } else {
                 $this->changeProfileRow($changedName, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userFirstName");
 
             }
-
 
 
         } else if (isset($_POST['changeSurnameProceed'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
 
             $changedSurname = trim($_POST['changeSurnameShow']);
 
-            if ($this->checkIfColEmpty($changedSurname))
-            {
+            if ($this->checkIfColEmpty($changedSurname)) {
                 header("location ../profile.php?error=SurnameEmpty");
                 exit();
 
-            } else
-            {
+            } else {
                 $this->changeProfileRow($changedSurname, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userLastName");
 
             }
@@ -574,15 +561,13 @@ class ChangeProfileData
 
             $changedEmail = trim($_POST['changeEmailShow']);
 
-            if ($this->checkIfColEmpty($changedEmail))
-            {
+            if ($this->checkIfColEmpty($changedEmail)) {
                 header("location ../profile.php?error=EmailEmpty");
                 exit();
 
-            } else
-            {
+            } else {
 
-                $this->changeEmail($changedEmail, $this->getDbConn()->getInitConn(), $_SESSION['idUser'] );
+                $this->changeEmail($changedEmail, $this->getDbConn()->getInitConn(), $_SESSION['idUser']);
 
             }
 
@@ -592,16 +577,12 @@ class ChangeProfileData
             $changeRepeatPass = trim($_POST['changeRepeatPassShow']);
 
 
-
-
-            if ($this->checkIfColEmpty($changePass) || $this->checkIfColEmpty($changeRepeatPass))
-            {
+            if ($this->checkIfColEmpty($changePass) || $this->checkIfColEmpty($changeRepeatPass)) {
                 header("location ../profile.php?error=passFieldEmpty");
                 exit();
 
-            } else
-            {
-                $this->changePass($this->getDbConn()->getInitConn(), $changePass, $changeRepeatPass, $_SESSION['idUser'] );
+            } else {
+                $this->changePass($this->getDbConn()->getInitConn(), $changePass, $changeRepeatPass, $_SESSION['idUser']);
             }
 
 
@@ -610,15 +591,12 @@ class ChangeProfileData
             $checkPass = trim($_POST['reqDelPass']);
 
 
-
-            if ($this->checkIfColEmpty($checkPass))
-            {
+            if ($this->checkIfColEmpty($checkPass)) {
                 header("location ../profile.php?error=passEmpty");
                 exit();
 
-            } else
-            {
-                $this->deleteAccount($this->getDbConn()->getInitConn(), $checkPass, $_SESSION['idUser'] );
+            } else {
+                $this->deleteAccountOfMyself($this->getDbConn()->getInitConn(), $checkPass, $_SESSION['idUser']);
             }
 
 
@@ -626,11 +604,6 @@ class ChangeProfileData
     }
 
 
-
-
-
-
-
 }
 
-$changeProfileData = new ChangeProfileData();
+$changeProfileData = new ManipulateProfileData();

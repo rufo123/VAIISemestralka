@@ -1,0 +1,31 @@
+.admin-right {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0;
+
+}
+
+.user_block {
+    display: flex;
+    flex-direction: row;
+    background-color: cyan;
+    width: 10em;
+    border: 1px solid rebeccapurple;
+    margin: 0.5em;
+
+}
+
+.user_block_admin {
+    background-color: red;
+}
+
+.user_block p {
+    text-align: center;
+    margin: auto;
+}
+
+.user_block img {
+    width: 30%;
+}

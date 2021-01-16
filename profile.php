@@ -11,10 +11,10 @@
 <div class="contentContainer">
 
     <div class="profile-content">
-        <form method="post" action="includes/ChangeProfileData.php">
+        <form method="post" action="includes/ManipulateProfileData.php">
 
-            <?php require "includes/ChangeProfileData.php";
-            $profileData = new ChangeProfileData();
+            <?php require "includes/ManipulateProfileData.php";
+            $profileData = new ManipulateProfileData();
 
 
             ?>

@@ -1,8 +1,8 @@
 <?php
 
-include "../includes/ChangeProfileData.php";
+include "../includes/ManipulateProfileData.php";
 
-$profileData = new ChangeProfileData();
+$profileData = new ManipulateProfileData();
 
 echo " <h1> Vitaj " . $profileData->getUserFirstName() ."  </h1>";
 

@@ -12,3 +12,9 @@ h1,h2 {
     display: flex;
     align-self: center;
 }
+
+.admin-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

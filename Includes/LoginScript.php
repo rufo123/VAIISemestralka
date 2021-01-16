@@ -114,6 +114,7 @@ class LoginScript
             session_start();
             $_SESSION['idUser'] = $riadokZDB['idPouzivatela'];
             $_SESSION['userLogin'] = $riadokZDB['loginPouzivatela'];
+            $_SESSION['isAdmin'] = $riadokZDB['isAdmin'];
             header('location: ' . $this->getReturnURL() .'?login=success');
             exit();
         }
