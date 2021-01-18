@@ -11,7 +11,7 @@
 <div class="contentContainer">
 
     <div class="profile-content">
-        <form method="post" action="includes/ManipulateProfileData.php">
+        <form method="post" action="includes/ManipulateProfileData.php" enctype="multipart/form-data">
 
             <?php require "includes/ManipulateProfileData.php";
             $profileData = new ManipulateProfileData();
@@ -25,13 +25,15 @@
 
                 <div class="profile-name">
                     <ul>
-
+                        <li><input type="file" name="avatarFile" id="avatarFile"></li>
+                        <li><input type="submit" value="Upload Image" name="avatarUpload"></li>
                     </ul>
                 </div>
 
 
             </div>
-
+        </form>
+        <form method="post" action="includes/ManipulateProfileData.php">
             <ul class="profile-data-ul">
 
                 <li>

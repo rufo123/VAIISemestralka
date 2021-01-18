@@ -20,7 +20,7 @@ $tmpAltTextIMG = "Image Of User - ". $profileData->getUserLogin();
 echo "<img class='admin_profile_showcase_image' src='$tmpProfileIMGURL' alt='$tmpAltTextIMG'>";
 
 echo "<h2> Rola: Administrator</h2>";
-?>
+
 
 
 

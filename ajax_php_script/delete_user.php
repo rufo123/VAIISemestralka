@@ -9,10 +9,12 @@ include_once "../includes/ManipulateProfileData.php";
 $profileManager = new ManipulateProfileData();
 
 
-if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
+if (isset($_SESSION['isAdmin']) && ($_SESSION['isAdmin'] === 1)) {
 
-    $profileManager->initialiseProfileVariables($_SESSION('idUser')); //Inicializujeme si Profilove premmene s nasim uctom
-    $profileManager->deleteAccountWithAdminPrivileges($profileManager->getDbConn()->getInitConn(), $_POST('idOfTargetUser')); //Vymazeme admin ucet
+
+    $profileManager->deleteAccountWithAdminPrivileges($profileManager->getDbConn()->getInitConn(), $_POST['idOfTargetUser']); //Vymazeme admin ucet
+
+
 
     header('location: ../adminPanel.php?success=accountDeleted');
     exit();

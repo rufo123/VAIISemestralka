@@ -1,0 +1,50 @@
+
+/*
+<form action="includes/BlogScript.php" method="post" >
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Title">
+    <label>Text</label>
+    <input type="text" name="text"  placeholder="Text">
+    <label>Image</label>
+    <input type="text" name="image" placeholder="Image">
+    <button class="btn" type="createPost" name="createPost">Create</button>
+</form>
+'
+
+ */
+
+.admin-right {
+    background-color: rgba(255,255,255,0.2);
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+}
+
+label {
+    margin: 0.1em;
+}
+
+input[name="title"] {
+    width: 50vw;
+    border: 0.2em solid rebeccapurple;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+}
+textarea {
+    width: 50vw;
+    height: 50vh;
+    border: 0.5em solid rebeccapurple;
+    background-color: rgba(255,255,255,0.5);
+
+}
+input[name="image"] {
+    border: 0.2em solid rebeccapurple;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+}

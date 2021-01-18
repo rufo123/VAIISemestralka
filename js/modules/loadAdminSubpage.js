@@ -12,10 +12,13 @@ class LoadAdminSubpage {
 
     loadPageLoader(parPageName) {
 
-            let tmpBackground = document.getElementsByClassName("admin-right")[0];
+        let tmpBackground = document.getElementsByClassName("admin-right")[0];
+
+        if (tmpBackground !== undefined) {
             tmpBackground.style.opacity = "0.5";
 
             this.loadPage(parPageName);
+        }
 
     };
 
@@ -42,6 +45,7 @@ class LoadAdminSubpage {
                 this.aPageIsLoaded = true;
                 let styleName = parPageName.slice(0, (parPageName.lastIndexOf("."))); //Odsekne priponu .php
                 this.loadStyleSheet(styleName);
+
 
             }
 
@@ -73,6 +77,13 @@ class LoadAdminSubpage {
                     tmpHead.appendChild(tmpLink);
                     console.log('AdminPanel css added successfully!');
                     console.log(tmpHead);
+                    if (parStyleSheetName === "manage_blog_entries") {
+                        ajaxSwitchBlogSubpages.ajaxSwitchAdminSubpage();
+                        console.log("Manage");
+                    } else if (parStyleSheetName === "users_managing") {
+                        ajaxDeleteUser.deleteUser();
+                        console.log("Delete");
+                    }
 
                 }
                 let tmpBackground = document.getElementsByClassName("admin-right")[0];
@@ -109,7 +120,7 @@ class LoadAdminSubpage {
     }
 
     deletePreviousSubStyle() {
-        if (this.getNumberOfLinks > this.aNumberOfLinksInPage) {
+        while (this.getNumberOfLinks > this.aNumberOfLinksInPage) {
             let tmpHead = document.getElementsByTagName('head')[0];
             let tmpLink = document.querySelector('link:last-child');
             tmpHead.removeChild(tmpLink);

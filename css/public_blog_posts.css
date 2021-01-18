@@ -1,0 +1,36 @@
+.blog_post {
+    background-color: rgba(0,0,0,0.5);
+    margin: 1em;
+}
+
+.blog_post p {
+    border: 1px solid rebeccapurple;
+    text-align: center;
+}
+
+.show_more_blogposts {
+    width: 10%;
+    height: 2em;
+    text-align: center;
+    align-self: center;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+    transition: 0.2s;
+    opacity: 0.5;
+    color: snow;
+    font-size: 100%;
+    font-family: inherit;
+    outline: 0;
+}
+
+
+.show_more_blogposts:hover {
+    background-color: mediumpurple;
+    outline: 0;
+}
+
+.blog_post_image {
+    align-self: center;
+
+}
+

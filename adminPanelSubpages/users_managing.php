@@ -19,27 +19,28 @@ for ($i = 0; $i < $userMassOperations->getUserCount(); $i++) {
         $tmpProfileIMGURL = $tmpProfileIMGURL . $profileData->getAvatarID();
     }
 
-    //echo "<script> changeAdminColor.changeColorAdmin('" . $tmpIsAdmin . "', '" . $i . "' ); </script>";
+    $tmpPromoteOrDemote;
 
     if ($profileData->isAdmin() === true) {
         echo "<div class='user_block user_block_admin'> ";
+        $tmpPromoteOrDemote = "Demote";
     } else {
         echo "<div class='user_block'>";
+        $tmpPromoteOrDemote = "Promote";
     }
-
-    echo "<img class='admin_profile_showcase_image' src='$tmpProfileIMGURL' alt='User:' . $tmpUserID . '>";
-    echo "<p>" . $profileData->getUserLogin() . "</p>";
-
-    echo "<ul>
-                <li><button class='admin_promote' onclick='changeAdminColor.changeColorAdmin(" . $i . "," . $tmpUserID . ")'>TEst</button></li>
-           </ul>";
-
-    echo " </div>";
-
-
+    echo "<div class='user_info'>";
+        echo "<img class='admin_profile_showcase_image' src='$tmpProfileIMGURL' alt='User $tmpUserID'>";
+        echo "<p>" . $profileData->getUserLogin() . "</p>";
+    echo "</div>";
+    /** @noinspection CommaExpressionJS */
+    echo "<div class='user_manipulation'>";
+             echo "<ul>";
+                 echo "<li><button class='admin_promote' onclick='changeAdminColor.changeColorAdmin($i , $tmpUserID)'>$tmpPromoteOrDemote</button></li>";
+                 echo "<li><button class='admin_delete_user' data-del='$tmpUserID'>Delete</button></li>";
+             echo "</ul>";
+        echo " </div>";
+    echo "</div>";
 
 }
 
-
-?>
 

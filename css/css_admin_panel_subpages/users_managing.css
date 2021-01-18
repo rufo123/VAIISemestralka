@@ -4,16 +4,19 @@
     align-content: flex-start;
     flex-wrap: wrap;
     gap: 0;
+    overflow: auto;
+    background-color: grey;
 
 }
 
 .user_block {
     display: flex;
-    flex-direction: row;
-    background-color: cyan;
+    flex-direction: column;
+    background-color: rebeccapurple;
     width: 10em;
     border: 1px solid rebeccapurple;
     margin: 0.5em;
+    overflow: hidden;
 
 }
 
@@ -28,4 +31,47 @@
 
 .user_block img {
     width: 30%;
+}
+
+.user_info {
+    display: flex;
+    flex-direction: row;
+}
+.user_manipulation{
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+li {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li button{
+    width: 50%;
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid black;
+}
+
+footer {
+    position: absolute;
+    z-index: 10;
+}
+
+@media screen and (max-width: 430px) {
+
+
+
+
 }

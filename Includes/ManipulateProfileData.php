@@ -451,9 +451,9 @@ class ManipulateProfileData
 
     public function deleteAccountWithAdminPrivileges(mysqli $parConnection, string $idUserToDelete)
     {
-        if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
+        if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === 1) {
 
-            $this->deleteAccount($parConnection, $idUserToDelete);
+            $this->deleteAccount($parConnection, $idUserToDelete, true);
 
         } else {
             header('location: ../index.php?error=noAdminPrivileges');
@@ -468,11 +468,11 @@ class ManipulateProfileData
 
         $this->checkPassword($parConnection, $parPassword, $idUser); //Overenie hesla pre potvrdenie
 
-        $this->deleteAccount($parConnection, $idUser);
+        $this->deleteAccount($parConnection, $idUser, false);
     }
 
 
-    private function deleteAccount(mysqli $parConnection, string $idUser)
+    private function deleteAccount(mysqli $parConnection, string $idUser, bool $asAdmin)
     {
 
 
@@ -505,9 +505,11 @@ class ManipulateProfileData
         $stmtDelAccPouziv->execute();
         $stmtDelAccPouziv->close();
 
-        session_start();
-        session_unset();
-        session_destroy();
+        if ($asAdmin === false) {
+            session_start();
+            session_unset();
+            session_destroy();
+        }
 
         header('location: ../index.php?success=uspDelete');
         exit();
@@ -598,6 +600,9 @@ class ManipulateProfileData
             } else {
                 $this->deleteAccountOfMyself($this->getDbConn()->getInitConn(), $checkPass, $_SESSION['idUser']);
             }
+
+
+        } else if (isset($_POST['avatarUpload'])) {
 
 
         }

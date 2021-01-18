@@ -1064,63 +1064,103 @@
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,EXECUTE|vaisemestralka:null
 </ObjectGrants>
     </user>
-    <table id="337" parent="8" name="pouzivatelia"/>
-    <table id="338" parent="8" name="profile_data"/>
-    <column id="339" parent="337" name="idPouzivatela">
+    <table id="337" parent="8" name="blog_posts"/>
+    <table id="338" parent="8" name="pouzivatelia"/>
+    <table id="339" parent="8" name="profile_data"/>
+    <column id="340" parent="337" name="idPost">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="340" parent="337" name="loginPouzivatela">
+    <column id="341" parent="337" name="idUser">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="342" parent="337" name="image">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="343" parent="337" name="title">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="344" parent="337" name="body">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <index id="345" parent="337" name="blog_posts_pouzivatelia_idPouzivatela_fk">
+      <ColNames>idUser</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="346" parent="337" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idPost</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="347" parent="337" name="blog_posts_pouzivatelia_idPouzivatela_fk">
+      <ColNames>idUser</ColNames>
+      <RefTableName>pouzivatelia</RefTableName>
+      <RefColNames>idPouzivatela</RefColNames>
+    </foreign-key>
+    <column id="348" parent="338" name="idPouzivatela">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="349" parent="338" name="loginPouzivatela">
       <Position>2</Position>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="341" parent="337" name="emailPouzivatela">
+    <column id="350" parent="338" name="emailPouzivatela">
       <Position>3</Position>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="342" parent="337" name="passPouzivatela">
+    <column id="351" parent="338" name="passPouzivatela">
       <Position>4</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="343" parent="337" name="isAdmin">
+    <column id="352" parent="338" name="isAdmin">
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <key id="344" parent="337" name="PRIMARY">
+    <key id="353" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idPouzivatela</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="345" parent="338" name="idUser">
+    <column id="354" parent="339" name="idUser">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="346" parent="338" name="avatarID">
+    <column id="355" parent="339" name="avatarID">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="347" parent="338" name="userFirstName">
+    <column id="356" parent="339" name="userFirstName">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="348" parent="338" name="userLastName">
+    <column id="357" parent="339" name="userLastName">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="349" parent="338" name="PRIMARY">
+    <key id="358" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idUser</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="350" parent="338" name="profile_data_pouzivatelia_idPouzivatela_fk">
+    <foreign-key id="359" parent="339" name="profile_data_pouzivatelia_idPouzivatela_fk">
       <ColNames>idUser</ColNames>
       <RefTableName>pouzivatelia</RefTableName>
       <RefColNames>idPouzivatela</RefColNames>

@@ -102,7 +102,7 @@ class MassUserManipulation
 
     }
 
-    public function setAdminStatus(string $parIDPouzivatela, bool $parMakeAdmin) : void {
+    public function setAdminStatus(string $parIDPouzivatela, int $parMakeAdmin) : void {
 
         $sqlUpdateAdmin = 'UPDATE pouzivatelia SET isAdmin = ? WHERE idPouzivatela = ?';
         $stmtUpdateAdmin = (($this->getDbConnect())->getInitConn())->stmt_init();
@@ -112,6 +112,8 @@ class MassUserManipulation
             header('location: ../index.php?error=stmtError');
             exit();
         }
+        
+
 
         $stmtUpdateAdmin->bind_param('ss', $parMakeAdmin, $parIDPouzivatela); //ss
         $stmtUpdateAdmin->execute();

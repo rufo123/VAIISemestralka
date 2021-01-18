@@ -1,0 +1,55 @@
+.admin-right {
+    overflow: auto;
+}
+
+
+.admin_blog_preview {
+    margin: 0.165em 0.1em;
+    background-color: dimgrey;
+    border: 1px solid rebeccapurple;
+    height: 7.89vh;
+    font-size: 100%;
+    display: flex;
+}
+
+.admin_blog_preview:hover {
+    opacity: 0.9;
+
+}
+
+.admin_blog_preview:nth-of-type(2n) {
+    background-color: grey;
+}
+
+.admin_blog_preview p {
+    margin: 0;
+    align-self: center;
+}
+
+.admin_blog_preview button {
+    display: block;
+    margin-left: auto;
+    background-color: rebeccapurple;
+    border: 1px solid rebeccapurple;
+    opacity: 0.5;
+}
+
+.admin_blog_preview button:hover {
+    opacity: 1;
+    border: 1px solid grey;
+}
+
+.admin_blog_preview:nth-of-type(2n):hover {
+    background-color: dimgrey;
+}
+
+.admin_blogpost_subpages {
+    display: flex;
+    align-self: center;
+}
+
+.admin_blogpost_subpages button {
+    height: 2em;
+    margin: 0 0.2em;
+}
+

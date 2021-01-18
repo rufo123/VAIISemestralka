@@ -606,6 +606,7 @@ body.body-admin-panel {
 
 .blogBox {
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 80%;
     background-color: rgba(255, 255, 255, 0.1);
@@ -724,6 +725,7 @@ footer p {
     font-size: 1.5em;
 }
 
+/*<editor-fold desc="Profile Content">*/
 .profile-content {
     min-height: calc(100vh - 9em);
     background-color: rgba(0, 0, 0, 0.5);
@@ -781,7 +783,6 @@ footer p {
 .profile-content .profile-data-ul {
 
     margin-left: 3.5em;
-    margin-top: 10em;
     display: flex;
     flex-direction: column;
 
@@ -875,6 +876,7 @@ footer p {
     transition: 0.5s;
 
 }
+/*</editor-fold>*/
 
 /*<editor-fold desc="Admin Panel Redirect">*/
 .admin-panel-box {
@@ -970,7 +972,7 @@ footer p {
 
 .admin-header{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     width: 100%;
     height: 3em;
     background-color: rebeccapurple;
@@ -984,7 +986,6 @@ footer p {
     flex-direction: column;
     background-color: black;
     min-height: 5em;
-    width: 15%;
     opacity: 0.5;
     z-index: 2;
 }
@@ -994,7 +995,7 @@ footer p {
     flex-direction: column;
     background-color: white;
     min-height: 5em;
-    width: 85%;
+    width: 93%;
     opacity: 0.8;
     z-index: 2;
     transition: 1s;
@@ -1010,10 +1011,16 @@ footer p {
 }
 
 .go-back-btn {
+    display: flex !important;
     background-color: rgba(0,0,0,0.7);
     border: none;
     color: white;
+    height: 100%;
     z-index: 1;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em;
+    text-decoration: none;
 }
 
 .admin-header .username-box {

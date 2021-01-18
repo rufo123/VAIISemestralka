@@ -29,7 +29,7 @@ if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
         <div class="username-box">
         <p> U : <?php echo $_SESSION['userLogin'] ?></p>
         </div>
-        <button class="mdc-icon-button material-icons go-back-btn" title="Go Back">exit_to_app</button>
+        <a href="index.php" class="mdc-icon-button material-icons go-back-btn"  title="Go Back">exit_to_app</a>
 
 
 
@@ -40,9 +40,8 @@ if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
             <ul>
                 <li><button class="btn-subpages" onclick="loadSubpage.loadPageLoader('admin_welcome.php')">Domov</button></li>
                 <li><button class="btn-subpages" onclick="loadSubpage.loadPageLoader('users_managing.php')">Users</button></li>
-                <li><button class="btn-subpages" onclick="loadSubpage.loadPageLoader('test.php')" >Submit3</button></li>
-                <li><button class="btn-subpages" onclick="loadSubpage.loadPageLoader('test2.php')">Submit4</button></li>
-                <li><button class="btn-subpages" onclick="loadSubpage.loadPageLoader('test.php')">Submit5</button></li>
+                <li><button class="btn-subpages" onclick="loadSubpage.loadPageLoader('create_blog_post.php')" >Create Blog</button></li>
+                <li><button class="btn-subpages" onclick="loadSubpage.loadPageLoader('manage_blog_entries.php')">Manage Blog</button></li>
             </ul>
 
         </div>
