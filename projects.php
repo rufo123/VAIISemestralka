@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <title>Rudolf Šimo | Projects</title>
 <?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
@@ -33,34 +33,35 @@
 
         <div class="project-box">
         <article class="projects-article">
-            <h2 class="project-title"> Pac-Man: </h2>
+            <h2 class="project-title"> Pac-Man: [Java] </h2>
 
             <p>
-                Danish bear claw oat cake toffee. Bonbon caramels muffin cake candy canes. Tiramisu candy tootsie roll tart muffin pie donut dessert. Sugar plum muffin dessert fruitcake wafer ice cream sweet roll.
-
-                Pie bear claw chocolate tootsie roll. Tiramisu pie muffin halvah gummies dragée. Liquorice candy canes bonbon. Chocolate cupcake tart soufflé.
+                Moja druhá semestrálna práca, naprogramovaná v programovacom jazyku Java, s použitím princípov dedičnosti.
+                Pacman, je žltý, duchovia sú farebný. Jeho úlohou je zozbierať všetky fialové bodky a tak vyhrať hru, bez
+                toho aby prišiel o všetky životy.
             </p>
         </article>
         <div class="cover-projects-img">
-        <img class="project-img" src="images/projects/snake_java.png" alt="sda">
+        <img class="project-img" src="images/projects/pacman_java.png" alt="Pacman v Jave">
         </div>
 
 
         </div>
         <div class="project-box">
         <article class="projects-article">
-            <h2 class="project-title"> Test: </h2>
+            <h2 class="project-title"> Tanky: [C++] </h2>
 
 
 
             <p>
-                Danish bear claw oat cake toffee. Bonbon caramels muffin cake candy canes. Tiramisu candy tootsie roll tart muffin pie donut dessert. Sugar plum muffin dessert fruitcake wafer ice cream sweet roll.
+                Hra pre 2 hráčov napogramovaná v jazyku C++, riešená spolu so synchronizačným problémom.
+                Využité Thready a Sockety pre sieťovú komunikáciu. Princíp hry spočíta v "zabití" druhého
+                hráča. Vyhráva hráč, ktorý prežije. - Vytvorené v spolupráci s: Michal Urbánek.
 
-                Pie bear claw chocolate tootsie roll. Tiramisu pie muffin halvah gummies dragée. Liquorice candy canes bonbon. Chocolate cupcake tart soufflé.
             </p>
         </article>
         <div class="cover-projects-img">
-        <img class="project-img" src="images/projects/snake_java.png" alt="sda">
+        <img class="project-img" src="images/projects/tanky_cpp.png" alt="Tanky">
         </div>
         </div>
 
@@ -69,17 +70,16 @@
 
         <div class="project-box">
         <article class="projects-article">
-            <h2 class="project-title"> Test2: </h2>
-
-
+            <h2 class="project-title"> Pumpa: [AnyLogic] </h2>
             <p>
-                Danish bear claw oat cake toffee. Bonbon caramels muffin cake candy canes. Tiramisu candy tootsie roll tart muffin pie donut dessert. Sugar plum muffin dessert fruitcake wafer ice cream sweet roll.
+                Simulačný model vytvorený pre potreby predmetu Modelovanie a Simulácia. Cieľom modelu bolo zistiť
+                odpoveďe na otázky, zadané na začiatku, experimentovanie s modelom. A zistenie prípadných zlepšení.
+                Vytvorené v spolupráci s: Richard Gabarík, Michal Urbánek.
 
-                Pie bear claw chocolate tootsie roll. Tiramisu pie muffin halvah gummies dragée. Liquorice candy canes bonbon. Chocolate cupcake tart soufflé.
             </p>
         </article>
         <div class="cover-projects-img">
-        <img class="project-img" src="images/projects/snake_java.png" alt="sda">
+        <img class="project-img" src="images/projects/pumpa_anylogic.png" alt="sda">
         </div>
         </div>
     </div>

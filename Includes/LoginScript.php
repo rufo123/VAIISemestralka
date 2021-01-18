@@ -23,7 +23,7 @@ class LoginScript
 
         } else if (isset($_POST['forgotPass'])) {
 
-            header('location: ../forgotpass.html?redirectFrom=loginForm');
+            header('location: ../signup.php?redirectFrom=loginForm');
             exit();
 
         } else if (isset($_POST['login-proceed'])) {

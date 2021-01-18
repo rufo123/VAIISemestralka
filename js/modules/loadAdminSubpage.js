@@ -72,11 +72,9 @@ class LoadAdminSubpage {
 
 
             this.checkIFFileExists(filePath, function (returnValue) {
-                console.log(returnValue);
                 if (returnValue === true) {
                     tmpHead.appendChild(tmpLink);
                     console.log('AdminPanel css added successfully!');
-                    console.log(tmpHead);
                     if (parStyleSheetName === "manage_blog_entries") {
                         ajaxSwitchBlogSubpages.ajaxSwitchAdminSubpage();
                         console.log("Manage");

@@ -1,6 +1,11 @@
 <?php //Inicializujeme Session
 if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
     session_start();
+
+    if (!isset($_SESSION['isAdmin']) || $_SESSION['isAdmin'] !== 1) {
+        header('location: index.php?error=noAdminPrivileges');
+        exit();
+    }
 } ?>
 
 <!DOCTYPE html>

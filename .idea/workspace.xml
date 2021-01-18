@@ -23,31 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="- Validacia">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jQuery.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/adminLoginForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/projects/pacman_java.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/projects/pumpa_anylogic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/projects/tanky_cpp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/BlogScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/BlogScript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/DBConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/DBConnect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/LoginScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/LogoutScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LogoutScript.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/ManipulateProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ManipulateProfileData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/MassUserManipulation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/MassUserManipulation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/SignupScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/SignupScript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/adminLoginForm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminPanelSubpages/create_blog_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanelSubpages/create_blog_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basescript.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/incPageContent/headElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/headElement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incPageContent/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +102,7 @@
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\php_mysql\www\VAIISemestralka\css" />
       <recent name="F:\php_mysql\www\VAIISemestralka\adminPanelSubpages" />
       <recent name="F:\php_mysql\www\VAIISemestralka\css\css_admin_panel_subpages\" />
       <recent name="F:\php_mysql\www\VAIISemestralka" />
@@ -182,7 +172,7 @@
       <workItem from="1610712437579" duration="26810000" />
       <workItem from="1610802617560" duration="25969000" />
       <workItem from="1610884842602" duration="56194000" />
-      <workItem from="1610965101947" duration="15466000" />
+      <workItem from="1610965101947" duration="22015000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -464,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610950916972</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="- Validacia">
+      <created>1610981155857</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1610981155857</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,11 +530,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="702" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610819216556" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1610906328998">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1610983363221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605023616946" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610906328998" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610983363221" />
     <state x="425" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610804417273">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -605,12 +602,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1606160606869" />
-    <state x="706" y="184" key="NewPhpClassDialog" timestamp="1610885251879">
+    <state x="706" y="184" key="NewPhpClassDialog" timestamp="1610983283480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1012" y="326" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926362416" />
     <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605091128140" />
-    <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610885251879" />
+    <state x="706" y="184" key="NewPhpClassDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610983283480" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610929840193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -626,18 +623,22 @@
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
     <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610977568078" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1610950920106">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1610981160517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610950920106" />
-    <state x="633" y="233" width="593" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610894637814">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610981160517" />
+    <state x="822" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610984141152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="822" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610984141152" />
+    <state x="633" y="233" width="593" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610984129435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="500" y="214" width="756" height="807" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605441661295" />
-    <state x="633" y="233" width="593" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610894637814" />
+    <state x="633" y="233" width="593" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610984129435" />
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610948671182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

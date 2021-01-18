@@ -1081,7 +1081,7 @@
     <column id="342" parent="337" name="image">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;default.png&apos;</DefaultExpression>
     </column>
     <column id="343" parent="337" name="title">
       <Position>4</Position>

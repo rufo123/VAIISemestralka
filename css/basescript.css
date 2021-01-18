@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url("images/body/snowy-mountain.jpg");
+    background-image: url("../images/body/snowy-mountain.jpg");
     background-color: #1e2047;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +18,7 @@ body.body-admin-panel {
 
 .bg-image {
     position: fixed;
-    background-image: url("images/body/snowy-mountain.jpg");
+    background-image: url("../images/body/snowy-mountain.jpg");
     background-size: cover;
     top: -2em;
     left: -2em;
@@ -671,7 +671,7 @@ body.body-admin-panel {
 }
 
 .WIP {
-    background: url("images/monkeyworking.jpg") center no-repeat fixed;
+    background: url("../images/monkeyworking.jpg") center no-repeat fixed;
     background-size: calc(100vw - 50%);
     opacity: 0.2;
     min-height: 400px;

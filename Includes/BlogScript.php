@@ -20,7 +20,8 @@ class BlogScript
 
         if (isset($_POST['createPost']) && isset($_SESSION['isAdmin'])) {
 
-            $tmpImage = (string)$_POST['image'];
+            //$tmpImage = (string)$_POST['image'];
+            $tmpImage = "default.png";
             $tmpTitle = (string)$_POST['title'];
             $tmpText = (string)$_POST['text'];
 
@@ -59,6 +60,16 @@ class BlogScript
             header('location: ../index.php?error=imageNotExists');
             exit();
         }
+        if (strlen($parBodyText) > 1500) {
+            header('location: ../adminPanel.php?error=tooMuchBodyText');
+            exit();
+        }
+
+        if (strlen($parTitle) > 30) {
+            header('location: ../adminPanel.php?error=titleTooLong');
+            exit();
+        }
+
 
 
         if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === 1) {

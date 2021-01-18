@@ -539,6 +539,21 @@ class ManipulateProfileData
 
         $sqlAccPouziv = 'DELETE FROM pouzivatelia WHERE idPouzivatela = ?';
         $sqlAccProfile = 'DELETE FROM profile_data WHERE idUser = ?';
+        $sqlAccBlogPosts = 'DELETE FROM blog_posts WHERE idUser = ?';
+
+        $stmtDelAccBlogPosts = $parConnection->stmt_init();
+
+        if (!$stmtDelAccBlogPosts->prepare($sqlAccBlogPosts)) { //Ak doslo k nejakej chybe
+            header('location: ../profile.php?error=stmtErrorDelProfile');
+            exit();
+        }
+
+
+        $stmtDelAccBlogPosts->bind_param('s', $idUser,); //ss - String, String
+        $stmtDelAccBlogPosts->execute();
+        $stmtDelAccBlogPosts->close();
+
+        //Dokoncene mazanie z profile_data
 
 
         $stmtDelAccProfile = $parConnection->stmt_init();
@@ -554,7 +569,6 @@ class ManipulateProfileData
         $stmtDelAccProfile->close();
 
         //Dokoncene mazanie z profile_data
-
 
         $stmtDelAccPouziv = $parConnection->stmt_init();
 
