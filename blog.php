@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 <head>
     <title>Rudolf Šimo | Blog</title>
-    <link rel="stylesheet" href="css/public_blog_posts.css">
+<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
+<link rel="stylesheet" href="css/public_blog_posts.css">
 </head>
-<?php include 'incPageContent/header.php'; ?> <!-- Header -->
-
 <body>
+<?php include 'incPageContent/header.php'; ?> <!-- Header -->
 
 <div class="contentContainer">
 
@@ -36,6 +35,6 @@
 
 <?php include "incPageContent/footer.php"?>
 
-</body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
 </html>

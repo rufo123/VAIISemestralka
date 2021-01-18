@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 <head>
-    <title>Rudolf Šimo | Sign-UP</title>
+    <title>Rudolf Šimo | Signup</title>
+<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 </head>
-<?php include "incPageContent/headerWOLogin.php"?> <!-- Header Without Login-->
-
 <body>
+<?php include "incPageContent/headerWOLogin.php"?> <!-- Header Without Login-->
 
 <div class="contentContainer">
 
@@ -59,7 +58,7 @@
         </li>
         <li>
             <input type="submit" name="signup-proceed">
-           <!-- <input type="button" id="signup-proceed" name="signup-proceed" value="Sign Up"> --->
+           <!-- <input type="button" id="signup-proceed" name="signup-proceed" value="Sign Up"> -->
         </li>
         <?php
 

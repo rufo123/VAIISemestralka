@@ -6,17 +6,8 @@ if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/ico" href="favicon.ico"/>
-    <link rel="stylesheet" href="basescript.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="module" src="./js/main.js"></script>
-    <title>Rudolf Šimo | Portfolio</title>
-
-</head>
-<head>
-    <title>Rudolf Šimo | Order</title>
+    <title>Rudolf Šimo | Admin</title>
+    <?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 </head>
 
 
@@ -57,6 +48,7 @@ if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
 
 <?php include "incPageContent/footer.php" ?>
 
-</body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
 </html>

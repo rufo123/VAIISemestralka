@@ -9,6 +9,9 @@ class DBConn
     private string $aDBmeno = 'vaisemestralka';
     private mysqli $initConn;
 
+    /**
+     * DBConn constructor.
+     */
     public function __construct() {
 
         $this->setConn(new mysqli($this->getAServerName(), $this->getADBlogin(), $this->getADBpass(), $this->getADBmeno()));

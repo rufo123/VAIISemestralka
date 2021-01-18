@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 <head>
     <title>Rudolf Šimo | Order</title>
+<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 </head>
-<?php include 'incPageContent/header.php'; ?> <!-- Header -->
-
 <body>
+<?php include 'incPageContent/header.php'; ?> <!-- Header -->
 
 <div class="contentContainer">
 

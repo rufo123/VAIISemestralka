@@ -50,6 +50,10 @@ class LoginScript
     }
 
 
+    /**
+     * @param string $username
+     * @param string $password
+     */
     public function isPrazdnyInput(string $username, string $password) : void
     {
         if ( empty($username) || empty($password) ) {
@@ -60,6 +64,11 @@ class LoginScript
 
     }
 
+    /**
+     * @param mysqli $connection
+     * @param string $username
+     * @return array|false|null
+     */
     public function isLoginCorrect(mysqli $connection, string $username) //Ak je login spravny funkcia najde hladany
         // riadok v databaze, inak vrati false
     {
@@ -96,6 +105,10 @@ class LoginScript
 
     }
 
+    /**
+     * @param array $riadokZDB
+     * @param string $password
+     */
     public function prihlasPouzivatela(array $riadokZDB, string $password): void
     {
 
@@ -119,7 +132,10 @@ class LoginScript
             exit();
         }
     }
-    
+
+    /**
+     *
+     */
     public function setURLOfPreviousPage(){
         $currentPageURL = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
         $escapedCurrentPageURL = htmlspecialchars($currentPageURL, ENT_QUOTES, 'UTF-8');

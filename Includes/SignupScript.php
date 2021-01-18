@@ -7,6 +7,9 @@ class SignupScript
 {
 
 
+    /**
+     * SignupScript constructor.
+     */
     public function __construct()
     {
 
@@ -38,6 +41,12 @@ class SignupScript
 
     }
 
+    /**
+     * @param string $login
+     * @param string $email
+     * @param string $pass
+     * @param string $repeatPass
+     */
     public function isPrazdnyInput(string $login, string $email, string $pass, string $repeatPass): void
     {
         if (empty($login) || empty($email) || empty($pass) || empty($repeatPass)) {
@@ -48,6 +57,10 @@ class SignupScript
 
     }
 
+    /**
+     * @param string $email
+     * @param string $login
+     */
     public function isValidnyEmail(string $email, string $login): void
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -58,6 +71,10 @@ class SignupScript
 
     }
 
+    /**
+     * @param string $email
+     * @param string $login
+     */
     public function isValidLogin(string $email, string $login): void
     {
         if (!preg_match("/^[a-zA-Z0-9_]*$/",$login)) {
@@ -68,6 +85,12 @@ class SignupScript
 
     }
 
+    /**
+     * @param string $pass
+     * @param string $repeatPass
+     * @param string $login
+     * @param string $email
+     */
     public function isRovnakyPass(string $pass, string $repeatPass, string $login, string $email): void
     {
         if ($repeatPass !== $pass) {
@@ -76,6 +99,12 @@ class SignupScript
         }
     }
 
+    /**
+     * @param mysqli $conn
+     * @param string $typeOfInput
+     * @param string $parEmail
+     * @param string $login
+     */
     public function isLoginUnique(mysqli $conn, string $typeOfInput, string $parEmail, string $login): void
     {
 
@@ -111,6 +140,11 @@ class SignupScript
 
     }
 
+    /**
+     * @param string $pass
+     * @param string $parLogin
+     * @param string $parEmail
+     */
     public function doesPassFulfilCriteria(string $pass, string $parLogin, string $parEmail): void
     {
         if (strlen($pass) < 8) { //Overovanie, ci heslo je dostatocne dlhe
@@ -125,6 +159,12 @@ class SignupScript
 
     }
 
+    /**
+     * @param mysqli $conn
+     * @param string $login
+     * @param string $email
+     * @param string $pass
+     */
     public function vytvorPouzivatela(mysqli $conn, string $login, string $email, string $pass) : void
     {
 

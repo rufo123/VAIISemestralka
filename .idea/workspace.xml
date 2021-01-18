@@ -22,39 +22,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="- Upravený Admin Panel o Menažment používateľov">
-      <change afterPath="$PROJECT_DIR$/Includes/BlogScript.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/manage_blog_entries.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ajax_php_script/delete_blog_post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ajax_php_script/show_more_blogposts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ajax_php_script/switch_ad_blog_pages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/css_admin_panel_subpages/create_blog_post.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/css_admin_panel_subpages/manage_blog_entries.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/public_blog_posts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/adminBlogResizer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/ajaxDeletePost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/ajaxDeleteUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/ajaxMoreBlogPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/modules/ajaxSwitchBlogSubpages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="- Validacia">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jQuery.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminPanelSubpages/adminLoginForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/BlogScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/BlogScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/DBConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/DBConnect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/LoginScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/LogoutScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LogoutScript.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/ManipulateProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ManipulateProfileData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/MassUserManipulation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/MassUserManipulation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/adminLoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/adminLoginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/SignupScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/SignupScript.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/adminLoginForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanelSubpages/admin_welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanelSubpages/admin_welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanelSubpages/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanelSubpages/create_blog_post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanelSubpages/test2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanelSubpages/users_managing.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanelSubpages/users_managing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax_php_script/delete_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax_php_script/delete_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax_php_script/promo_demote_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax_php_script/promo_demote_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/basescript.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/css_admin_panel_subpages/users_managing.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/css_admin_panel_subpages/users_managing.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incPageContent/headElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/headElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incPageContent/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/headerWOLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,17 +105,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\php_mysql\www\VAIISemestralka\css\css_admin_panel_subpages\" />
-      <recent name="F:\php_mysql\www\VAIISemestralka" />
-      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\php_mysql\www\VAIISemestralka\adminPanelSubpages" />
       <recent name="F:\php_mysql\www\VAIISemestralka" />
       <recent name="F:\php_mysql\www\VAIISemestralka\includes" />
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
       <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\php_mysql\www\VAIISemestralka\adminPanelSubpages" />
+      <recent name="F:\php_mysql\www\VAIISemestralka\css\css_admin_panel_subpages\" />
+      <recent name="F:\php_mysql\www\VAIISemestralka" />
+      <recent name="C:\Users\Rufo123\PhpstormProjects\VAIISemestralka" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -187,7 +181,8 @@
       <workItem from="1609681205062" duration="15529000" />
       <workItem from="1610712437579" duration="26810000" />
       <workItem from="1610802617560" duration="25969000" />
-      <workItem from="1610884842602" duration="56151000" />
+      <workItem from="1610884842602" duration="56194000" />
+      <workItem from="1610965101947" duration="15466000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -462,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610834504100</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="- Admin Panel dokonceny aj responzivita - Zaciatok na dokoncovacich pracach">
+      <created>1610950916972</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1610950916972</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,8 +484,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Dokončený Base projects.html" />
-    <MESSAGE value="Skoro cele html/css hotove" />
     <MESSAGE value="Dokonceny základ stránky" />
     <MESSAGE value="Priebezne ulozenie" />
     <MESSAGE value="Komplet dokoncene základné HTML + CSS" />
@@ -507,7 +507,9 @@
     <MESSAGE value="- Zaciatok prace na Admin Paneli + AJAX dynamicka zmena SubStranky" />
     <MESSAGE value="- Admin Panel - Urobene dynamicke stranky" />
     <MESSAGE value="- Upravený Admin Panel o Menažment používateľov" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Upravený Admin Panel o Menažment používateľov" />
+    <MESSAGE value="- Admin Panel dokonceny aj responzivita - Zaciatok na dokoncovacich pracach" />
+    <MESSAGE value="- Validacia" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Validacia" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
@@ -548,7 +550,6 @@
     <state x="962" y="213" key="FileChooserDialogImpl" timestamp="1610920992980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="802" y="176" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1602329181206" />
     <state x="-798" y="350" key="FileChooserDialogImpl/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926140077" />
     <state x="962" y="213" key="FileChooserDialogImpl/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1604387389781" />
     <state x="962" y="213" key="FileChooserDialogImpl/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610920992980" />
@@ -556,10 +557,6 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="657" y="329" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1600.860@0.0.1600.860" timestamp="1602526371629" />
-    <state x="623" y="362" key="Github.ShareDialog" timestamp="1602328990815">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="623" y="362" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1602328990815" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1606160606868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -623,23 +620,19 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="817" y="134" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603183248950" />
-    <state x="465" y="80" key="SettingsEditor" timestamp="1610733404100">
+    <state x="465" y="80" key="SettingsEditor" timestamp="1610977568078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
-    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610733404100" />
-    <state x="590" y="333" key="VCS.EditChangelistDialog" timestamp="1602329311745">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="590" y="333" key="VCS.EditChangelistDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329311745" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1610834505908">
+    <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610977568078" />
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1610950920106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610834505908" />
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610950920106" />
     <state x="633" y="233" width="593" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610894637814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -667,13 +660,5 @@
     <state x="-1137" y="354" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604766888076" />
     <state x="982" y="205" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605447770035" />
     <state x="982" y="205" width="807" height="820" key="search.everywhere.popup/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610934443824" />
-    <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser" timestamp="1602329031735">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="546" y="150" width="442" height="629" key="svn.repositoryBrowser/0.0.1600.860@0.0.1600.860" timestamp="1602329031735" />
-    <state x="587" y="367" key="svn.upgradeDialog" timestamp="1602329031765">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="587" y="367" key="svn.upgradeDialog/0.0.1600.860@0.0.1600.860" timestamp="1602329031765" />
   </component>
 </project>

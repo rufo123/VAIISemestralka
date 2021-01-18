@@ -5,12 +5,12 @@ if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 <head>
-    <title>Rudolf Šimo | Order</title>
+    <title>Rudolf Šimo | Admin Redirect</title>
+    <?php include 'incPageContent/headElement.php'; ?> <!-- Head Element -->
 </head>
-
 <body class="body-admin-panel">
+
 <div class="bg-image"></div>
 
 
@@ -18,9 +18,7 @@ if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
 
     <div class="admin-panel-box">
 
-
         <?php
-
 
         if (isset($_SESSION['idUser'])) //Ak este nie je pouzivatel prihlaseny
         {
@@ -28,14 +26,12 @@ if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
             exit();
         } else {
 
-            include "includes/adminLoginForm.php";
+            include "adminPanelSubpages/adminLoginForm.php";
 
         }
         ?>
 
-
     </div>
-
 
 </div>
 

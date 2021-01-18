@@ -18,7 +18,7 @@
                     <li><a class="navbar-item" href="gallery.php">Galéria</a></li>
                     <li><a class="navbar-item" href="blog.php">Blog</a></li>
                    <!-- <li><a class="navbar-item" href="order.php">Objednávky</a></li> -->
-                     <li><a class="mdc-icon-button material-icons navbar-item admin-nav-icon" title="Admin Panel"  name="Admin" href="admin.php">admin_panel_settings</a></li>
+                     <li><a class="mdc-icon-button material-icons navbar-item admin-nav-icon" title="Admin Panel"  href="admin.php">admin_panel_settings</a></li>
 
                  </ul>
                  <div class="navigation-login">

@@ -23,6 +23,9 @@ class MassUserManipulation
     }
 
 
+    /**
+     * MassUserManipulation constructor.
+     */
     public function __construct()
     {
         if (session_status() == PHP_SESSION_NONE) { //Ak este Session nie je startnuta
@@ -102,6 +105,10 @@ class MassUserManipulation
 
     }
 
+    /**
+     * @param string $parIDPouzivatela
+     * @param int $parMakeAdmin
+     */
     public function setAdminStatus(string $parIDPouzivatela, int $parMakeAdmin) : void {
 
         $sqlUpdateAdmin = 'UPDATE pouzivatelia SET isAdmin = ? WHERE idPouzivatela = ?';

@@ -47,6 +47,11 @@ class BlogScript
         $this->dbConnect = $dbConnect;
     }
 
+    /**
+     * @param string $parImage
+     * @param string $parTitle
+     * @param string $parBodyText
+     */
     public function createBlogPost(string $parImage, string $parTitle, string $parBodyText)
     {
 
@@ -85,6 +90,10 @@ class BlogScript
         }
     }
 
+    /**
+     * @param string $parFile
+     * @return bool
+     */
     public function doFileExist(string $parFile): bool
     {
         $parFile = "../images/userAvatars/" . $parFile;
@@ -141,6 +150,10 @@ class BlogScript
     }
 
 
+    /**
+     * @param int $parStartPost
+     * @param int $parCountPosts
+     */
     public function getAdminPreviewOfPosts(int $parStartPost, int $parCountPosts): void
     {
 
@@ -189,6 +202,10 @@ class BlogScript
     }
 
 
+    /**
+     * @param int $parPostID
+     * @return int
+     */
     public function deletePostByID(int $parPostID): int
     {
 
@@ -214,6 +231,9 @@ class BlogScript
         }
     }
 
+    /**
+     * @return int
+     */
     public function getNumberOfPosts(): int
     {
 

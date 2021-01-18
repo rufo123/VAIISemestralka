@@ -60,6 +60,10 @@ class ManipulateProfileData
         $this->dbConn = $dbConn;
     }
 
+    /**
+     * @param string $idUser
+     * @return array|false|null
+     */
     public function selectProfileData(string $idUser)
     {
 
@@ -112,6 +116,9 @@ class ManipulateProfileData
 
     //<editor-fold desc="Initialize Attributes">
 
+    /**
+     * @param string $idUser
+     */
     public function initialiseProfileVariables(string $idUser)
     {
         $arrayUserDataFromDB = $this->selectProfileData($idUser);
@@ -239,10 +246,14 @@ class ManipulateProfileData
     //</editor-fold>
 
 
+    /**
+     * @param string $parNameOfCol
+     * @return bool
+     */
     public function checkIfColEmpty(string $parNameOfCol): bool
     {
         if (empty($parNameOfCol)) {
-            header('location: ../profile.php?error=emptyInput');
+            header('location: ../profile.php?error[]=emptyInput');
             exit();
         } else {
             return false;
@@ -251,21 +262,31 @@ class ManipulateProfileData
 
     }
 
-    public function passRequiredChar(string $parPass)
+    /**
+     * @param string $parPass
+     */
+    public function passRequiredChar(string $parPass) : void
     {
         if (strlen($parPass) < 8) { //Overovanie, ci heslo je dostatocne dlhe
-            header('location: ../profile.php?error=passNotLongEnough');
+            header('location: ../profile.php?error[]=passNotLongEnough');
             exit();
+
         }
 
         if (!preg_match("(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$)", $parPass)) { // 0-9 | a-z | A-Z
-            header('location: ../profile.php?error=passNoRequiredCharacters');
+            header('location: ../profile.php?error[]=passNoRequiredCharacters');
             exit();
         }
     }
 
 
-    public function changeUserName(string $parChangeToWhat, mysqli $parConn, string $idUser)
+    /**
+     * @param string $parChangeToWhat
+     * @param mysqli $parConn
+     * @param string $idUser
+     * @return string
+     */
+    public function changeUserName(string $parChangeToWhat, mysqli $parConn, string $idUser) : string
     {
 
         $this->isLoginUnique($parConn, $parChangeToWhat, "login");
@@ -286,11 +307,16 @@ class ManipulateProfileData
         //Kedze sme uspesne zmenili pouzivatelsky login, treba ho zmenit aj v session
 
         $_SESSION['userLogin'] = $parChangeToWhat;
-        header('location: ../profile.php?success=uspChangedUsername');
-        exit();
+
+        return "&success[]=uspChangedUsername";
 
     }
 
+    /**
+     * @param mysqli $conn
+     * @param string $loginORemail
+     * @param string $typeOfInput
+     */
     public function isLoginUnique(mysqli $conn, string $loginORemail, string $typeOfInput): void
     {
         if ($typeOfInput == "email") {
@@ -319,7 +345,7 @@ class ManipulateProfileData
 
         if ($result > 0) { //Ak je tam viac dat ako 0, to znamena ze taky login uz existuje
 
-            header('location: ../profile.php?error=' . $typeOfInput . 'NotUnique');
+            header('location: ../profile.php?error[]=' . $typeOfInput . 'NotUnique');
             exit();
 
         }
@@ -327,7 +353,14 @@ class ManipulateProfileData
     }
 
 
-    public function changeProfileRow(string $changedRow, mysqli $parConn, string $idUser, string $nameOfDBCol)
+    /**
+     * @param string $changedRow
+     * @param mysqli $parConn
+     * @param string $idUser
+     * @param string $nameOfDBCol
+     * @return string
+     */
+    public function changeProfileRow(string $changedRow, mysqli $parConn, string $idUser, string $nameOfDBCol) : string
     {
 
         if ($nameOfDBCol == "userFirstName") {
@@ -335,11 +368,9 @@ class ManipulateProfileData
         } else if ($nameOfDBCol == "userLastName") {
             $sqlRowChange = "    UPDATE profile_data SET userLastName = ? WHERE idUser = ?";
         } else {
-            header('location: ../profile.php?systemError=changeProfileRowBADCOLL');
-            exit();
+            return "?systemError=changeProfileRowBADCOLL";
 
         }
-
 
         $stmtProfileRowChange = $parConn->stmt_init();
 
@@ -354,13 +385,19 @@ class ManipulateProfileData
         $stmtProfileRowChange->close();
         //Kedze sme uspesne zmenili pouzivatelsky login, treba ho zmenit aj v session
 
-        header('location: ../profile.php?success=uspChangedRow');
-        exit();
+        return "1";
+
 
     }
 
 
-    public function changeEmail(string $changedMail, mysqli $parConn, string $idUser)
+    /**
+     * @param string $changedMail
+     * @param mysqli $parConn
+     * @param string $idUser
+     * @return string
+     */
+    public function changeEmail(string $changedMail, mysqli $parConn, string $idUser) : string
     {
         $this->isLoginUnique($parConn, $changedMail, "email");
 
@@ -377,17 +414,22 @@ class ManipulateProfileData
         $stmtEmailChange->execute();
         $stmtEmailChange->close();
 
-        header('location: ../profile.php?success=uspChangedEmail');
-        exit();
+        return "&success[]=uspChangedEmail";
 
     }
 
+    /**
+     * @param mysqli $parConnection
+     * @param string $parPassword
+     * @param string $parRepeatPass
+     * @param string $idUser
+     */
     public function changePass(mysqli $parConnection, string $parPassword, string $parRepeatPass, string $idUser)
     {
 
 
         if ($parPassword !== $parRepeatPass) {
-            header('location: ../profile.php?error=passwordNotEquals');
+            header('location: ../profile.php?error[]=passwordNotEquals');
             exit();
         } else {
 
@@ -407,14 +449,19 @@ class ManipulateProfileData
             $stmtPasswordChange->execute();
             $stmtPasswordChange->close();
 
-            header('location: ../profile.php?success=uspChangePass');
-            exit();
 
+            header('location: ../profile.php?success[]=uspChangePass');
+            exit();
         }
 
 
     }
 
+    /**
+     * @param mysqli $parConnection
+     * @param string $parPassword
+     * @param string $idUser
+     */
     public function checkPassword(mysqli $parConnection, string $parPassword, string $idUser)
     { //Overovanie hesla
 
@@ -442,13 +489,17 @@ class ManipulateProfileData
 
         } else {
 
-            header('location: ../profile.php?error=wrongPass');
+            header('location: ../profile.php?error[]=wrongPass');
             exit();
 
         }
 
     }
 
+    /**
+     * @param mysqli $parConnection
+     * @param string $idUserToDelete
+     */
     public function deleteAccountWithAdminPrivileges(mysqli $parConnection, string $idUserToDelete)
     {
         if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === 1) {
@@ -463,6 +514,11 @@ class ManipulateProfileData
 
     }
 
+    /**
+     * @param mysqli $parConnection
+     * @param string $parPassword
+     * @param string $idUser
+     */
     public function deleteAccountOfMyself(mysqli $parConnection, string $parPassword, string $idUser)
     {
 
@@ -472,6 +528,11 @@ class ManipulateProfileData
     }
 
 
+    /**
+     * @param mysqli $parConnection
+     * @param string $idUser
+     * @param bool $asAdmin
+     */
     private function deleteAccount(mysqli $parConnection, string $idUser, bool $asAdmin)
     {
 
@@ -511,81 +572,103 @@ class ManipulateProfileData
             session_destroy();
         }
 
-        header('location: ../index.php?success=uspDelete');
+        header('location: ../index.php?success[]=uspDelete');
         exit();
 
 
     }
 
 
+    /**
+     *
+     */
     public function changeDataByInput()
     {
-        if (isset($_POST['changeUserProceed'])) {
 
-            $changedUsername = trim($_POST['changeUserShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
+        if (isset($_POST['submitProfileChanges'])) {
 
-            if ($this->checkIfColEmpty($changedUsername))  //Kontrolujeme ak sme submitli zmenu Username
-            {
-                header("location ../profile.php?error=UsernameEmpty");
-                exit();
-            } else {
-                $this->changeUserName($changedUsername, $this->getDbConn()->getInitConn(), $_SESSION['idUser']);
-            }
+            $tmpReturnLocation = "location: ../profile.php?";
 
+            if (isset($_POST['changeUserShow']) && !empty($_POST['changeUserShow'])) {
 
-        } else if (isset($_POST['changeNameProceed'])) { //Kontrolujeme ak sme submitli zmenu Mena
+                $changedUsername = trim($_POST['changeUserShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
 
-            $changedName = trim($_POST['changeNameShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
-
-            if ($this->checkIfColEmpty($changedName)) {
-                header("location ../profile.php?error=NameEmpty");
-                exit();
-            } else {
-                $this->changeProfileRow($changedName, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userFirstName");
+                if ($this->checkIfColEmpty($changedUsername))  //Kontrolujeme ak sme submitli zmenu Username
+                {
+                    header("location ../profile.php?error[]=UsernameEmpty");
+                    exit();
+                } else {
+                    $tmpReturnLocation .= $this->changeUserName($changedUsername, $this->getDbConn()->getInitConn(), $_SESSION['idUser']);
+                }
 
             }
+             if (isset($_POST['changeNameShow']) && !empty($_POST['changeNameShow'])) { //Kontrolujeme ak sme submitli zmenu Mena
+
+                 $changedName = trim($_POST['changeNameShow']); //Meno premmennej, ktora je input na to co sa ma zmenit
+
+                 if ($this->checkIfColEmpty($changedName)) {
+                     header("location ../profile.php?error[]=NameEmpty");
+                     exit();
+                 } else {
+                      if ($this->changeProfileRow($changedName, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userFirstName") == "1" ) {
+                          $tmpReturnLocation .= "&success[]=uspChangedName";
+                      }
+
+                 }
+
+             }
+             if (isset($_POST['changeSurnameShow']) && !empty($_POST['changeSurnameShow'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
+
+                 $changedSurname = trim($_POST['changeSurnameShow']);
+
+                 if ($this->checkIfColEmpty($changedSurname)) {
+                     header("location ../profile.php?error[]=SurnameEmpty");
+                     exit();
+
+                 } else {
+                     if ($this->changeProfileRow($changedSurname, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userLastName")) {
+                         $tmpReturnLocation .= "&success[]=uspChangedSurname";
+                     }
 
 
-        } else if (isset($_POST['changeSurnameProceed'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
+                 }
+             }
+            if (isset($_POST['changeEmailShow']) && !empty($_POST['changeEmailShow'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
 
-            $changedSurname = trim($_POST['changeSurnameShow']);
+                $changedEmail = trim($_POST['changeEmailShow']);
 
-            if ($this->checkIfColEmpty($changedSurname)) {
-                header("location ../profile.php?error=SurnameEmpty");
-                exit();
+                if ($this->checkIfColEmpty($changedEmail)) {
+                    header("location ../profile.php?error[]=EmailEmpty");
+                    exit();
 
-            } else {
-                $this->changeProfileRow($changedSurname, $this->getDbConn()->getInitConn(), $_SESSION['idUser'], "userLastName");
+                } else {
+
+                    $tmpReturnLocation .= $this->changeEmail($changedEmail, $this->getDbConn()->getInitConn(), $_SESSION['idUser']);
+
+                }
+            }
+
+            header($tmpReturnLocation);
+            exit();
+
+        } else if (isset($_POST['submitPasswordChange'])) {
+
+             if (isset($_POST['changePassShow']) && !empty($_POST['changePassShow'])) { //Kontrolujeme ak sme submitli zmenu Hesla
+
+                $changePass = trim($_POST['changePassShow']);
+                $changeRepeatPass = trim($_POST['changeRepeatPassShow']);
+
+
+                if ($this->checkIfColEmpty($changePass) || $this->checkIfColEmpty($changeRepeatPass)) {
+                    header("location ../profile.php?error[]=passFieldEmpty");
+                    exit();
+
+                } else {
+                    $this->changePass($this->getDbConn()->getInitConn(), $changePass, $changeRepeatPass, $_SESSION['idUser']);
+                }
 
             }
 
-        } else if (isset($_POST['changeEmailProceed'])) { //Kontrolujeme ak sme submitli zmenu Priezviska
-
-            $changedEmail = trim($_POST['changeEmailShow']);
-
-            if ($this->checkIfColEmpty($changedEmail)) {
-                header("location ../profile.php?error=EmailEmpty");
-                exit();
-
-            } else {
-
-                $this->changeEmail($changedEmail, $this->getDbConn()->getInitConn(), $_SESSION['idUser']);
-
-            }
-
-        } else if (isset($_POST['changePassSubmit'])) { //Kontrolujeme ak sme submitli zmenu Hesla
-
-            $changePass = trim($_POST['changePassShow']);
-            $changeRepeatPass = trim($_POST['changeRepeatPassShow']);
-
-
-            if ($this->checkIfColEmpty($changePass) || $this->checkIfColEmpty($changeRepeatPass)) {
-                header("location ../profile.php?error=passFieldEmpty");
-                exit();
-
-            } else {
-                $this->changePass($this->getDbConn()->getInitConn(), $changePass, $changeRepeatPass, $_SESSION['idUser']);
-            }
 
 
         } else if (isset($_POST['deleteAccount'])) { //Zmaza
@@ -594,7 +677,7 @@ class ManipulateProfileData
 
 
             if ($this->checkIfColEmpty($checkPass)) {
-                header("location ../profile.php?error=passEmpty");
+                header("location ../profile.php?error[]=passEmpty");
                 exit();
 
             } else {
@@ -603,8 +686,7 @@ class ManipulateProfileData
 
 
         } else if (isset($_POST['avatarUpload'])) {
-
-
+                //WIP
         }
     }
 

@@ -14,6 +14,9 @@ class LogoutScript
             $this->destroySession();
     }
 
+    /**
+     *
+     */
     public function destroySession() : void
     {
         session_start();

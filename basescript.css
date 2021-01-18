@@ -584,6 +584,61 @@ body.body-admin-panel {
         padding-left: 0;
     }
 
+    .profile-content ul li .profile-p {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        margin: 0 auto;
+        width: 80%;
+
+    }
+
+    .contentContainer .profile-content .profile-data-ul {
+        margin: 0;
+        width: 100%;
+    }
+
+    .profile-top-image-name {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .profile-top-image-name img {
+        width: 90%;
+        max-width: 200px;
+
+    }
+
+    .profile-data-ul .profile-change-box {
+
+        display: flex;
+        width: unset;
+
+    }
+
+    .contentContainer .profile-top-image-name img {
+        margin: 2em 0 0 0;
+    }
+    .contentContainer .profile-content ul li .password-desc {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .contentContainer .profile-change-box .profile-change-label {
+        min-width: unset;
+        margin: 0;
+    }
+
+    .contentContainer .profile-change-box .profile-change-label label{
+        min-width: unset;
+    }
+
+    .contentContainer .profile-change-box .profile-change-label .input{
+
+    }
+
 }
 
 .gallery-imagebox {
@@ -876,6 +931,21 @@ footer p {
     transition: 0.5s;
 
 }
+
+.profile-content .profile-message {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+.profile-change-box input[type=submit]{
+    background-color: rebeccapurple;
+    border: 1px solid rebeccapurple;
+    opacity: 0.8;
+}
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="Admin Panel Redirect">*/
@@ -1089,14 +1159,21 @@ footer p {
 
 
 
+
 /*</editor-fold>*/
+@media screen and (max-width: 800px) {
 
 
+.contentContainer .profile-change-box .profile-change-label {
+    flex-direction: column;
+}
 
+.contentContainer .profile-content .profile-message {
+        width: 80%;
+        text-align: center;
+}
 
-
-
-
+}
 @media screen and (max-width: 640px) {
     .navbar-logo {
         display: none;
@@ -1145,6 +1222,13 @@ footer p {
     .hidden-signup {
         margin-left: calc((0em));
     }
+
+    .contentContainer .profile-content .profile-message {
+       font-size: 70%;
+        background: none;
+    }
+
+
 
 }
 
