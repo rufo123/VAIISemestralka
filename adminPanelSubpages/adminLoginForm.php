@@ -1,7 +1,9 @@
 
 <form class="admin-login" action="includes/LoginScript.php" method="post">
             <ul>
-                Nie ste prihlásený! Pre prístup do Admin Panelu sa musíte najprv prihlásiť!
+                <li>
+                    Nie ste prihlásený! Pre prístup do Admin Panelu sa musíte najprv prihlásiť!
+                </li>
                 <li>
                     <label for="login">Prihlasovacie Meno</label>
                     <input type="text" id="login" name="login" placeholder="User Name">

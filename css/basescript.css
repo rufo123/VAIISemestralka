@@ -128,6 +128,8 @@ body.body-admin-panel {
 
 }
 
+
+/*<editor-fold desc="Login Container">*/
 .login-container {
     float: left;
 
@@ -193,6 +195,7 @@ body.body-admin-panel {
     flex-direction: column;
 
 }
+
 
 
 .hidden-signup {
@@ -365,6 +368,8 @@ body.body-admin-panel {
     width: unset;
     justify-content: flex-end;
 }
+
+/*</editor-fold>*/
 
 
 .contentContainer {
@@ -698,6 +703,7 @@ footer p {
 
 /* ------------- SIGNUP FORM ------------- */
 
+/*<editor-fold desc="Sigup Form">*/
 .signup {
     display: flex;
     width: 100%;
@@ -779,6 +785,7 @@ footer p {
     color: lightgrey;
     font-size: 1.5em;
 }
+/*</editor-fold>*/
 
 /*<editor-fold desc="Profile Content">*/
 .profile-content {

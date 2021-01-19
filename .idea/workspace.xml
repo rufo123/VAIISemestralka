@@ -22,20 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="- Validacia">
-      <change afterPath="$PROJECT_DIR$/images/projects/pacman_java.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/pumpa_anylogic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/tanky_cpp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9cdd76f3-11f6-4941-9ef2-3eca4dbf3d48.xml" afterDir="false" />
+    <list default="true" id="3bf500c6-f763-42c1-8599-729db76ec67c" name="Default Changelist" comment="- Pripravené na obhajobu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/BlogScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/BlogScript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/LoginScript.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/LoginScript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/ManipulateProfileData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/ManipulateProfileData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPanelSubpages/create_blog_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanelSubpages/create_blog_post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basescript.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incPageContent/headElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/incPageContent/headElement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/loadAdminSubpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminPanelSubpages/adminLoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPanelSubpages/adminLoginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/basescript.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/basescript.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects.php" afterDir="false" />
     </list>
     <list id="2fc85e52-4427-4c84-8f92-95a3176ae55c" name="Prvotné Nastavenie" comment="" />
@@ -172,7 +162,8 @@
       <workItem from="1610712437579" duration="26810000" />
       <workItem from="1610802617560" duration="25969000" />
       <workItem from="1610884842602" duration="56194000" />
-      <workItem from="1610965101947" duration="22015000" />
+      <workItem from="1610965101947" duration="22940000" />
+      <workItem from="1611041307242" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1602329211865</created>
@@ -461,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610981155857</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="- Pripravené na obhajobu">
+      <created>1610988519103</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1610988519103</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +479,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Dokonceny základ stránky" />
     <MESSAGE value="Priebezne ulozenie" />
     <MESSAGE value="Komplet dokoncene základné HTML + CSS" />
     <MESSAGE value="Posledné upravy pred odovzdaním prvej časti" />
@@ -506,7 +503,8 @@
     <MESSAGE value="- Upravený Admin Panel o Menažment používateľov" />
     <MESSAGE value="- Admin Panel dokonceny aj responzivita - Zaciatok na dokoncovacich pracach" />
     <MESSAGE value="- Validacia" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Validacia" />
+    <MESSAGE value="- Pripravené na obhajobu" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Pripravené na obhajobu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1014" y="220" key="#CLI_Interpreters" timestamp="1604926157600">
@@ -623,13 +621,13 @@
     <state x="0" y="149" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602525543134" />
     <state x="-1093" y="210" key="SettingsEditor/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604926180735" />
     <state x="465" y="80" key="SettingsEditor/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610977568078" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1610981160517">
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2" timestamp="1610988521675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="476" y="152" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602784998459" />
     <state x="-1124" y="326" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@-1600.174.1600.860" timestamp="1604862197430" />
     <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.174.1600.860@0.0.1920.1040" timestamp="1605107977101" />
-    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610981160517" />
+    <state x="571" y="184" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.277.1600.860@0.0.1920.1040" timestamp="1610988521675" />
     <state x="822" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610984141152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

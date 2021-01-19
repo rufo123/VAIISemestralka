@@ -14,7 +14,6 @@
         <div class="project-box">
         <article class="projects-article">
             <h2 class="project-title"> Snake: [Java] </h2>
-
             <p>
             Moja prvá semestrálna práca, naprogramovaná v Jave. Hra je fakticky jednoduchý klon "Snake-a", kde
             sa vykreslia hracie polia z matice (kde obsah matíc je vždy načítaný z textového súboru)...
